@@ -155,3 +155,39 @@ Other HELD-OUT results:
 ## Multiple comparisons
 
 Five extensions were tested against pre-stated criteria, and HELD-OUT was used once. X1 passed its criterion only marginally, with a non-significant difference, and is therefore not claimed as an improvement.
+
+## Post-tournament checks (9 October 2026, 03:40–04:10)
+
+### C1 — Does the follow-up-selection advantage hold on independent data?
+
+This answers an external reviewer's question: does X3 hold on independent simulations, and under realistic spectrograph limits?
+
+**Protocol.** The script `src/x3_heldout.py` was written and hashed before it was run. It applies X3 with no re-tuning to the HELD-OUT DR5 mocks. This is the first time X3 has touched HELD-OUT.
+
+**Criterion (unchanged from X3):** EIG-ranked RV follow-up must give ≥ 1.2× more correct resolutions than ambiguity-ranked follow-up, with no more wrong ones. The budget is the same for all policies.
+
+Results, as correct / wrong resolutions:
+
+| Setting | Ambiguous candidates | Ambiguity-ranked | Random | Brightest first | Most planet-like first | **EIG-ranked (RV)** | EIG per cost (free choice of option) |
+|---|---|---|---|---|---|---|---|
+| S1 nominal (SB2 if Δv > 8 km/s) | 400 | 58 / 3 | 66 / 1 | 78 / 3 | 77 / 3 | **91 / 0** | 351 / 1 |
+| S2 small-telescope (G ≤ 11.5; SB2 if Δv > 12 km/s; metallicity σ 0.25) | 59 | 3 / 0 | 7 / 0 | 5 / 0 | 8 / 0 | **12 / 0** | 43 / 4 |
+
+**Criterion met in both settings.**
+- In S1, EIG-ranked gives 1.57× the ambiguity-ranked result, and also beats brightest-first and most-planet-like-first.
+- In S2, the numbers are small (n = 59), so the 4× ratio is fragile.
+- In S2 the free-choice policy produced 4 wrong resolutions, all from single-epoch spectra. With a small telescope we therefore recommend the **3-epoch RV option**, not single spectra.
+
+### C2 — Per-candidate period uncertainty in the RVS template (realism fix)
+
+The mock catalogues' own MCMC period errors have a median of **3.5%**, not the 1% assumed until now. The fixed 1% was **optimistic** for typical candidates.
+
+VALIDATION results using each candidate's own σ_P (`results/sigp_validation.json`):
+
+| Quantity | Fixed 1% | Own σ_P |
+|---|---|---|
+| AUC | 0.9761 | 0.9751 |
+| Impostors rejected at 95% retention | 87.3% | 87.1% |
+| Impostors with z > 2.33 | 37.6% | 34.4% |
+
+**Adopted for v3.1**, because it is the correct model. The cost is small and honest.

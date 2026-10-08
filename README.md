@@ -26,6 +26,8 @@ All classification numbers so far are **simulations**. The real test is the blin
   - `benchmark.py`, `eval_v3.py`, `eval_lib.py`, `contam_bins.py`: baselines, stress tests and contamination recovery.
   - `sim.py`, `lik.py`, `followup.py`, `tournament.py`, `x3_sens.py`: v3.1 tools: configurable simulator, competing hypotheses, three-way output, EIG follow-up, and the tournament.
   - `identifiability.py`, `realism.py`: identifiability maps and checks of the simulator against real cadence.
+  - `dr4_pipeline.py`: **DR4 day-1 pipeline** (ADQL fetch → Thiele–Innes features → CMD ridge from field stars → scoring → catalogue with three-way verdict and best follow-up). `python dr4_pipeline.py selftest` runs it end-to-end on mock input.
+  - `x3_heldout.py`, `sigp_val.py`: post-tournament checks (follow-up selection on held-out data; per-candidate σ_P).
   - `inj_rec.py`: injection–recovery on real Gaia cadence.
   - `blind_eval.py`: metrics, bootstrap CIs and the freeze harness.
   - `rv_degeneracy.py`: centroid vs width theory.
