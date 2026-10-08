@@ -260,9 +260,9 @@ section[id]{scroll-margin-top:70px}
   </div>
   <ol class="flow">
     <li><span class="k">01</span><h3><span class="az">Müstəqil pipeline</span><span class="en">Independent pipeline</span></h3><p><span class="az">DR4 epoxa astrometriyası üzərində tək ulduz + Kepler orbiti; Thiele–Innes, MCMC ilə (P, e, T₀).</span><span class="en">Single star + Keplerian on DR4 epoch astrometry; Thiele–Innes, MCMC over (P, e, T₀).</span></p></li>
-    <li><span class="k">02</span><h3><span class="az">Parlaqlıq izi</span><span class="en">Brightness evidence</span></h3><p><span class="az">Rəng–parlaqlıq diaqramında izafi parlaqlıq ΔM<sub>G</sub>; q ~ U(0.5, 1) üzrə marjinallaşdırma.</span><span class="en">Colour–magnitude over-luminosity ΔM<sub>G</sub>, marginalised over q ~ U(0.5, 1).</span></p></li>
-    <li><span class="k">03</span><h3><span class="az">Fazaya bağlı spektr</span><span class="en">Phase-locked spectrum</span></h3><p><span class="az">RVS xətt eni orbitdən gələn şablonla [cos(ν+ω)+e cos ω]² korrelyasiya olunur. Yeni sərbəst parametr yoxdur.</span><span class="en">RVS line width correlated with the orbit's template [cos(ν+ω)+e cos ω]². No new free parameters.</span></p></li>
-    <li><span class="k">04</span><h3><span class="az">Kalibrlənmiş ehtimal</span><span class="en">Calibrated probability</span></h3><p><span class="az">Müstəqil ehtimal nisbətlərindən Bayes faktoru və sabit a priori π = 0.3 → P(saxtakar).</span><span class="en">Bayes factor from independent likelihood ratios and a fixed prior π = 0.3 → P(impostor).</span></p></li>
+    <li><span class="k">02</span><h3><span class="az">Orbit + parlaqlıq birlikdə</span><span class="en">Orbit + brightness, jointly</span></h3><p><span class="az">Saxtakarın kiçik yırğalanması onun hansı kütlə nisbətinə (q) malik olmalı olduğunu göstərir; bu q nə qədər izafi parlaqlıq ΔM<sub>G</sub> tələb edir?</span><span class="en">An impostor's small wobble fixes the mass ratio q it would need; how much extra light ΔM<sub>G</sub> does that q demand?</span></p></li>
+    <li><span class="k">03</span><h3><span class="az">Fazaya bağlı spektr</span><span class="en">Phase-locked spectrum</span></h3><p><span class="az">RVS xətt eni orbit şablonu [cos(ν+ω)+e cos ω]² ilə müqayisə olunur; gözlənilən siqnal hər namizəd üçün öz orbiti və müşahidə ritmi ilə simulyasiya edilir.</span><span class="en">RVS line width vs the orbit template [cos(ν+ω)+e cos ω]²; the expected signal is simulated for each candidate with its own orbit and cadence.</span></p></li>
+    <li><span class="k">04</span><h3><span class="az">Etiketsiz öyrənən prior</span><span class="en">A prior learned without labels</span></h3><p><span class="az">Saxtakar payı π(x) bütün namizəd siyahısından EM alqoritmi ilə, heç bir etiket olmadan qiymətləndirilir → kalibrlənmiş P(saxtakar).</span><span class="en">The impostor fraction π(x) is fitted by EM on the whole candidate list, with no labels → calibrated P(impostor).</span></p></li>
     <li><span class="k">05</span><h3><span class="az">Kor qiymətləndirmə</span><span class="en">Blind evaluation</span></h3><p><span class="az">Möhürlənmiş RV etiketli dəst; RUWE, yalnız-CMD və ML üsulları ilə müqayisə.</span><span class="en">Sealed RV-labelled set; compared with RUWE, CMD-only and an ML baseline.</span></p></li>
   </ol>
 </section>
@@ -270,8 +270,21 @@ section[id]{scroll-margin-top:70px}
 <section class="sec" id="results">
   <div class="sec-head">
     <div class="num">03</div>
-    <h2><span class="az">İlk nəticələr: <em>real DR4 məlumatı</em></span><span class="en">First results on <em>real DR4 data</em></span></h2>
-    <p><span class="az">Kodumuz 2026-cı ilin iyununda açıqlanan DR4 epoxa astrometriyası üzərində işlədildi. Gaia BH3 qara dəliyinin orbiti dərc olunmuş həllə uyğun gəlir.</span><span class="en">Our code was run on the DR4 epoch astrometry released in June 2026. The orbit of the black hole Gaia BH3 matches the published solution.</span></p>
+    <h2><span class="az">İlk nəticələr: <em>DR4 ilkin nümunəsi</em></span><span class="en">First results: <em>the DR4 pre-release sample</em></span></h2>
+    <p><span class="az">ESA 26 iyun 2026-da tam DR4-dən əvvəl bir neçə seçilmiş sistemin epoxa astrometriyasını açıqladı. Pipeline-ı bu ilkin nümunədə yoxladıq. Əsas kor qiymətləndirmə isə yalnız <b>tam DR4</b> (2 dekabr 2026) ilə aparılacaq. Hansı nəticənin hansı məlumatdan gəldiyi aşağıdakı cədvəldədir.</span><span class="en">On 26 June 2026 ESA released epoch astrometry for a few selected systems ahead of full DR4. We checked the pipeline on this pre-release sample. The main blind evaluation will use only the <b>full DR4</b> (2 December 2026). The table below shows which result comes from which data.</span></p>
+  </div>
+  <div class="card">
+    <h3><span class="az">Məlumat mənbələri</span><span class="en">Data provenance</span></h3>
+    <div class="tbl"><table>
+      <thead><tr><th><span class="az">Məlumat</span><span class="en">Data</span></th><th><span class="az">Mənbə · tarix</span><span class="en">Source · date</span></th><th><span class="az">Əhatə</span><span class="en">Coverage</span></th><th><span class="az">Nə üçün istifadə olunur</span><span class="en">Used for</span></th></tr></thead>
+      <tbody>
+        <tr><td><span class="az">DR4 ilkin nümunəsi (epoxa astrometriyası)</span><span class="en">DR4 pre-release (epoch astrometry)</span></td><td>ESA · 26.06.2026</td><td><span class="az">seçilmiş sistemlər (Gaia BH3, Gaia-4 və s.)</span><span class="en">selected systems (Gaia BH3, Gaia-4, …)</span></td><td><span class="az">pipeline yoxlaması (H4), skan ritmi</span><span class="en">pipeline check (H4), scan cadence</span></td></tr>
+        <tr><td><span class="az">Tam Gaia DR4</span><span class="en">Full Gaia DR4</span></td><td>ESA · 02.12.2026</td><td><span class="az">bütün namizədlər — <b>hələ yoxdur</b></span><span class="en">all candidates — <b>not yet available</b></span></td><td><span class="az">kor qiymətləndirmə (H1–H3, H5–H6)</span><span class="en">blind evaluation (H1–H3, H5–H6)</span></td></tr>
+        <tr><td><span class="az">Mock kataloqlar</span><span class="en">Mock catalogues</span></td><td>Lammers &amp; Winn 2025</td><td><span class="az">7 545 planet, 1 151 saxtakar (simulyasiya)</span><span class="en">7,545 planets, 1,151 impostors (simulated)</span></td><td><span class="az">metodun inkişafı, stress testləri</span><span class="en">method development, stress tests</span></td></tr>
+        <tr><td><span class="az">Dərc olunmuş BH3 orbiti</span><span class="en">Published BH3 orbit</span></td><td>Gaia Collab. 2024, A&amp;A</td><td>1</td><td><span class="az">müqayisə</span><span class="en">comparison</span></td></tr>
+        <tr><td><span class="az">Etiketlər</span><span class="en">Labels</span></td><td><span class="az">11 məqalə (yer teleskopları)</span><span class="en">11 papers (ground-based)</span></td><td><span class="az">65 analizdə</span><span class="en">65 analysed</span></td><td><span class="az">kor test</span><span class="en">blind test</span></td></tr>
+      </tbody>
+    </table></div>
   </div>
   <div class="grid2">
     <div class="card">
@@ -286,7 +299,7 @@ section[id]{scroll-margin-top:70px}
           <tr><td><span class="az">Paralaks [mas]</span><span class="en">Parallax [mas]</span></td><td class="n">1.659 ± 0.002</td><td class="n">1.6747 ± 0.0094</td><td class="ok">1.6σ</td></tr>
         </tbody>
       </table></div>
-      <p><span class="az">Gaia-4b planeti P = 579 ± 4 gün periodla tapılır (Δχ² = 1683); kütlə ≈ 10.7 M<sub>Yup</sub> (ədəbiyyat: 11.8 M<sub>Yup</sub>).</span><span class="en">The planet Gaia-4b is recovered at P = 579 ± 4 d (Δχ² = 1683); mass ≈ 10.7 M<sub>J</sub> (literature: 11.8 M<sub>J</sub>).</span></p>
+      <p><span class="az">Gaia-4b planeti P = 579 ± 4 gün periodla tapılır (Δχ² = 1683); kütlə ≈ 10.7 M<sub>Yup</sub> (ədəbiyyat: 11.8 M<sub>Yup</sub>). Bu məlumata baxıldığı üçün Gaia-4 kor testdən çıxarılıb.</span><span class="en">The planet Gaia-4b is recovered at P = 579 ± 4 d (Δχ² = 1683); mass ≈ 10.7 M<sub>J</sub> (literature: 11.8 M<sub>J</sub>). Because these data were inspected, Gaia-4 is excluded from the blind test.</span></p>
     </div>
     <div class="card">
       <h3><span class="az">Aşkarlama tamlığı · real Gaia skan ritmi</span><span class="en">Detection completeness · real Gaia cadence</span></h3>
@@ -325,6 +338,48 @@ section[id]{scroll-margin-top:70px}
       <p class="note"><span class="az">Yalnız simulyasiya. Real DR4 RVS xətt eni dəqiqliyi və real CMD səpələnməsi buraxılışa qədər məlum deyil — H2 fərziyyəsinin əsas riski budur.</span><span class="en">Simulation only. The real DR4 RVS line-width precision and true CMD scatter are unknown until release — the main risk to hypothesis H2.</span></p>
     </div>
   </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3><span class="az">Etiketsiz GAIA-FP vs simulyatorda öyrədilmiş ML</span><span class="en">Label-free GAIA-FP vs ML trained on the simulator</span></h3>
+      <p style="font-size:14px;color:var(--muted)"><span class="az">ML simulyatorun öz “düzgün cavablarını” görüb öyrənib. GAIA-FP heç bir etiket görmür. Hər xanada: AUC / 95% planet saxlanmasında rədd edilən saxtakarlar.</span><span class="en">The ML model learned from the simulator's own answers. GAIA-FP sees no labels at all. Each cell: AUC / impostors rejected at 95% planet retention.</span></p>
+      <div class="tbl"><table>
+        <thead><tr><th><span class="az">Sınaq</span><span class="en">Test</span></th><th>ML</th><th>GAIA-FP v3 + EM</th></tr></thead>
+        <tbody>
+          <tr><td><span class="az">Eyni paylanma</span><span class="en">Same distribution</span></td><td class="n">0.979 / 89%</td><td class="n" style="color:var(--gold)">0.980 / 91%</td></tr>
+          <tr><td><span class="az">Demoqrafik sürüşmə</span><span class="en">Demographic shift</span></td><td class="n">0.976 / 88%</td><td class="n" style="color:var(--gold)">0.976 / 89%</td></tr>
+          <tr><td><span class="az">Səs-küy dəyişdi (0.45 mag)</span><span class="en">Noise changed (0.45 mag)</span></td><td class="n">0.929 / 67%</td><td class="n" style="color:var(--gold)">0.949 / 72%</td></tr>
+        </tbody>
+      </table></div>
+      <p style="font-size:14px;color:var(--muted)"><span class="az">RUWE (standart göstərici) burada praktiki olaraq təsadüfi işləyir: AUC 0.52. Saxtakarlar planetin yırğalanmasını təqlid etdiyi üçün bu gözləniləndir.</span><span class="en">RUWE, the standard flag, is near random here: AUC 0.52 — expected, because impostors mimic the planet's wobble.</span></p>
+    </div>
+    <div class="card">
+      <h3><span class="az">Çirklənmə payını etiketsiz ölçmək</span><span class="en">Measuring contamination without labels</span></h3>
+      <div id="contam" role="img" aria-label="True vs estimated contamination"></div>
+      <p style="font-size:13px;color:var(--muted)"><span class="az">Həqiqi saxtakar payı (x) və GAIA-FP-in etiketsiz təxmini (y), 95% CI ilə. Diaqonal = mükəmməl.</span><span class="en">True impostor fraction (x) vs GAIA-FP's label-free estimate (y), with 95% CI. Diagonal = perfect.</span></p>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3><span class="az">Üç cavab: planet · saxtakar · <em>bilinmir</em></span><span class="en">Three answers: planet · impostor · <em>undecided</em></span></h3>
+      <p><span class="az">GAIA-FP hər ulduz üçün məcburi qərar vermir. P ≤ 0.15 olarsa “ehtimalla substellar”, P ≥ 0.85 olarsa “ehtimalla saxtakar”, aradakılar isə “qeyri-müəyyən — əlavə müşahidə lazımdır” kimi qeyd olunur. Hədd əvvəlcədən validasiya dəstində seçilib və sonra heç dəyişdirilməyib.</span><span class="en">GAIA-FP does not force a verdict on every star. P ≤ 0.15 is reported as “likely substellar”, P ≥ 0.85 as “likely impostor”, and anything in between as “ambiguous — follow-up needed”. The threshold was chosen on a validation set and then never changed.</span></p>
+      <div class="tbl"><table>
+        <thead><tr><th><span class="az">Ayrıca saxlanmış test (DR5 mock)</span><span class="en">Held-out test (DR5 mocks)</span></th><th><span class="az">Nəticə</span><span class="en">Result</span></th></tr></thead>
+        <tbody>
+          <tr><td><span class="az">Qərar verilən namizədlər</span><span class="en">Candidates decided</span></td><td class="n">84%</td></tr>
+          <tr><td><span class="az">Onların arasında səhv</span><span class="en">Error among them</span></td><td class="n">2.0% (95% CI 1.6–2.4%)</td></tr>
+          <tr><td>AUC · GAIA-FP / ML</td><td class="n" style="color:var(--gold)">0.978 / 0.971</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="card">
+      <h3><span class="az">Qeyri-müəyyənlər üçün: hansı müşahidə ən çox məlumat verər?</span><span class="en">For ambiguous stars: which observation is most informative?</span></h3>
+      <p><span class="az">Hər qeyri-müəyyən namizəd üçün gözlənilən məlumat qazancı (EIG) hesablanır: 3 epoxalı RV spektroskopiyası, tək spektr (metallik) və ya təsvir (speckle/AO). Simulyasiyada eyni teleskop büdcəsi ilə EIG sıralaması sadə “ən qeyri-müəyyən birinci” sıralamasından 1.5–2.7 dəfə çox namizədi düzgün həll etdi.</span><span class="en">For every ambiguous candidate the expected information gain (EIG) is computed for 3-epoch RV spectroscopy, a single spectrum (metallicity) or imaging (speckle/AO). In simulation, with the same telescope budget, EIG ranking correctly resolved 1.5–2.7× more candidates than simply observing the most ambiguous first.</span></p>
+      <p class="note"><span class="az">GAIA-FP özü müşahidə etmir; o, yalnız hansı müşahidənin ən faydalı olacağını tövsiyə edir.</span><span class="en">GAIA-FP does not observe anything itself; it only recommends which observation would help most.</span></p>
+    </div>
+  </div>
+  <p class="note"><span class="az">Bu bölmədəki bütün rəqəmlər Lammers &amp; Winn (2025) mock kataloqları üzərində simulyasiyadır; real DR4 nəticəsi deyil.</span><span class="en">All numbers in this block are simulations on the Lammers &amp; Winn (2025) mocks, not real DR4 results.</span></p>
 </section>
 
 <section class="sec" id="prereg">
@@ -334,22 +389,24 @@ section[id]{scroll-margin-top:70px}
     <p><span class="az">Fərziyyələr, metod və hədlər DR4 məlumatı mövcud olmamışdan əvvəl yazılır və SHA-256 hash ilə möhürlənir. Etiketli dəstin özü gizli qalır; açıq yerdə yalnız onun hash-i var.</span><span class="en">Hypotheses, method and thresholds are written down and sealed with SHA-256 hashes before any DR4 data exists. The labelled set itself stays private; only its hash is public.</span></p>
   </div>
   <ul class="tl">
-    <li class="done"><b><span class="az">İyun 2026</span><span class="en">Jun 2026</span></b><span><span class="az">Pipeline DR4 ilkin məlumatı ilə yoxlandı</span><span class="en">Pipeline checked on DR4 pre-release data</span></span></li>
-    <li class="done"><b><span class="az">9 okt 2026</span><span class="en">9 Oct 2026</span></b><span><span class="az">GitHub-da ilk zaman möhürü</span><span class="en">First timestamp on GitHub</span></span></li>
-    <li><b><span class="az">Noy 2026</span><span class="en">Nov 2026</span></b><span><span class="az">Metod və etiketlər (v2) dondurulur</span><span class="en">Method and labels (v2) frozen</span></span></li>
-    <li class="key"><b><span class="az">2 dek 2026</span><span class="en">2 Dec 2026</span></b><span><span class="az">Gaia DR4 açıqlanır</span><span class="en">Gaia DR4 released</span></span></li>
+    <li class="done"><b><span class="az">İyun 2026</span><span class="en">Jun 2026</span></b><span><span class="az">Pipeline DR4 ilkin nümunəsi ilə yoxlandı (ESA, 26 iyun)</span><span class="en">Pipeline checked on the DR4 pre-release (ESA, 26 June)</span></span></li>
+    <li class="done"><b><span class="az">9 okt 2026</span><span class="en">9 Oct 2026</span></b><span><span class="az">GitHub-da zaman möhürü; etiketlər v2 möhürləndi</span><span class="en">GitHub timestamp; labels v2 sealed</span></span></li>
+    <li><b><span class="az">Noy 2026</span><span class="en">Nov 2026</span></b><span><span class="az">Metod son dəfə dondurulur (OSF/Zenodo)</span><span class="en">Method frozen for good (OSF/Zenodo)</span></span></li>
+    <li class="key"><b><span class="az">2 dek 2026</span><span class="en">2 Dec 2026</span></b><span><span class="az">Tam Gaia DR4 açıqlanır</span><span class="en">Full Gaia DR4 released</span></span></li>
     <li><b><span class="az">Dek–Fev</span><span class="en">Dec–Feb</span></b><span><span class="az">Kor qiymətləndirmə və etiketlərin açılması</span><span class="en">Blind scoring, then unblinding</span></span></li>
   </ul>
   <div class="hyp">
     <div class="card"><b>H1 · <span class="az">ayırma</span><span class="en">discrimination</span></b><p><span class="az">Tam skor saxtakarları təsdiqlənmiş substellar sistemlərdən AUC ≥ 0.80 ilə ayırır. 95% CI 0.5-i əhatə edərsə, rədd edilir.</span><span class="en">The full score separates impostors from confirmed substellar systems with AUC ≥ 0.80. Falsified if the 95% CI includes 0.5.</span></p></div>
     <div class="card"><b>H2 · <span class="az">RVS-in faydası</span><span class="en">value of RVS</span></b><p><span class="az">≥ 15 RVS epoxası olan obyektlərdə faza testi 95% planet saxlanmasında rədd payını artırır (cütləşdirilmiş bootstrap).</span><span class="en">For objects with ≥ 15 RVS epochs the phase test raises rejection at 95% planet retention (paired bootstrap).</span></p></div>
     <div class="card"><b>H3 · <span class="az">kalibrləmə</span><span class="en">calibration</span></b><p><span class="az">Tam modelin Brier skoru yalnız-CMD modelindən aşağıdır.</span><span class="en">The full model has a lower Brier score than CMD-only.</span></p></div>
+    <div class="card"><b>H5 · <span class="az">çirklənmə</span><span class="en">contamination</span></b><p><span class="az">Etiketsiz EM təxmini etiketli dəstdə müşahidə olunan saxtakar payı ilə 95% CI daxilində üst-üstə düşür.</span><span class="en">The label-free EM estimate matches the impostor fraction seen in the labelled set within its 95% CI.</span></p></div>
+    <div class="card"><b>H6 · <span class="az">etiketsiz vs ML</span><span class="en">no labels vs ML</span></b><p><span class="az">Real etiketli dəstdə GAIA-FP-in AUC-u simulyatorda öyrədilmiş ML-dən aşağı deyil.</span><span class="en">On the real labelled set GAIA-FP's AUC is not lower than ML trained on the simulator.</span></p></div>
     <div class="card"><b>H4 · <span class="az">pipeline</span><span class="en">pipeline</span></b><p><span class="az">Dərc olunmuş DR4 orbitləri 2σ daxilində təkrarlanır — ilkin məlumatda artıq ödənib.</span><span class="en">Published DR4 orbits reproduced within 2σ — already met on the pre-release.</span></p></div>
   </div>
   <div class="card">
-    <h3><span class="az">Möhürlənmiş etiketli dəst · labels_v1</span><span class="en">Sealed labelled set · labels_v1</span></h3>
-    <p><span class="az">33 sistem: 19 saxtakar (əkiz SB2), 12 substellar (RV ilə təsdiqlənmiş), 2 həll olunmamış (metrikalardan çıxarılır). Mənbələr: Marcussen et al. 2026, Marcussen &amp; Albrecht 2023, Barbato et al. 2026.</span><span class="en">33 systems: 19 impostors (twin SB2), 12 substellar (RV-confirmed), 2 unresolved (excluded from metrics). Sources: Marcussen et al. 2026, Marcussen &amp; Albrecht 2023, Barbato et al. 2026.</span></p>
-    <div class="hash">SHA-256 44f30e2279664cdb0c977413cee4ca5117356ef18f7166fcde4e4563f45edb51</div>
+    <h3><span class="az">Möhürlənmiş etiketli dəst · labels_v2</span><span class="en">Sealed labelled set · labels_v2</span></h3>
+    <p><span class="az">Siyahıda 76 sistem var (11 məqalə, yer teleskoplarının RV/spektroskopiyası). <b>Analizə 65 sistem daxildir: 39 saxtakar + 26 substellar.</b> 11 sistem bütün metrikalardan əvvəlcədən çıxarılır: 10-u ziddiyyətli və ya zəif etiketə görə, 1-i (Gaia-4) isə onun DR4 ilkin məlumatı pipeline yoxlamasında artıq istifadə olunduğu üçün.</span><span class="en">The list holds 76 systems (11 papers, ground-based RV/spectroscopy). <b>65 enter the analysis: 39 impostors + 26 substellar.</b> 11 are excluded from all metrics in advance: 10 for conflicting or low-confidence labels, and 1 (Gaia-4) because its DR4 pre-release data were already used in the pipeline check.</span></p>
+    <div class="hash">SHA-256 d6b0aabbf164692e8b5d11042989017dbf624362b8e0192484420ee760b38169</div>
   </div>
 </section>
 
@@ -360,9 +417,12 @@ section[id]{scroll-margin-top:70px}
   </div>
   <ul class="lim">
     <li><span class="az">RVS epoxa məlumatı yalnız parlaq ulduzlar üçün var, ona görə spektral test namizədlərin bir hissəsini əhatə edir.</span><span class="en">RVS epoch data exist only for bright stars, so the spectral test covers a subset of candidates.</span></li>
-    <li><span class="az">Etiketli dəst kiçikdir və parlaq şimal ulduzlarına meyllidir; rədd payının etibar intervalları geniş olacaq.</span><span class="en">The labelled set is small and biased toward bright northern stars; rejection-rate intervals will be wide.</span></li>
+    <li><span class="az">Analizə daxil olan etiketli dəst (65 sistem) hələ də kiçikdir və parlaq ulduzlara meyllidir; etibar intervalları geniş olacaq.</span><span class="en">The analysed labelled set (65 systems) is still small and biased toward bright stars; intervals will be wide.</span></li>
+    <li><span class="az">Simulyasiya nəticələri simulyatorun fərziyyələrini daşıyır; etiketsiz EM ümumi çirklənməni +0.01–0.02 qədər artıq qiymətləndirir.</span><span class="en">Simulation results inherit the simulator's assumptions; the label-free EM overestimates total contamination by +0.01–0.02.</span></li>
     <li><span class="az">Etiketləri analiz edən şəxs özü topladığı üçün kor test zaman ardıcıllığına əsaslanır: metod hər hansı DR4 əlaməti mövcud olmamışdan əvvəl dondurulur.</span><span class="en">Labels were compiled by the analyst, so blinding rests on time ordering: the method is frozen before any DR4 feature exists.</span></li>
     <li><span class="az">Transit üzrə ortalama xətaları azaldır; CCD səviyyəli məlumatla düzəldiləcək (BH3 paralaksında 1.6σ fərq).</span><span class="en">Per-transit averaging underestimates errors; to be fixed with CCD-level data (1.6σ offset in BH3 parallax).</span></li>
+    <li><span class="az"><b>Ən yaxın əvvəlki iş:</b> astrometriya ilə fotometriyanı birlikdə istifadə edərək əkiz binarları planetlərdən ayırmaq Bailer-Jones &amp; Kreidberg (2026, A&amp;A) tərəfindən artıq edilib. GAIA-FP bu ideyanı özünə aid etmir. Bizim fərqimiz daha dardır: kalibrlənmiş ehtimal, fazaya bağlı RVS testi, etiketsiz çirklənmə təxmini, üç cavablı nəticə və əvvəlcədən qeydiyyatlı kor test.</span><span class="en"><b>Closest prior work:</b> using astrometry and photometry jointly to separate twin binaries from planets was already done by Bailer-Jones &amp; Kreidberg (2026, A&amp;A). GAIA-FP does not claim that idea. Our difference is narrower: calibrated probabilities, a phase-locked RVS test, label-free contamination, a three-way output and a pre-registered blind test.</span></li>
+    <li><span class="az">RVS epoxa məlumatı olmayan (G ≳ 13) və CMD səpələnməsi böyük olan ulduzlarda planet sahibi + uzaq ulduz yoldaşı ilə saxtakarı Gaia məlumatı ilə ayırmaq <b>mümkün deyil</b>; belə hallar “qeyri-müəyyən” kimi verilir.</span><span class="en">For stars without RVS epochs (G ≳ 13) and with large CMD scatter, a planet host with a wide stellar companion <b>cannot</b> be told apart from an impostor with Gaia data; such cases are reported as “ambiguous”.</span></li>
     <li><span class="az">Yeni namizədlər müsabiqəyə qədər RV ilə təsdiqlənə bilməz və yalnız kalibrlənmiş namizəd kimi təqdim olunur.</span><span class="en">New candidates cannot be RV-confirmed before the competition and are reported as calibrated candidates only.</span></li>
   </ul>
 </section>
@@ -564,6 +624,17 @@ section[id]{scroll-margin-top:70px}
     var xh='<div></div>';
     d.forEach(function(r){h+='<div class="grp"><div class="b c1" style="height:'+r[1]+'%"><i>'+r[1]+'</i></div><div class="b c2" style="height:'+r[2]+'%"><i>'+r[2]+'</i></div></div>'; xh+='<div>'+r[0]+' mag</div>'});
     B.innerHTML=h; xl.innerHTML=xh;
+  })();
+
+  /* ---------- contamination recovery (SVG, to scale) ---------- */
+  (function(){
+    var d=[[0.05,0.051,0.044,0.058],[0.10,0.106,0.093,0.119],[0.20,0.213,0.199,0.227],[0.30,0.324,0.305,0.352],[0.45,0.474,0.448,0.501]];
+    var W=320,H=240,l=40,b=30,t=10,r=10, X=function(v){return l+v/0.5*(W-l-r)}, Y=function(v){return H-b-v/0.5*(H-b-t)};
+    var g='<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:420px;display:block" font-family="IBM Plex Mono, monospace" font-size="10">';
+    [0,0.1,0.2,0.3,0.4,0.5].forEach(function(v){g+='<line x1="'+l+'" x2="'+(W-r)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="var(--line)"/><text x="'+(l-6)+'" y="'+(Y(v)+3)+'" text-anchor="end" fill="var(--dim)">'+Math.round(v*100)+'%</text><text x="'+X(v)+'" y="'+(H-b+14)+'" text-anchor="middle" fill="var(--dim)">'+Math.round(v*100)+'%</text>'});
+    g+='<line x1="'+X(0)+'" y1="'+Y(0)+'" x2="'+X(0.5)+'" y2="'+Y(0.5)+'" stroke="var(--line2)" stroke-dasharray="4 4"/>';
+    d.forEach(function(p){g+='<line x1="'+X(p[0])+'" x2="'+X(p[0])+'" y1="'+Y(p[2])+'" y2="'+Y(p[3])+'" stroke="var(--gold)" stroke-width="2"/><circle cx="'+X(p[0])+'" cy="'+Y(p[1])+'" r="4" fill="var(--gold)"/>'});
+    g+='</svg>'; document.getElementById('contam').innerHTML=g;
   })();
 
   /* ---------- heatmap ---------- */

@@ -3,7 +3,7 @@
 **A Gaia-only probabilistic test for stellar-binary impostors among astrometric substellar-companion candidates, evaluated blind on Gaia DR4**
 
 - Author: Omar Abdullayev (Secondary School No. 39, Ganja, Azerbaijan)
-- Version: v0.1 DRAFT, 8 October 2026
+- Version: v0.2 DRAFT, 9 October 2026 (v0.1: 8 October 2026; changes listed in §12)
 - **Freeze deadline: before Gaia DR4 release (2 December 2026, ~12:00 CET).** The final version and every hash below must be committed to a public GitHub repository, which provides the timestamp, before that moment. Any change after freezing is reported as a deviation (§9).
 
 ## 1. Background and gap
@@ -31,33 +31,45 @@ All hypotheses are evaluated on the sealed labelled set (§5), using DR4 data.
   - Tested with a paired comparison on the same objects, reported with a bootstrap CI of the difference.
   - *Falsified if* that CI includes 0 **and** the point estimate is ≤ 0.
 - **H3 (calibration).** In the pooled synthetic and real evaluation, the Brier score of the full model is lower than that of the CMD-only model.
-- **H4 (pipeline validity).** The independent orbit pipeline recovers the published DR4 orbits of Gaia BH3 and Gaia-4 within 2σ in P, e and a0.
+- **H5 (label-free contamination).** The unlabelled EM estimate of the impostor fraction among DR4 substellar candidates with labels agrees with the fraction observed in the labelled set within its 95% CI. (Development: recovered within +0.00 to +0.02 on mocks for true 5–45%.)
+- **H6 (no-label method vs. simulator-trained ML).** On the real labelled set, GAIA-FP v3+EM has an AUC not lower than a gradient-boosting classifier trained on the Lammers & Winn simulator (paired bootstrap; falsified if the CI of AUC_ML − AUC_GAIA-FP lies entirely above 0).
+- **H4 (pipeline validity).** The independent orbit pipeline recovers the published orbits of Gaia BH3 (Gaia Collaboration 2024) and Gaia-4 (Stefánsson et al. 2025) from the DR4 pre-release epoch astrometry within 2σ in P, e and a0. This is a pipeline check only and is not part of the blind test.
   - Already verified on the June 2026 pre-release: BH3 P = 4194 ± 128 d vs 4195 ± 112; e = 0.728 ± 0.006 vs 0.726 ± 0.006; a0 = 27.15 ± 0.67 vs 27.07 ± 0.56 mas.
 
 ## 4. Data
+
+| Data | Source · date | Coverage | Used for |
+|---|---|---|---|
+| DR4 pre-release epoch astrometry | ESA, 26 June 2026 | a few selected systems (Gaia BH3, Gaia-4, …) | pipeline validation (H4), real scan cadence for injection–recovery |
+| Full Gaia DR4 | ESA, 2 December 2026 | all candidates (not yet available) | blind evaluation (H1–H3, H5, H6) |
+| Lammers & Winn (2025) mocks | GitHub CalebLammers/GaiaForecasts | 7545 planets, 1151 impostors (simulated) | method development only |
+| Labels | 11 papers, ground-based RV/spectroscopy | 65 analysed | blind test |
+
+Full DR4 tables to be used:
 
 - **Gaia DR4** (from 2 December 2026): `epoch_astrometry`, `nss_two_body_orbit`, `gaia_source` (photometry, parallax, RUWE), `rvs_epoch_parameters_single` / `_double` (RV, line broadening), `xp_continuous_mean_spectrum`.
 - **Synthetic populations:** Lammers & Winn (2025) DR4 mock exoplanet (7545) and impostor (1151) catalogues, GitHub CalebLammers/GaiaForecasts. These are used for development only. They are **not** used to tune the priors in §6.
 
 ## 5. Sealed labelled set
 
-- File: `sealed/labels_v1.json`.
-- **SHA-256: `44f30e2279664cdb0c977413cee4ca5117356ef18f7166fcde4e4563f45edb51`**
+- File: `sealed/labels_v2.json` (supersedes v1; v1 hash kept below for the record).
+- **SHA-256 (v2): `d6b0aabbf164692e8b5d11042989017dbf624362b8e0192484420ee760b38169`**
+- v2 contents: 76 unique systems. **65 enter the analysis: 39 impostors + 26 substellar.** 11 are excluded from all metrics: 10 unresolved/conflicting/low-confidence, and 1 (Gaia-4 = PM J13580+3141) whose DR4 pre-release epoch astrometry was already analysed during pipeline validation. Rules fixed before seeing any Gaia feature: labels only from ground-based spectroscopy/RV or imaging; conflicting sources or low confidence → excluded; any object whose DR4 data (including the 26 June 2026 pre-release) were inspected before freezing → excluded. The 7 Barbato PENDING ids are resolved; one duplicate (HIP 105707 = LP 341-28) removed.
+- v1 SHA-256 (historical): `44f30e2279664cdb0c977413cee4ca5117356ef18f7166fcde4e4563f45edb51`
 - Contents: 33 entries.
   - 19 impostors (near-twin SB2).
   - 12 substellar (brown dwarfs or planet, RV-confirmed).
   - 2 unresolved, which are **excluded** from all metrics.
-- 7 entries from Barbato et al. 2026 have source_id = PENDING. They will be resolved from the published tables before freezing, then re-sealed as `labels_v2`.
-- Sources: Marcussen et al. 2026; Marcussen & Albrecht 2023; Barbato et al. 2026.
-- **Honesty note:** the labels were compiled by the analysis team, so blinding relies on *time ordering*. The method, priors and thresholds are frozen before any DR4 feature of any labelled object exists. No DR3 or DR4 feature of a labelled object is inspected before freezing.
+- Sources: Marcussen et al. 2026; Marcussen & Albrecht 2023; Barbato et al. 2026; Stefánsson et al. 2025; Pinamonti et al. 2025; Unger et al. 2023; Winn 2022; Fitzmaurice et al. 2024; Horch et al. 2020; Bonavita et al. 2022; Venner et al. 2026.
+- **Honesty note:** the labels were compiled by the analysis team, so blinding relies on *time ordering*. The method, priors and thresholds are frozen before any DR4 feature of any labelled object exists. No DR3 or DR4 feature of an analysed labelled object is inspected before freezing. The one exception found during the audit is Gaia-4: its pre-release epoch astrometry was used for pipeline validation, so Gaia-4 is excluded from all metrics.
 
-## 6. Method (frozen)
+## 6. Method (frozen) — GAIA-FP v3
 
-1. **Astrometric fit.** A 5-parameter single-star model plus a Keplerian, using Thiele–Innes linearisation. Linear parameters are marginalised analytically, and (P, e, T0) are sampled with MCMC. Errors are inflated so that the reduced χ² = 1.
-2. **CMD evidence.** ΔM_G = M_G − M_G,MS(BP−RP). Under H_t, ΔM_G ~ N(μ(q), σ) with q ~ U(0.5, 1), μ = −2.5 log10(1 + q⁴). Under H_p, μ = 0. Here σ is the empirical main-sequence scatter of field stars in the same colour bin, measured from DR4 non-candidate stars.
-3. **RVS phase evidence.** S = corr(σ_obs²(t_i), [cos(ν_i + ω) + e cos ω]²), using orbital elements from step 1 only. Then z = atanh(S)·√(n−3). Under H_p, z ~ N(0, 1); under H_t, z ~ N(μ, 1) with μ ~ U(0, 6).
-4. **Combination.** log BF = log LR_CMD + log LR_RVS (independent evidence), and P(impostor) = σ(log BF + logit π). The prior π = 0.3 is fixed a priori and is not taken from the labelled set.
-
+1. **Astrometric fit.** A 5-parameter single-star model plus a Keplerian, using Thiele–Innes linearisation. Linear parameters are marginalised analytically, and (P, e, T0) are sampled with MCMC. Errors are inflated so that the reduced χ² = 1. Output: a0, σ_a0, P, e, i, ω, T0.
+2. **Joint astrometric–photometric evidence (`joint_lr.py`).** Under H_t, latent q ~ U(0.1, 1) and G-band mass–luminosity slope n ~ U(2, 6), with β = qⁿ/(1+qⁿ), M1 = M_phot/(1+qⁿ)^(1/n), a0_pred = a_rel(M1, q, P)·|q/(1+q) − β|·ϖ and ΔM_G = −2.5 log10(1+qⁿ). The LR uses the conditional p(ΔM_G | a0, H_t) / p(ΔM_G | H_p) with ΔM_G ~ N(μ, σ). Here σ is the main-sequence scatter of field stars in the same colour bin, measured from DR4 non-candidate stars.
+3. **RVS evidence, physics-predicted per candidate (`rvs_predict.py`).** S = corr(σ_obs²(t_i), [cos(ν_i+ω) + e cos ω]²) and z = atanh(S)·√(n−3). Under H_p, z ~ N(0, 1). Under H_t, p(z) is obtained by simulating 40 draws of (q, n) with the candidate's own orbit, epochs and precision (Gaussian KDE, bandwidth 0.5).
+4. **Combination.** log LR = log LR_(a0,CMD) + log LR_RVS.
+5. **Population prior (`hier_em.py`).** logit π(x) is linear in standardised (G, log P, e, log d, log M_fit) and is fitted by EM on the **unlabelled** list of all DR4 substellar candidates (L2 regularisation C = 1). Then P(impostor)_i = σ(log LR_i + logit π(x_i)). The constant-π EM is reported as a sensitivity analysis. The previous fixed prior π = 0.3 is retained as a secondary analysis.
 ## 7. Metrics, baselines and analysis
 
 - **Primary metrics:**
@@ -67,7 +79,7 @@ All hypotheses are evaluated on the sealed labelled set (§5), using DR4 data.
 - **Baselines:**
   1. RUWE threshold.
   2. CMD-only likelihood ratio.
-  3. A re-implementation of Sahlmann & Gómez (2025), where feasible.
+  3. A gradient-boosting classifier trained on the Lammers & Winn DR4 simulator (features P, e, M_fit, d, G, ΔM_G, z), and a re-implementation of Sahlmann & Gómez where feasible.
   4. Random scoring (null).
 - **Ablations:** CMD only, RVS only, CMD + RVS; and bright (G_RVS ≤ 12) vs faint subsamples.
 - **Injection–recovery:** synthetic orbits injected into real DR4 epoch geometry of non-candidate stars. The FAP = 1% detection threshold comes from 400 null simulations per cadence. Completeness is mapped over mass × period × distance.
@@ -79,6 +91,13 @@ All hypotheses are evaluated on the sealed labelled set (§5), using DR4 data.
 - An independent search of DR4 epoch astrometry of nearby stars for substellar candidates not in `nss_two_body_orbit`.
 - Any such candidate is reported with its FAP and P(impostor). No candidate is called a "planet" without RV confirmation.
 
+## 8b. Development results (mocks only, before freezing)
+
+See `results/RESULTS_v3.md`. Summary:
+- The LR is calibrated: E_planet[LR] = 1.05 and E_imp[1/LR] = 0.99.
+- The no-label v3+EM reaches AUC 0.980, versus 0.979 for ML trained on the simulator. Under a CMD-noise shift it reaches 0.949 versus 0.929.
+- Contamination is recovered within +0.00 to +0.02 for true values of 5–45%.
+
 ## 9. Deviations policy
 
 Any change after freezing is logged with its date and reason. Results are reported both with and without the change.
@@ -87,7 +106,7 @@ Any change after freezing is logged with its date and reason. Results are report
 
 Code drafting and the literature search were assisted by an AI system (Claude, Anthropic). All analysis choices are reviewed, understood and owned by the author. The AI-assisted portions are disclosed on the ISEF forms.
 
-## 11. Frozen file hashes (v0.1 draft; to be recomputed at freeze)
+## 11. File hashes (v0.1 draft list; recomputed at freeze)
 
 ```
 f422c294c9680007c0b0d59af9848c393baecce671ffa062acbb6be865096113  gaia_orbit.py
@@ -100,3 +119,15 @@ b3fc3f7fac3cd4643388162fd5011eb175006e68521fd71ff502deccd2ec274c  rvs_phase_test
 def4edfd12f63105ab85af7253adf04918a62aa4a56a5ce3a87708443a50a69f  inj_rec.py
 44f30e2279664cdb0c977413cee4ca5117356ef18f7166fcde4e4563f45edb51  sealed/labels_v1.json
 ```
+
+## 12. Changes v0.1 → v0.2 (9 October 2026, before any DR4 data exist)
+
+1. Labelled set expanded to v2 (76 systems) and re-sealed.
+2. The method was upgraded to v3, with three changes:
+   - joint a0–CMD likelihood conditioned on a0;
+   - per-candidate physics prediction for the RVS term;
+   - mass–luminosity slope marginalised.
+3. Added the label-free EM population prior, with H5 and H6.
+4. Added the ML-trained-on-simulator baseline.
+
+Reason for the changes: mock-based development showed that the v1 likelihood ratios were miscalibrated (E_imp[1/LR] = 0.31) and that a fixed slope n = 4 mis-predicts a0. All changes were decided before DR4 exists and before any Gaia feature of a labelled object was inspected.
