@@ -23,6 +23,8 @@
 | Abstention ("ambiguous") output | Generic reject-option classifiers; exoplanet vetting tools report probabilities | Pieces exist | A validated coverage–error curve for Gaia impostor vetting: held-out 84% decided at 2.0% error. |
 | EIG-ranked follow-up | Loredo 2004 (Bayesian adaptive exploration); Ford 2008 (RV scheduling); active-learning follow-up (Ishida 2019; Astudillo 2019) | **Principle known**; not found for Gaia impostor vetting | Ranking candidates for a fixed instrument by EIG resolves 1.5–2.7× more ambiguous candidates than ranking by ambiguity, in a truth-based simulation. The choice of instrument depends on unvalidated assumptions about the metallicity correction. |
 | Pre-registration and blind test with sealed labels | Blinding in KiDS-450 (Hildebrandt 2017) and DES (Muir 2020) | Not found for exoplanet candidate vetting | A credibility asset, not a scientific result in itself. |
+| Independent validation with public survey SB2 catalogues (H7) | Bashi et al. 2022, MNRAS 517, 3888: validated Gaia DR3 **spectroscopic** SB1 orbits with LAMOST and GALAH RVs. Marcussen et al. 2026 used only their own spectra (FIES, NIRPS, NEID). | Not found for astrometric substellar candidates | Uses existing APOGEE, GALAH and LAMOST SB2 detections as independent impostor labels for Gaia DR4 astrometric candidates. Survey RV scatter is excluded by design, because of the centroid degeneracy. |
+
 
 ## Defensible contribution statement (draft)
 

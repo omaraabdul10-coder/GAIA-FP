@@ -3,7 +3,7 @@
 **A Gaia-only probabilistic test for stellar-binary impostors among astrometric substellar-companion candidates, evaluated blind on Gaia DR4**
 
 - Author: Omar Abdullayev (Secondary School No. 39, Ganja, Azerbaijan)
-- Version: v0.2 DRAFT, 9 October 2026 (v0.1: 8 October 2026; changes listed in §12)
+- Version: v0.3 DRAFT, 9 October 2026 (v0.1: 8 Oct; v0.2: 9 Oct; changes listed in §12–13)
 - **Freeze deadline: before Gaia DR4 release (2 December 2026, ~12:00 CET).** The final version and every hash below must be committed to a public GitHub repository, which provides the timestamp, before that moment. Any change after freezing is reported as a deviation (§9).
 
 ## 1. Background and gap
@@ -33,6 +33,18 @@ All hypotheses are evaluated on the sealed labelled set (§5), using DR4 data.
 - **H3 (calibration).** In the pooled synthetic and real evaluation, the Brier score of the full model is lower than that of the CMD-only model.
 - **H5 (label-free contamination).** The unlabelled EM estimate of the impostor fraction among DR4 substellar candidates with labels agrees with the fraction observed in the labelled set within its 95% CI. (Development: recovered within +0.00 to +0.02 on mocks for true 5–45%.)
 - **H6 (no-label method vs. simulator-trained ML).** On the real labelled set, GAIA-FP v3+EM has an AUC not lower than a gradient-boosting classifier trained on the Lammers & Winn simulator (paired bootstrap; falsified if the CI of AUC_ML − AUC_GAIA-FP lies entirely above 0).
+- **H7 (independent validation with public spectroscopic surveys).** Among DR4 substellar candidates that cross-match public multi-epoch spectroscopic surveys, GAIA-FP separates survey-detected double-lined binaries from the rest with AUC > 0.5 (95% CI excludes 0.5). The rules below are fixed now and are independent of every Gaia measurement.
+  - **Surveys:** APOGEE (SB2 catalogue of Kounkel et al. 2021), GALAH (SB2/binary catalogue of Traven et al. 2020) and LAMOST medium-resolution survey SB2 catalogues. Exact catalogue versions are to be verified and listed before the freeze.
+  - **Matching:** by Gaia DR3 source_id as given by each survey, then mapped to DR4.
+  - **Survey-SB2 label (impostor):** the candidate appears in any survey SB2 catalogue.
+  - **Survey-single label (not SB2):** ≥ 3 survey epochs and no SB2 flag in any catalogue. This class still contains some unflagged impostors, so the AUC is a **lower bound**.
+  - **Metrics:**
+    - (a) AUC between survey-SB2 and survey-single candidates, with bootstrap CI;
+    - (b) recall: the fraction of survey-SB2 candidates with P ≥ 0.85, and with P ≥ 0.5;
+    - (c) a survey-based lower bound on contamination in the matched subset, compared with GAIA-FP's label-free bracket for the same subset.
+  - **Falsification:** H7 fails if the CI of (a) includes 0.5.
+  - **Order of operations:** the cross-match is run only after the DR4 catalogue has been frozen and hashed.
+  - **What survey RVs are not used for:** survey RV *scatter* is **not** used as an impostor label. As shown in `rv_degeneracy.py`, blended centroid RVs mimic the planet signal, so only line splitting or broadening counts.
 - **H4 (pipeline validity).** The independent orbit pipeline recovers the published orbits of Gaia BH3 (Gaia Collaboration 2024) and Gaia-4 (Stefánsson et al. 2025) from the DR4 pre-release epoch astrometry within 2σ in P, e and a0. This is a pipeline check only and is not part of the blind test.
   - Already verified on the June 2026 pre-release: BH3 P = 4194 ± 128 d vs 4195 ± 112; e = 0.728 ± 0.006 vs 0.726 ± 0.006; a0 = 27.15 ± 0.67 vs 27.07 ± 0.56 mas.
 
@@ -131,3 +143,13 @@ def4edfd12f63105ab85af7253adf04918a62aa4a56a5ce3a87708443a50a69f  inj_rec.py
 4. Added the ML-trained-on-simulator baseline.
 
 Reason for the changes: mock-based development showed that the v1 likelihood ratios were miscalibrated (E_imp[1/LR] = 0.31) and that a fixed slope n = 4 mis-predicts a0. All changes were decided before DR4 exists and before any Gaia feature of a labelled object was inspected.
+
+## 13. Changes v0.2 → v0.3 (9 October 2026, before any DR4 data exist)
+
+1. Added H7: validation against SB2 catalogues from public spectroscopic surveys, which multiplies the number of independent real-data labels. The closest prior work is Bashi et al. 2022 (MNRAS 517, 3888), which validated Gaia DR3 **spectroscopic** SB1 orbits with LAMOST and GALAH RVs. No study was found that uses survey SB2 detections to vet Gaia **astrometric substellar** candidates.
+2. The RVS template now uses each candidate's own period uncertainty instead of a fixed 1% (`EXPERIMENT_TOURNAMENT.md`, C2).
+3. Fixed operating choices, decided on validation data only:
+   - three-way verdict threshold t = 0.15;
+   - contamination reported as a bracket (constant-π EM, heterogeneous EM);
+   - follow-up recommendations ranked by EIG, preferring 3-epoch RV over single spectra for small telescopes.
+4. Still to do before the freeze: replace the approximate M_G–mass relation with PARSEC or MIST isochrones, then recompute every hash in §11.
