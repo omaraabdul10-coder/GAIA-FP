@@ -1,0 +1,76 @@
+{
+ "S1_nominal": {
+  "n_ambiguous_observable": 400,
+  "budget": 359.99999999999994,
+  "policies": {
+   "ambiguity_RV": {
+    "observed": 119,
+    "correct": 58,
+    "wrong": 3
+   },
+   "random_RV": {
+    "observed": 119,
+    "correct": 66,
+    "wrong": 1
+   },
+   "brightest_RV": {
+    "observed": 119,
+    "correct": 78,
+    "wrong": 3
+   },
+   "most_planet_like_RV": {
+    "observed": 119,
+    "correct": 77,
+    "wrong": 3
+   },
+   "EIG_RV": {
+    "observed": 119,
+    "correct": 91,
+    "wrong": 0
+   },
+   "EIG_per_cost_free_option": {
+    "observed": 359,
+    "correct": 351,
+    "wrong": 1
+   }
+  },
+  "truth_impostor_frac": 0.445
+ },
+ "S2_shao_2m_like": {
+  "n_ambiguous_observable": 59,
+  "budget": 53.099999999999994,
+  "policies": {
+   "ambiguity_RV": {
+    "observed": 17,
+    "correct": 3,
+    "wrong": 0
+   },
+   "random_RV": {
+    "observed": 17,
+    "correct": 7,
+    "wrong": 0
+   },
+   "brightest_RV": {
+    "observed": 17,
+    "correct": 5,
+    "wrong": 0
+   },
+   "most_planet_like_RV": {
+    "observed": 17,
+    "correct": 8,
+    "wrong": 0
+   },
+   "EIG_RV": {
+    "observed": 17,
+    "correct": 12,
+    "wrong": 0
+   },
+   "EIG_per_cost_free_option": {
+    "observed": 53,
+    "correct": 43,
+    "wrong": 4
+   }
+  },
+  "truth_impostor_frac": 0.2711864406779661
+ }
+}
