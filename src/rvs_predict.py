@@ -23,7 +23,7 @@ def llr_rvs_physics(row, n_draw=40, rng=None, bw=0.5, n_ml=4.0):
         M2 = q*M1
         K = K_sum_kms(M1, M2, row['P'], min(row['e'], 0.95), row['inc'])
         f = q**n_ml/(1+q**n_ml)
-        s = simulate_stat(True, row['P'], row['e'], row['T0'], row['om'], K, f, int(row['nep']), float(row['srv']), rng, span=float(row['span']) if 'span' in row else 2000.0)
+        s = simulate_stat(True, row['P'], row['e'], row['T0'], row['om'], K, f, int(row['nep']), float(row['srv']), rng, span=float(row['span']) if 'span' in row else 2000.0, dP=float(row['sigP']) if 'sigP' in row else 0.01)
         zs[k] = np.arctanh(np.clip(s, -.999, .999))*np.sqrt(row['nep']-3)
     pt = np.mean(norm.pdf(row['z'], zs, np.sqrt(bw**2)))
     pp = norm.pdf(row['z'], 0, 1)

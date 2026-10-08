@@ -34,14 +34,15 @@ def phase_stat(t, P, e, T0, omega_deg, sig_obs2):
         return 0.0
     return float(np.corrcoef(shape2, sig_obs2)[0, 1])
 
-def simulate_stat(is_binary, P, e, T0, omega, K, f, n_ep, sig_meas, rng, sig0=11.0, span=2000.0):
+def simulate_stat(is_binary, P, e, T0, omega, K, f, n_ep, sig_meas, rng, sig0=11.0, span=2000.0, dP=0.01):
+    """dP: fractional period uncertainty of the analyst's astrometric orbit (default 1%; v3.1 passes the candidate's own)."""
     t = np.sort(rng.uniform(0, span, n_ep))
     nu = true_anomaly(t, P, e, T0); w = np.radians(omega)
     dv = K*np.abs(np.cos(nu+w) + e*np.cos(w)) if is_binary else 0*t
     sig_true = np.sqrt(sig0**2 + f*(1-f)*dv**2)
     sig_obs = sig_true + rng.normal(0, sig_meas, n_ep)
     # təhlilçi Gaia astrometrik orbitindən (P, e, T0, ω) istifadə edir — burada həqiqi dəyərlər + kiçik xəta
-    return phase_stat(t, P*(1+rng.normal(0, 0.01)), np.clip(e+rng.normal(0, 0.05), 0, 0.95),
+    return phase_stat(t, P*(1+rng.normal(0, dP)), np.clip(e+rng.normal(0, 0.05), 0, 0.95),
                       T0+rng.normal(0, 0.02*P), omega+rng.normal(0, 10), sig_obs**2)
 
 def auc(s_pos, s_neg):
@@ -49,7 +50,7 @@ def auc(s_pos, s_neg):
     return (np.sum(s_pos[:, None] > s_neg[None, :]) + 0.5*np.sum(s_pos[:, None] == s_neg[None, :]))/(len(s_pos)*len(s_neg))
 
 if __name__ == "__main__":
-    R = '../../dl/GaiaForecasts/'
+    R = '../dl/GaiaForecasts/'
     im = pd.read_csv(R+'DR4_mock_planet_impostor_catalog.csv')
     pl = pd.read_csv(R+'DR4_mock_exoplanet_catalog.csv').sample(1500, random_state=1)
     rng = np.random.default_rng(11)

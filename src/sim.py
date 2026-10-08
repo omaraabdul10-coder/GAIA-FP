@@ -10,6 +10,7 @@ cfg keys (defaults = DR4-like):
   rvs_noise    : multiplier on per-epoch line-width precision               (1.0)
   drop_rvs     : remove RVS modality entirely                               (False)
   wide_frac    : fraction of PLANET hosts given an unresolved wide stellar companion (H_pw)   (0.0)
+  own_sigP     : use each candidate's own MCMC period uncertainty in the RVS template (v3.1); else fixed 1%  (False)
 
 Every row also carries TRUE quantities (prefixed t_) used only by the follow-up simulator to generate
 outcomes; the scorer never reads them.
@@ -39,6 +40,7 @@ def features(df, imp, cfg=None, seed=0):
     Pt, et, it, Tt, wt = (df['True period [days]'].values, df['True eccentricity'].values, df['True inclination [deg]'].values,
                           df['True T_peri [days]'].values, df['True omega [deg]'].values)
     dtrue = df['True distance [pc]'].values
+    sigP = np.clip((df['MCMC period 84th [days]'].values - df['MCMC period 16th [days]'].values)/2/P, 1e-4, 0.5) if c.get('own_sigP', False) else np.full(n, 0.01)
     cls = np.full(n, 'p') if not imp else np.full(n, 't')
     if imp:
         M1, M2 = df['Primary stellar mass [M_\\odot]'].values, df['Secondary stellar mass [M_\\odot]'].values
@@ -64,15 +66,15 @@ def features(df, imp, cfg=None, seed=0):
     z = np.full(n, np.nan)
     for i in np.where(has)[0]:
         if imp:
-            s = simulate_stat(True, Pt[i], et[i], Tt[i], wt[i], K[i], f[i], int(nep[i]), float(srv[i]), rng, span=c['span'])
+            s = simulate_stat(True, Pt[i], et[i], Tt[i], wt[i], K[i], f[i], int(nep[i]), float(srv[i]), rng, span=c['span'], dP=float(sigP[i]))
         else:
             sig0 = np.sqrt(11.0**2 + 0.25*sig0_extra[i]**2)
-            s = simulate_stat(False, Pt[i], et[i], Tt[i], wt[i], 0.0, 0.0, int(nep[i]), float(srv[i]), rng, sig0=sig0, span=c['span'])
+            s = simulate_stat(False, Pt[i], et[i], Tt[i], wt[i], 0.0, 0.0, int(nep[i]), float(srv[i]), rng, sig0=sig0, span=c['span'], dP=float(sigP[i]))
         z[i] = np.arctanh(np.clip(s, -.999, .999))*np.sqrt(nep[i]-3)
     X = pd.DataFrame(dict(P=P, e=e, mfit=mfit, d=d, G=G, dm=dm, z=z, M=M,
                           inc=df['Best-fit inclination [deg]'].values, T0=df['Best-fit T_peri [days]'].values,
                           om=df['Best-fit omega [deg]'].values, nep=np.where(has, nep, 0), srv=srv, span=c['span'],
-                          a0=a0, a0err=a0err, y=int(imp), cls=cls,
+                          a0=a0, a0err=a0err, sigP=sigP, y=int(imp), cls=cls,
                           t_K=K, t_f=f, t_dm=dm_true, t_arel=arel, t_plx=1000/dtrue, t_P=Pt, t_e=et, t_inc=it))
     ok = np.isfinite(X[['P', 'e', 'mfit', 'd', 'G', 'dm', 'a0']].values).all(1) & (X['P'] > 0) & (X['d'] > 0) & (X['a0'] > 0)
     return X[ok].reset_index(drop=True)
