@@ -1,0 +1,32 @@
+{
+  "external_reference": "El-Badry et al. 2024, DOI 10.33232/001c.121261; arXiv:2405.00089",
+  "crossmatched_21_RV_followup_sources": 21,
+  "in_raw_gaia_nss": 6,
+  "in_gaiafp_candidate_parent": 0,
+  "in_mechanism_scored": 1,
+  "in_95_physical_characterization": 0,
+  "in_2026_MS_NS_reference_pair": [
+    "5136025521527939072",
+    "1801110822095134848"
+  ],
+  "scored_external_reference_source_ids": [
+    "1801110822095134848"
+  ],
+  "scored_reference_records": [
+    {
+      "source_id": "1801110822095134848",
+      "in_published_2024_21_system_RV_followup_sample": true,
+      "in_2026_MS_NS_reference_pair": true,
+      "in_raw_gaia_nss": true,
+      "in_gaiafp_2119_candidate_parent": false,
+      "in_gaiafp_mechanism_scored": true,
+      "in_gaiafp_95_physical_characterization": false,
+      "2024_reference_status": "published RV-followed NS candidate; WD alternatives not completely excluded",
+      "S1_corrected_c1": -0.5599712464283264,
+      "B2": -1.296249343065338,
+      "VB": -0.8960669369849749,
+      "label_H10": -1.0
+    }
+  ],
+  "interpretation": "Only one of the 21 literature RV-followed NS candidates is present in the archived mechanism_scored output: Gaia DR3 1801110822095134848. Its corrected S1 is in the dark-consistent tail (see row-level score JSON). None of the 21 lies in the 2,119-object substellar candidate parent or in the 95-object validation subset. This is a one-object external, out-of-domain sanity check, not independent validation of sensitivity, specificity, or AUC. The 2024 authors explicitly say ultramassive WD and tight WD+WD alternatives cannot be fully excluded."
+}

@@ -1,0 +1,37 @@
+{
+  "counts": {
+    "raw_nss": {
+      "rows": 71759,
+      "unique_source_ids": 71759
+    },
+    "candidate_2119": {
+      "rows": 2138,
+      "unique_source_ids": 2119
+    },
+    "ch_95": {
+      "rows": 95,
+      "unique_source_ids": 95
+    },
+    "characterization_95": {
+      "rows": 95,
+      "unique_source_ids": 95
+    },
+    "mechanism_scored": {
+      "rows": 10118,
+      "unique_source_ids": 10118
+    }
+  },
+  "raw_nss_mechanism_intersection": 9372,
+  "mechanism_only_vs_raw_nss": 746,
+  "raw_only_vs_mechanism": 62387,
+  "mechanism_only_are_candidate_ids": 0,
+  "mechanism_only_are_ch95_ids": 0,
+  "mechanism_only_are_characterization95_ids": 0,
+  "old_h10_count_difference": {
+    "earlier_reported_rows": 2672,
+    "labelled_rows": 1926,
+    "difference": 746,
+    "same_identity_as_mechanism_only_746": "NOT_ESTABLISHED; original historical input rows/IDs are missing"
+  },
+  "conclusion": "The 746 IDs in this report are precisely mechanism_scored minus raw DR3 NSS. Their source-population/query vintage cannot be identified from the archived inputs. The old H10 2672-1926 difference is a distinct unverified discrepancy despite sharing the same count."
+}

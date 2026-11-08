@@ -1,0 +1,233 @@
+{
+  "parent_candidate_unique_ids": 2119,
+  "characterization_ids": 95,
+  "sample_membership_reproduced": 95,
+  "n_remaining_parent_ids_without_95_characterization": 2024,
+  "AstroSpectroSB1_parent_count": 94,
+  "AstroSpectroSB1_in_95_sample": 94,
+  "AstroSpectroSB1_parent_coverage_fraction": 1.0,
+  "AstroSpectroSB1_is_census_in_95_sample": true,
+  "OrbitalTargetSearchValidated_parent_count": 8,
+  "OrbitalTargetSearchValidated_in_95_sample": 1,
+  "sample_solution_type_counts": {
+    "AstroSpectroSB1": 94,
+    "OrbitalTargetedSearchValidated": 1
+  },
+  "parent_solution_type_counts": {
+    "Orbital": 2008,
+    "AstroSpectroSB1": 94,
+    "OrbitalTargetedSearch": 9,
+    "OrbitalTargetedSearchValidated": 8
+  },
+  "sample_mass_and_label_characterization": {
+    "mfit_min_Mj": 13.420766149449648,
+    "mfit_median_Mj": 65.08667348331804,
+    "mfit_max_Mj": 79.68752757742426,
+    "m2dyn_median_Mjup": 127.8821744712489,
+    "m2dyn_min_Mjup": 46.03117126536152,
+    "m2dyn_max_Mjup": 622.85615912016,
+    "label_counts": {
+      "-1": 51,
+      "1": 42,
+      "0": 2
+    },
+    "criterion_reason_counts": {
+      "undetermined": 51,
+      "both_mass_and_rho": 38,
+      "mass_only": 3,
+      "dark_compatible": 2,
+      "rho_only": 1
+    }
+  },
+  "propensity_sensitivity": [
+    {
+      "C": 0.01,
+      "selection_auc_5fold": 0.9497607655502394,
+      "selected_propensity_quantiles": [
+        0.04920617940632572,
+        0.11007711508853138,
+        0.14827358741694996,
+        0.2029591191735372,
+        0.451031137669367
+      ],
+      "nonselected_propensity_quantiles": [
+        0.0011465467681811446,
+        0.012189228311314984,
+        0.022620271778368645,
+        0.04770825389053174,
+        0.7166837062709831
+      ],
+      "nonselected_below_min_selected_propensity_fraction": 0.7593873517786561,
+      "transport_weight_ess_of_95": 70.80747047817155,
+      "max_abs_smd_before": 2.216145784032033,
+      "max_abs_smd_after_diagnostic_ipw": 1.8372235019642682,
+      "smd_before": {
+        "logP": 0.5527723445792077,
+        "eccentricity": 0.36873995493505934,
+        "phot_g_mean_mag": 2.216145784032033,
+        "bp_rp": 1.846171068510829,
+        "parallax": 0.15445743909196769,
+        "log_parallax_snr": 0.7584099063795101,
+        "log_ruwe": 0.2646480267445163,
+        "log_significance": 0.12291769648382364,
+        "a0_snr": 0.12622569162679678,
+        "log_a0": 0.8481845682874372
+      },
+      "smd_after_diagnostic_ipw": {
+        "logP": 0.31773496567380205,
+        "eccentricity": 0.19053356276310796,
+        "phot_g_mean_mag": 1.8372235019642682,
+        "bp_rp": 1.5324676916776796,
+        "parallax": 0.14642025741195472,
+        "log_parallax_snr": 0.4910580316154104,
+        "log_ruwe": 0.11339990767990166,
+        "log_significance": 0.11178207274999181,
+        "a0_snr": 0.06674662871958677,
+        "log_a0": 0.6604608496815879
+      },
+      "warning": "Weights are diagnostics only. Do not use to estimate a corrected label rate because the 2,024 nonselected candidates do not have compatible rho-based labels."
+    },
+    {
+      "C": 0.1,
+      "selection_auc_5fold": 0.9458758061160808,
+      "selected_propensity_quantiles": [
+        0.015798279298002246,
+        0.12560204889743806,
+        0.2529695310650941,
+        0.41162741789464685,
+        0.8390548611506379
+      ],
+      "nonselected_propensity_quantiles": [
+        1.1075425054759971e-05,
+        0.001981620851028143,
+        0.006934140227222919,
+        0.02931356768256196,
+        0.9603319701021172
+      ],
+      "nonselected_below_min_selected_propensity_fraction": 0.6378458498023716,
+      "transport_weight_ess_of_95": 27.581736742938585,
+      "max_abs_smd_before": 2.216145784032033,
+      "max_abs_smd_after_diagnostic_ipw": 1.79791952076396,
+      "smd_before": {
+        "logP": 0.5527723445792077,
+        "eccentricity": 0.36873995493505934,
+        "phot_g_mean_mag": 2.216145784032033,
+        "bp_rp": 1.846171068510829,
+        "parallax": 0.15445743909196769,
+        "log_parallax_snr": 0.7584099063795101,
+        "log_ruwe": 0.2646480267445163,
+        "log_significance": 0.12291769648382364,
+        "a0_snr": 0.12622569162679678,
+        "log_a0": 0.8481845682874372
+      },
+      "smd_after_diagnostic_ipw": {
+        "logP": 0.06835166494750616,
+        "eccentricity": 0.0843772531713301,
+        "phot_g_mean_mag": 1.79791952076396,
+        "bp_rp": 1.3864050935135583,
+        "parallax": 0.0676119608464138,
+        "log_parallax_snr": 0.17476857484008454,
+        "log_ruwe": 0.05483709962985094,
+        "log_significance": 0.0749133943397238,
+        "a0_snr": 0.15641913992574527,
+        "log_a0": 0.4274538681019789
+      },
+      "warning": "Weights are diagnostics only. Do not use to estimate a corrected label rate because the 2,024 nonselected candidates do not have compatible rho-based labels."
+    },
+    {
+      "C": 1.0,
+      "selection_auc_5fold": 0.9410131058872477,
+      "selected_propensity_quantiles": [
+        0.005407100947839344,
+        0.10787028811138098,
+        0.2795996485377939,
+        0.5182901041591188,
+        0.9187349489501252
+      ],
+      "nonselected_propensity_quantiles": [
+        2.5487261973483806e-07,
+        0.0008211824901898399,
+        0.003701001325576314,
+        0.021482981649150485,
+        0.9763969863103185
+      ],
+      "nonselected_below_min_selected_propensity_fraction": 0.5518774703557312,
+      "transport_weight_ess_of_95": 12.496045639243082,
+      "max_abs_smd_before": 2.216145784032033,
+      "max_abs_smd_after_diagnostic_ipw": 1.8553798556732526,
+      "smd_before": {
+        "logP": 0.5527723445792077,
+        "eccentricity": 0.36873995493505934,
+        "phot_g_mean_mag": 2.216145784032033,
+        "bp_rp": 1.846171068510829,
+        "parallax": 0.15445743909196769,
+        "log_parallax_snr": 0.7584099063795101,
+        "log_ruwe": 0.2646480267445163,
+        "log_significance": 0.12291769648382364,
+        "a0_snr": 0.12622569162679678,
+        "log_a0": 0.8481845682874372
+      },
+      "smd_after_diagnostic_ipw": {
+        "logP": 0.07150284553163548,
+        "eccentricity": 0.2710538813295967,
+        "phot_g_mean_mag": 1.8553798556732526,
+        "bp_rp": 1.3079363981786651,
+        "parallax": 0.3117325424251967,
+        "log_parallax_snr": 0.050341230803099074,
+        "log_ruwe": 0.2585640122372813,
+        "log_significance": 0.17546623077990176,
+        "a0_snr": 0.29011829727150346,
+        "log_a0": 0.1742389783993502
+      },
+      "warning": "Weights are diagnostics only. Do not use to estimate a corrected label rate because the 2,024 nonselected candidates do not have compatible rho-based labels."
+    },
+    {
+      "C": 10.0,
+      "selection_auc_5fold": 0.9396661119201165,
+      "selected_propensity_quantiles": [
+        0.004179755465953714,
+        0.1035504009003782,
+        0.2830948335819499,
+        0.5180165887845218,
+        0.9270341437590937
+      ],
+      "nonselected_propensity_quantiles": [
+        1.0402737882921545e-07,
+        0.0006761943233986053,
+        0.0033347994362188313,
+        0.020272463576629277,
+        0.9777412503005236
+      ],
+      "nonselected_below_min_selected_propensity_fraction": 0.5375494071146245,
+      "transport_weight_ess_of_95": 10.755249473522339,
+      "max_abs_smd_before": 2.216145784032033,
+      "max_abs_smd_after_diagnostic_ipw": 1.8678267965393072,
+      "smd_before": {
+        "logP": 0.5527723445792077,
+        "eccentricity": 0.36873995493505934,
+        "phot_g_mean_mag": 2.216145784032033,
+        "bp_rp": 1.846171068510829,
+        "parallax": 0.15445743909196769,
+        "log_parallax_snr": 0.7584099063795101,
+        "log_ruwe": 0.2646480267445163,
+        "log_significance": 0.12291769648382364,
+        "a0_snr": 0.12622569162679678,
+        "log_a0": 0.8481845682874372
+      },
+      "smd_after_diagnostic_ipw": {
+        "logP": 0.11163872170488354,
+        "eccentricity": 0.2837638930244976,
+        "phot_g_mean_mag": 1.8678267965393072,
+        "bp_rp": 1.30423900003876,
+        "parallax": 0.35595470260290685,
+        "log_parallax_snr": 0.042738042285526745,
+        "log_ruwe": 0.3148574210567746,
+        "log_significance": 0.1854540974296816,
+        "a0_snr": 0.30063317604568135,
+        "log_a0": 0.10829401245637522
+      },
+      "warning": "Weights are diagnostics only. Do not use to estimate a corrected label rate because the 2,024 nonselected candidates do not have compatible rho-based labels."
+    }
+  ],
+  "conclusion": "NO DEFENSIBLE GENERAL-POPULATION LABEL CORRECTION. The 95-object characterization is a near-census of the parent AstroSpectroSB1 subgroup (94/94), plus one OrbitalTargetSearchValidated object, within a 2,119-object candidate set. The remaining 2,024 candidates lack compatible rho-based outcome labels in the archive and are predominantly different NSS solution types. Cross-validated propensity diagnostics show severe feature separation and weak effective sample size; propensity weighting cannot create missing outcomes or restore positivity."
+}

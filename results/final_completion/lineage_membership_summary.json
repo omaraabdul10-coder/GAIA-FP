@@ -1,0 +1,17 @@
+{
+  "raw_nss_rows": 71759,
+  "raw_nss_unique": 71759,
+  "candidate_rows": 2138,
+  "candidate_unique": 2119,
+  "mechanism_rows": 10118,
+  "mechanism_unique": 10118,
+  "raw_nss_intersection_mechanism": 9372,
+  "raw_nss_only": 62387,
+  "mechanism_only_746": 746,
+  "characterization_95": 95,
+  "characterization95_in_raw_nss": 95,
+  "characterization95_in_candidate_table": 95,
+  "characterization95_in_mechanism": 62,
+  "characterization95_missing_mechanism": 33,
+  "old_H10_2672_minus_1926_lineage": "NOT RECONSTRUCTABLE: original 2,672-row and 1,926-row source tables/IDs are not in this archive."
+}

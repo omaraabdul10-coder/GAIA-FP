@@ -1,0 +1,98 @@
+{
+  "status": "EXPLORATORY DR3 RE-ABlATION WITH V3.2 LABEL-FREE PRIOR SELECTION; SB2 PU PROXY ONLY",
+  "sample": {
+    "n": 2102,
+    "sb2_positive": 16,
+    "unlabelled_not_verified_negative": 2086
+  },
+  "prior_selection": {
+    "grid": [
+      0.0,
+      0.003,
+      0.03,
+      0.3,
+      1.0
+    ],
+    "selection_uses_SB2_labels": false,
+    "FULL_selected_C": 0.3,
+    "CMD_marginal_selected_C": 1.0,
+    "FULL_cv_loglik": {
+      "0.0": 1608.7546206272377,
+      "0.003": 1611.3095272651165,
+      "0.03": 1621.2995040959856,
+      "0.3": 1624.8839989904823,
+      "1.0": 1624.367258620956
+    },
+    "CMD_marginal_cv_loglik": {
+      "0.0": 1433.4719107487529,
+      "0.003": 1433.447228833453,
+      "0.03": 1433.4204340383894,
+      "0.3": 1437.9227716498265,
+      "1.0": 1447.6675145234599
+    },
+    "FULL_mean_pi": 0.9376308904019911,
+    "CMD_marginal_mean_pi": 0.9036520335023686
+  },
+  "metrics": {
+    "n_boot": 1000,
+    "seed": 20261101,
+    "auc": {
+      "FULL_v32_prior_select": {
+        "point": 0.6506771332694151,
+        "95pct_CI": [
+          0.4969117030201342,
+          0.7894010666347077
+        ]
+      },
+      "CMD_marginal_v32_prior_select": {
+        "point": 0.7257610258868648,
+        "95pct_CI": [
+          0.6334971236816874,
+          0.8192069151486098
+        ]
+      },
+      "FULL_fixed_pi_0.3": {
+        "point": 0.721656279961649,
+        "95pct_CI": [
+          0.5835076102588687,
+          0.8321548418024928
+        ]
+      },
+      "CMD_marginal_fixed_pi_0.3": {
+        "point": 0.7328619367209972,
+        "95pct_CI": [
+          0.6141516359060403,
+          0.8389224292905081
+        ]
+      }
+    },
+    "paired_delta_FULL_minus_variant": {
+      "CMD_marginal_v32_prior_select": {
+        "point": -0.07508389261744963,
+        "95pct_CI": [
+          -0.21863090244487052,
+          0.04821653283796748
+        ]
+      },
+      "FULL_fixed_pi_0.3": {
+        "point": -0.07097914669223393,
+        "95pct_CI": [
+          -0.17306148130393093,
+          0.0149628475551294
+        ]
+      },
+      "CMD_marginal_fixed_pi_0.3": {
+        "point": -0.08218480345158208,
+        "95pct_CI": [
+          -0.16782118887823586,
+          -0.0010321788111218178
+        ]
+      }
+    }
+  },
+  "interpretation": [
+    "C is selected by the project v3.2 label-free held-out mixture-log-likelihood rule, not by SB2 AUC.",
+    "This remains exploratory on DR3; registered v3.1/C=1 outputs are preserved.",
+    "SB2 matches are only known positives. The rest are unlabelled, not verified negatives."
+  ]
+}

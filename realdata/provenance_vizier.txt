@@ -1,0 +1,4 @@
+sb2_lamost.csv | VizieR TAP sync | 2026-10-09T07:27:52.452Z | 12426 rows | SELECT GaiaDR3 AS gaia_dr3_source_id FROM "J/MNRAS/527/521/tableb1"
+sb2_galah.csv | VizieR TAP sync | 2026-10-09T07:27:53.114Z | 12760 rows | SELECT GaiaDR2 AS gaia_dr2_source_id FROM "J/A+A/638/A145/catalog"
+sb2_apogee.csv | VizieR TAP sync | 2026-10-09T07:27:54.118Z | 8105 rows | SELECT ID, RAJ2000 AS ra, DEJ2000 AS dec, SBn FROM "J/AJ/162/184/table1"
+lamost_cov_pos.csv | VizieR TAP async https://tapvizier.cds.unistra.fr/TAPVizieR/tap/async/1791531030712 | 2026-10-09T07:33:29.009Z | 292534 rows | SELECT Gaia AS gaia_dr2_float, COUNT(*) AS n_epochs, AVG(RAJ2000) AS ra, AVG(DEJ2000) AS dec FROM "J/ApJS/244/27/lamostMRS" GROUP BY Gaia

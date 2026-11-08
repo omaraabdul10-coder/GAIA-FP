@@ -1,0 +1,6 @@
+SELECT s.GaiaEDR3 AS source_id, s.GALAH AS galah_id,
+       r.RVgalah AS rv_kms, r.e_RVgalah AS rv_error_kms,
+       r.f_RVgalah AS rv_method_flag, r.HJD AS hjd, r.MJDlocal AS mjd_local
+FROM "J/MNRAS/506/150/spect" AS s
+JOIN "J/MNRAS/506/150/rv" AS r ON s.GALAH = r.GALAH
+WHERE s.GaiaEDR3 IN (6905721582726975104, 6913810483612308480)

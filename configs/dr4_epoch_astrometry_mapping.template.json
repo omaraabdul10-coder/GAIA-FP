@@ -1,0 +1,24 @@
+{
+  "_comment": "TEMPLATE. Every value 'FILL_FROM_RELEASED_DR4_DATAMODEL' must be replaced from the published DR4 DataLink/epoch-astrometry table description. The adapter refuses to run while a placeholder remains. No DR4 column names are assumed.",
+  "layout": "rows_per_observation",
+  "columns": {
+    "source_id": "FILL_FROM_RELEASED_DR4_DATAMODEL",
+    "time": "FILL_FROM_RELEASED_DR4_DATAMODEL",
+    "along_scan": "FILL_FROM_RELEASED_DR4_DATAMODEL",
+    "uncertainty": "FILL_FROM_RELEASED_DR4_DATAMODEL",
+    "ccd": null,
+    "valid_flag": null,
+    "scan_angle": null,
+    "parallax_factor": null
+  },
+  "time_unit": "ns_since_2010_tcb",
+  "ref_epoch": "J2017.5",
+  "uncertainty_kind": "sigma",
+  "uncertainty_scale": 1.0,
+  "uncertainty_floor_mas": 0.0,
+  "extra_noise_mas": 0.0,
+  "ccd_select": null,
+  "missing_sentinels": [],
+  "valid_flag_true_value": 1,
+  "min_observations": 5
+}

@@ -1,0 +1,16 @@
+{
+  "n_characterization_95": 95,
+  "found_in_raw_nss": 95,
+  "found_in_candidate_table": 95,
+  "found_in_c_h_table": 95,
+  "found_in_mechanism_scored": 62,
+  "missing_from_mechanism_scored": 33,
+  "missing_33_pass_pre_vb_screen": 33,
+  "missing_33_fail_colour": 0,
+  "missing_33_fail_dm": 0,
+  "missing_33_fail_positive_m1": 0,
+  "missing_33_fail_ti_finite": 0,
+  "missing_33_sealed": 0,
+  "m1_note": "m1 is reconstructed using the exact h10() fallback mass_from_MG because archived 95-object input does not contain binary_masses.m1.",
+  "downstream_note": "All 33 absent source IDs pass every reconstructed pre-vbroad H10 filter. Exact downstream reason is not identifiable because dark_companion_scored.csv, source vbroad calibration inputs, and the complete 33,464-row source query export are absent."
+}

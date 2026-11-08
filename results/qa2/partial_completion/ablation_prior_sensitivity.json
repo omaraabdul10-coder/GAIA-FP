@@ -1,0 +1,291 @@
+{
+  "status": "EXPLORATORY PRIOR-REGULARIZATION AND TOP-K SENSITIVITY; NOT A MODEL SELECTION",
+  "registered_primary_C": 1.0,
+  "C_sweep": [
+    {
+      "C": 0.01,
+      "mean_pi": 0.9158527394461347,
+      "median_pi": 0.9199344870227246,
+      "auc_sb2_positive_unlabelled_proxy": 0.6966383029721955,
+      "max_posterior": 0.9999999999127511,
+      "fraction_p_ge_0_85": 0.8891531874405328
+    },
+    {
+      "C": 0.03,
+      "mean_pi": 0.9232086106955608,
+      "median_pi": 0.9338338955482162,
+      "auc_sb2_positive_unlabelled_proxy": 0.6785115052732502,
+      "max_posterior": 0.9999999998695288,
+      "fraction_p_ge_0_85": 0.9005708848715509
+    },
+    {
+      "C": 0.1,
+      "mean_pi": 0.9322885852758611,
+      "median_pi": 0.9508710972271763,
+      "auc_sb2_positive_unlabelled_proxy": 0.6631411792905082,
+      "max_posterior": 0.999999999806054,
+      "fraction_p_ge_0_85": 0.9058039961941009
+    },
+    {
+      "C": 0.3,
+      "mean_pi": 0.9376308904019911,
+      "median_pi": 0.9604980198594062,
+      "auc_sb2_positive_unlabelled_proxy": 0.6506771332694151,
+      "max_posterior": 0.9999999997600693,
+      "fraction_p_ge_0_85": 0.9067554709800191
+    },
+    {
+      "C": 1.0,
+      "mean_pi": 0.9401919478637007,
+      "median_pi": 0.9653876578619005,
+      "auc_sb2_positive_unlabelled_proxy": 0.6434863374880153,
+      "max_posterior": 0.9999999997327076,
+      "fraction_p_ge_0_85": 0.9091341579448144
+    },
+    {
+      "C": 3.0,
+      "mean_pi": 0.9409548110193722,
+      "median_pi": 0.9669009116744893,
+      "auc_sb2_positive_unlabelled_proxy": 0.6414189837008628,
+      "max_posterior": 0.9999999997235012,
+      "fraction_p_ge_0_85": 0.9096098953377736
+    },
+    {
+      "C": 10.0,
+      "mean_pi": 0.9412243749785878,
+      "median_pi": 0.9675161774046179,
+      "auc_sb2_positive_unlabelled_proxy": 0.6410294822627037,
+      "max_posterior": 0.9999999997201148,
+      "fraction_p_ge_0_85": 0.9100856327307326
+    }
+  ],
+  "top_k_retrieval": {
+    "0.005": {
+      "FULL_joint_EM_C1": {
+        "top_k": 11,
+        "sb2_matches_captured": 1,
+        "recall_of_16_known_sb2": 0.0625,
+        "match_fraction_in_top_k": 0.09090909090909091,
+        "enrichment_vs_global_sb2_rate": 11.943181818181818
+      },
+      "joint_fixed_prior_pi0.3": {
+        "top_k": 11,
+        "sb2_matches_captured": 1,
+        "recall_of_16_known_sb2": 0.0625,
+        "match_fraction_in_top_k": 0.09090909090909091,
+        "enrichment_vs_global_sb2_rate": 11.943181818181818
+      },
+      "CMD_marginal_EM_C1": {
+        "top_k": 11,
+        "sb2_matches_captured": 1,
+        "recall_of_16_known_sb2": 0.0625,
+        "match_fraction_in_top_k": 0.09090909090909091,
+        "enrichment_vs_global_sb2_rate": 11.943181818181818
+      },
+      "CMD_marginal_fixed_prior_pi0.3": {
+        "top_k": 11,
+        "sb2_matches_captured": 1,
+        "recall_of_16_known_sb2": 0.0625,
+        "match_fraction_in_top_k": 0.09090909090909091,
+        "enrichment_vs_global_sb2_rate": 11.943181818181818
+      },
+      "B2_CMD_only": {
+        "top_k": 11,
+        "sb2_matches_captured": 0,
+        "recall_of_16_known_sb2": 0.0,
+        "match_fraction_in_top_k": 0.0,
+        "enrichment_vs_global_sb2_rate": 0.0
+      }
+    },
+    "0.01": {
+      "FULL_joint_EM_C1": {
+        "top_k": 22,
+        "sb2_matches_captured": 1,
+        "recall_of_16_known_sb2": 0.0625,
+        "match_fraction_in_top_k": 0.045454545454545456,
+        "enrichment_vs_global_sb2_rate": 5.971590909090909
+      },
+      "joint_fixed_prior_pi0.3": {
+        "top_k": 22,
+        "sb2_matches_captured": 1,
+        "recall_of_16_known_sb2": 0.0625,
+        "match_fraction_in_top_k": 0.045454545454545456,
+        "enrichment_vs_global_sb2_rate": 5.971590909090909
+      },
+      "CMD_marginal_EM_C1": {
+        "top_k": 22,
+        "sb2_matches_captured": 1,
+        "recall_of_16_known_sb2": 0.0625,
+        "match_fraction_in_top_k": 0.045454545454545456,
+        "enrichment_vs_global_sb2_rate": 5.971590909090909
+      },
+      "CMD_marginal_fixed_prior_pi0.3": {
+        "top_k": 22,
+        "sb2_matches_captured": 1,
+        "recall_of_16_known_sb2": 0.0625,
+        "match_fraction_in_top_k": 0.045454545454545456,
+        "enrichment_vs_global_sb2_rate": 5.971590909090909
+      },
+      "B2_CMD_only": {
+        "top_k": 22,
+        "sb2_matches_captured": 2,
+        "recall_of_16_known_sb2": 0.125,
+        "match_fraction_in_top_k": 0.09090909090909091,
+        "enrichment_vs_global_sb2_rate": 11.943181818181818
+      }
+    },
+    "0.02": {
+      "FULL_joint_EM_C1": {
+        "top_k": 43,
+        "sb2_matches_captured": 1,
+        "recall_of_16_known_sb2": 0.0625,
+        "match_fraction_in_top_k": 0.023255813953488372,
+        "enrichment_vs_global_sb2_rate": 3.0552325581395348
+      },
+      "joint_fixed_prior_pi0.3": {
+        "top_k": 43,
+        "sb2_matches_captured": 1,
+        "recall_of_16_known_sb2": 0.0625,
+        "match_fraction_in_top_k": 0.023255813953488372,
+        "enrichment_vs_global_sb2_rate": 3.0552325581395348
+      },
+      "CMD_marginal_EM_C1": {
+        "top_k": 43,
+        "sb2_matches_captured": 1,
+        "recall_of_16_known_sb2": 0.0625,
+        "match_fraction_in_top_k": 0.023255813953488372,
+        "enrichment_vs_global_sb2_rate": 3.0552325581395348
+      },
+      "CMD_marginal_fixed_prior_pi0.3": {
+        "top_k": 43,
+        "sb2_matches_captured": 1,
+        "recall_of_16_known_sb2": 0.0625,
+        "match_fraction_in_top_k": 0.023255813953488372,
+        "enrichment_vs_global_sb2_rate": 3.0552325581395348
+      },
+      "B2_CMD_only": {
+        "top_k": 43,
+        "sb2_matches_captured": 3,
+        "recall_of_16_known_sb2": 0.1875,
+        "match_fraction_in_top_k": 0.06976744186046512,
+        "enrichment_vs_global_sb2_rate": 9.165697674418604
+      }
+    },
+    "0.05": {
+      "FULL_joint_EM_C1": {
+        "top_k": 106,
+        "sb2_matches_captured": 3,
+        "recall_of_16_known_sb2": 0.1875,
+        "match_fraction_in_top_k": 0.02830188679245283,
+        "enrichment_vs_global_sb2_rate": 3.7181603773584904
+      },
+      "joint_fixed_prior_pi0.3": {
+        "top_k": 106,
+        "sb2_matches_captured": 3,
+        "recall_of_16_known_sb2": 0.1875,
+        "match_fraction_in_top_k": 0.02830188679245283,
+        "enrichment_vs_global_sb2_rate": 3.7181603773584904
+      },
+      "CMD_marginal_EM_C1": {
+        "top_k": 106,
+        "sb2_matches_captured": 2,
+        "recall_of_16_known_sb2": 0.125,
+        "match_fraction_in_top_k": 0.018867924528301886,
+        "enrichment_vs_global_sb2_rate": 2.4787735849056602
+      },
+      "CMD_marginal_fixed_prior_pi0.3": {
+        "top_k": 106,
+        "sb2_matches_captured": 3,
+        "recall_of_16_known_sb2": 0.1875,
+        "match_fraction_in_top_k": 0.02830188679245283,
+        "enrichment_vs_global_sb2_rate": 3.7181603773584904
+      },
+      "B2_CMD_only": {
+        "top_k": 106,
+        "sb2_matches_captured": 4,
+        "recall_of_16_known_sb2": 0.25,
+        "match_fraction_in_top_k": 0.03773584905660377,
+        "enrichment_vs_global_sb2_rate": 4.9575471698113205
+      }
+    },
+    "0.1": {
+      "FULL_joint_EM_C1": {
+        "top_k": 211,
+        "sb2_matches_captured": 4,
+        "recall_of_16_known_sb2": 0.25,
+        "match_fraction_in_top_k": 0.018957345971563982,
+        "enrichment_vs_global_sb2_rate": 2.490521327014218
+      },
+      "joint_fixed_prior_pi0.3": {
+        "top_k": 211,
+        "sb2_matches_captured": 4,
+        "recall_of_16_known_sb2": 0.25,
+        "match_fraction_in_top_k": 0.018957345971563982,
+        "enrichment_vs_global_sb2_rate": 2.490521327014218
+      },
+      "CMD_marginal_EM_C1": {
+        "top_k": 211,
+        "sb2_matches_captured": 4,
+        "recall_of_16_known_sb2": 0.25,
+        "match_fraction_in_top_k": 0.018957345971563982,
+        "enrichment_vs_global_sb2_rate": 2.490521327014218
+      },
+      "CMD_marginal_fixed_prior_pi0.3": {
+        "top_k": 211,
+        "sb2_matches_captured": 5,
+        "recall_of_16_known_sb2": 0.3125,
+        "match_fraction_in_top_k": 0.023696682464454975,
+        "enrichment_vs_global_sb2_rate": 3.113151658767772
+      },
+      "B2_CMD_only": {
+        "top_k": 211,
+        "sb2_matches_captured": 6,
+        "recall_of_16_known_sb2": 0.375,
+        "match_fraction_in_top_k": 0.02843601895734597,
+        "enrichment_vs_global_sb2_rate": 3.7357819905213265
+      }
+    },
+    "0.2": {
+      "FULL_joint_EM_C1": {
+        "top_k": 421,
+        "sb2_matches_captured": 5,
+        "recall_of_16_known_sb2": 0.3125,
+        "match_fraction_in_top_k": 0.011876484560570071,
+        "enrichment_vs_global_sb2_rate": 1.560273159144893
+      },
+      "joint_fixed_prior_pi0.3": {
+        "top_k": 421,
+        "sb2_matches_captured": 8,
+        "recall_of_16_known_sb2": 0.5,
+        "match_fraction_in_top_k": 0.019002375296912115,
+        "enrichment_vs_global_sb2_rate": 2.496437054631829
+      },
+      "CMD_marginal_EM_C1": {
+        "top_k": 421,
+        "sb2_matches_captured": 7,
+        "recall_of_16_known_sb2": 0.4375,
+        "match_fraction_in_top_k": 0.0166270783847981,
+        "enrichment_vs_global_sb2_rate": 2.1843824228028503
+      },
+      "CMD_marginal_fixed_prior_pi0.3": {
+        "top_k": 421,
+        "sb2_matches_captured": 10,
+        "recall_of_16_known_sb2": 0.625,
+        "match_fraction_in_top_k": 0.023752969121140142,
+        "enrichment_vs_global_sb2_rate": 3.120546318289786
+      },
+      "B2_CMD_only": {
+        "top_k": 421,
+        "sb2_matches_captured": 6,
+        "recall_of_16_known_sb2": 0.375,
+        "match_fraction_in_top_k": 0.014251781472684086,
+        "enrichment_vs_global_sb2_rate": 1.8723277909738718
+      }
+    }
+  },
+  "interpretation": [
+    "C=1 remains the registered primary; do not select C from this SB2 proxy.",
+    "Top-k metrics quantify retrieval of known SB2 matches among unlabelled candidates, not precision among true negatives.",
+    "A fixed prior changes posterior calibration but, for a constant prior, does not change ranking/AUC relative to the underlying likelihood ratio."
+  ]
+}

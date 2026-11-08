@@ -1,0 +1,56 @@
+{
+  "status": "H10 ARCHIVE RECONCILED TO POST-UNIT-FIX RESULTS; NOT RECOMPUTED HERE BECAUSE RAW 33,463-ROW D3 / FIELD INPUT FILES ARE NOT IN THIS PACKAGE",
+  "sample": {
+    "n_labelled_with_vbroad": 1927,
+    "luminous_positive": 841,
+    "dark_consistent_negative": 1086
+  },
+  "corrected_primary_c1_auc": {
+    "B2_CMD": [
+      0.7319084313815658,
+      0.7076840033022164,
+      0.7539850228724464
+    ],
+    "VB_alone": [
+      0.7549976678644865,
+      0.7329017514009236,
+      0.7758250339966233
+    ],
+    "S1_CMD_plus_physical_vbroad_LR": [
+      0.7763657226444883,
+      0.7550820846006793,
+      0.7968619912276668
+    ],
+    "AMRF_shared_astrometric_baseline": [
+      0.7879891736357008,
+      0.7674379411075563,
+      0.8074213369596398
+    ],
+    "S2_joint_shared_astrometry": [
+      0.8323796760411944,
+      0.8135541416755901,
+      0.8502938709726866
+    ]
+  },
+  "registered_primary_comparison_S1_minus_B2": [
+    0.04445729126292253,
+    0.03339568784858857,
+    0.05510102635860576
+  ],
+  "stronger_naive_baseline": {
+    "definition": "B2 + standardized VB score, simple additive combination",
+    "AUC": 0.7956896004274487,
+    "S1_minus_naive_paired_bootstrap": [
+      -0.019323877782960408,
+      -0.03148552652612534,
+      -0.007467103750468136
+    ]
+  },
+  "unit_erratum_effect": {
+    "pre_fix_archived_S1_AUC": 0.8001983957535426,
+    "post_fix_S1_AUC": 0.7763657226444883,
+    "note": "The post-fix c=1 result is authoritative for this diagnostic; pre-fix K_sum used years where days were expected."
+  },
+  "secondary_shared_input_note": "S2/AMRF use astrometric a0 information that also enters the physical-label construction; treat these as exploratory secondary comparisons, not independent validation.",
+  "interpretation": "S1 improves over the preregistered CMD-only B2 baseline, but does not beat the stronger simple B2+VB score. Do not claim superiority over a strong independent baseline."
+}

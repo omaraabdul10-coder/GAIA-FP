@@ -1,0 +1,58 @@
+{
+  "status": "LOCAL CROSS-MATCH AUDIT COMPLETED; EPOCH-RV VARIABILITY CATALOGUE NOT YET RETRIEVED",
+  "n_scored_candidates": 2102,
+  "n_scored_unique_source_ids": 2102,
+  "catalogues": {
+    "LAMOST_MRS_SB2": {
+      "catalogue_rows": 12426,
+      "unique_ids": 12426,
+      "candidate_matches": 1,
+      "match_type": "exact Gaia DR3 source_id"
+    },
+    "GALAH_FGK_SB2": {
+      "catalogue_rows": 12760,
+      "unique_ids": 12234,
+      "candidate_matches": 2,
+      "candidate_sources_with_valid_DR2_link": 2102,
+      "match_type": "Gaia DR2 source_id via stored DR3-to-DR2 neighbourhood; <1000 mas guard"
+    },
+    "APOGEE_SB2": {
+      "catalogue_rows": 8105,
+      "candidate_unique_matches": 13,
+      "candidate_ambiguous_matches": 0,
+      "candidate_rows_with_any_match": 13,
+      "median_nearest_sep_arcsec_for_matches": 0.06089248846169692,
+      "max_nearest_sep_arcsec_for_matches": 0.20361554384394087,
+      "match_type": "Gaia 2016.0 -> J2000 linear PM propagation; 2 arcsec; ambiguous excluded"
+    }
+  },
+  "independent_survey_overlap_patterns": {
+    "(False, False, False)": 2086,
+    "(False, False, True)": 13,
+    "(False, True, False)": 2,
+    "(True, False, False)": 1
+  },
+  "union_SB2_candidate_count": 16,
+  "multi_survey_candidate_count": 0,
+  "reconciliation_with_archived_flags": "ALL EXACT MATCH FLAGS REPRODUCED",
+  "APOGEE_local_offset_control": {
+    "n_realizations": 200,
+    "offset_annulus_arcsec": [
+      10,
+      120
+    ],
+    "random_matches_per_realization_median": 0.0,
+    "random_matches_per_realization_95pct": [
+      0.0,
+      0.0
+    ],
+    "interpretation": "local-density chance-match diagnostic; not a formal posterior match probability"
+  },
+  "AstroSpectroSB1_95_subset": {
+    "n": 95,
+    "LAMOST": 1,
+    "GALAH": 0,
+    "APOGEE": 0,
+    "any_external_SB2": 1
+  }
+}

@@ -1,0 +1,1102 @@
+{
+  "status": "SYNTHETIC INJECTION-RECOVERY COMPLETED; NOT REAL GAIA VALIDATION",
+  "design": {
+    "n_per_class_per_replicate": 1000,
+    "independent_replicates_per_scenario": 3,
+    "train_test_split": "70/30 stratified",
+    "period_days": "log-uniform 30-1500",
+    "eccentricity": "0.85*Beta(1.5,5)",
+    "inclination": "isotropic; cos(i) uniform [0,1]",
+    "stellar_mass_msun": "uniform 0.7-1.4",
+    "SB1_selection": "exact project A6 rule: exclude if q**n >=0.2 AND K_sum*(1+e)>=30 km/s; q**n is line-flux ratio, distinct from companion fraction q**n/(1+q**n)",
+    "epochs": "uniform over 2000 days",
+    "instrumental_width_kms": 11.0,
+    "measurement_error_kms": [
+      2,
+      4,
+      8
+    ],
+    "analyst_orbit_perturbation": "P 1%, e 0.05, T0 0.02P, omega 10 deg",
+    "CMD_scatter_mag": 0.3,
+    "negative_control": "permute per-epoch widths across times before phase statistic",
+    "classifier": "standardized logistic regression C=1; fixed 70/30 split per replicate",
+    "bootstrap_reps_per_replicate": 500
+  },
+  "scenarios": [
+    {
+      "n_epoch": 20,
+      "sigma_meas_kms": 2.0,
+      "seed": 20263121,
+      "n_train": 1400,
+      "n_test": 600,
+      "n_sb1_binary_injections": 1000,
+      "SB2_rejected_by_A6": true,
+      "A6_rejection_count_during_sampling": 929,
+      "A6_attempted_draws": 2000,
+      "A6_rejection_fraction_of_attempted_draws": 0.4645,
+      "selected_binary_median_K_sum_kms": 24.078764998919944,
+      "selected_binary_median_flux_fraction": 0.14702341895834142,
+      "auc_test": {
+        "CMD_only": 0.7206000000000001,
+        "RVS_phase_only": 0.7647333333333334,
+        "CMD_plus_RVS_phase": 0.8052666666666666,
+        "CMD_plus_phase_scrambled_negative_control": 0.7200888888888889
+      },
+      "paired_delta_auc": {
+        "CMD_plus_RVS_minus_CMD_only": {
+          "point": 0.08466666666666645,
+          "95pct_percentile_CI": [
+            0.0475130555555556,
+            0.12427111111111117
+          ]
+        },
+        "CMD_plus_RVS_minus_scrambled_control": {
+          "point": 0.08517777777777769,
+          "95pct_percentile_CI": [
+            0.044410833333333274,
+            0.12516000000000002
+          ]
+        }
+      },
+      "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data.",
+      "replicate_runs": [
+        {
+          "n_epoch": 20,
+          "sigma_meas_kms": 2.0,
+          "seed": 20263121,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 929,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.4645,
+          "selected_binary_median_K_sum_kms": 24.078764998919944,
+          "selected_binary_median_flux_fraction": 0.14702341895834142,
+          "auc_test": {
+            "CMD_only": 0.7206000000000001,
+            "RVS_phase_only": 0.7647333333333334,
+            "CMD_plus_RVS_phase": 0.8052666666666666,
+            "CMD_plus_phase_scrambled_negative_control": 0.7200888888888889
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.08466666666666645,
+              "95pct_percentile_CI": [
+                0.0475130555555556,
+                0.12427111111111117
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.08517777777777769,
+              "95pct_percentile_CI": [
+                0.044410833333333274,
+                0.12516000000000002
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        },
+        {
+          "n_epoch": 20,
+          "sigma_meas_kms": 2.0,
+          "seed": 20264130,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 1252,
+          "A6_attempted_draws": 2500,
+          "A6_rejection_fraction_of_attempted_draws": 0.5008,
+          "selected_binary_median_K_sum_kms": 23.905742864175892,
+          "selected_binary_median_flux_fraction": 0.14424287610819836,
+          "auc_test": {
+            "CMD_only": 0.6471,
+            "RVS_phase_only": 0.7527777777777778,
+            "CMD_plus_RVS_phase": 0.7748666666666667,
+            "CMD_plus_phase_scrambled_negative_control": 0.645688888888889
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.1277666666666667,
+              "95pct_percentile_CI": [
+                0.09227944444444446,
+                0.16476472222222216
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.12917777777777772,
+              "95pct_percentile_CI": [
+                0.08778083333333342,
+                0.16965027777777775
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        },
+        {
+          "n_epoch": 20,
+          "sigma_meas_kms": 2.0,
+          "seed": 20265139,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 969,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.4845,
+          "selected_binary_median_K_sum_kms": 24.143133296865717,
+          "selected_binary_median_flux_fraction": 0.1454496586466847,
+          "auc_test": {
+            "CMD_only": 0.688688888888889,
+            "RVS_phase_only": 0.7988555555555557,
+            "CMD_plus_RVS_phase": 0.8257111111111111,
+            "CMD_plus_phase_scrambled_negative_control": 0.6847
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.13702222222222205,
+              "95pct_percentile_CI": [
+                0.09791916666666677,
+                0.17731138888888892
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.1410111111111111,
+              "95pct_percentile_CI": [
+                0.10333416666666662,
+                0.1803166666666667
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        }
+      ],
+      "replicate_summary": {
+        "n_replicates": 3,
+        "mean_auc": {
+          "CMD_only": 0.685462962962963,
+          "RVS_phase_only": 0.7721222222222224,
+          "CMD_plus_RVS_phase": 0.8019481481481482,
+          "CMD_plus_phase_scrambled_negative_control": 0.6834925925925925
+        },
+        "mean_delta_auc_joint_minus_cmd": 0.11648518518518507,
+        "delta_auc_range_across_replicates": [
+          0.08466666666666645,
+          0.13702222222222205
+        ],
+        "replicates_with_95pct_bootstrap_CI_above_zero": 3,
+        "replicate_bootstrap_CIs": [
+          [
+            0.0475130555555556,
+            0.12427111111111117
+          ],
+          [
+            0.09227944444444446,
+            0.16476472222222216
+          ],
+          [
+            0.09791916666666677,
+            0.17731138888888892
+          ]
+        ]
+      }
+    },
+    {
+      "n_epoch": 20,
+      "sigma_meas_kms": 4.0,
+      "seed": 20263141,
+      "n_train": 1400,
+      "n_test": 600,
+      "n_sb1_binary_injections": 1000,
+      "SB2_rejected_by_A6": true,
+      "A6_rejection_count_during_sampling": 1253,
+      "A6_attempted_draws": 2500,
+      "A6_rejection_fraction_of_attempted_draws": 0.5012,
+      "selected_binary_median_K_sum_kms": 24.466491635478448,
+      "selected_binary_median_flux_fraction": 0.14718236580805477,
+      "auc_test": {
+        "CMD_only": 0.7011666666666666,
+        "RVS_phase_only": 0.6476999999999999,
+        "CMD_plus_RVS_phase": 0.7209888888888889,
+        "CMD_plus_phase_scrambled_negative_control": 0.7014333333333334
+      },
+      "paired_delta_auc": {
+        "CMD_plus_RVS_minus_CMD_only": {
+          "point": 0.019822222222222297,
+          "95pct_percentile_CI": [
+            -0.012481111111111012,
+            0.0533352777777778
+          ]
+        },
+        "CMD_plus_RVS_minus_scrambled_control": {
+          "point": 0.019555555555555548,
+          "95pct_percentile_CI": [
+            -0.015348611111111092,
+            0.0529797222222223
+          ]
+        }
+      },
+      "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data.",
+      "replicate_runs": [
+        {
+          "n_epoch": 20,
+          "sigma_meas_kms": 4.0,
+          "seed": 20263141,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 1253,
+          "A6_attempted_draws": 2500,
+          "A6_rejection_fraction_of_attempted_draws": 0.5012,
+          "selected_binary_median_K_sum_kms": 24.466491635478448,
+          "selected_binary_median_flux_fraction": 0.14718236580805477,
+          "auc_test": {
+            "CMD_only": 0.7011666666666666,
+            "RVS_phase_only": 0.6476999999999999,
+            "CMD_plus_RVS_phase": 0.7209888888888889,
+            "CMD_plus_phase_scrambled_negative_control": 0.7014333333333334
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.019822222222222297,
+              "95pct_percentile_CI": [
+                -0.012481111111111012,
+                0.0533352777777778
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.019555555555555548,
+              "95pct_percentile_CI": [
+                -0.015348611111111092,
+                0.0529797222222223
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        },
+        {
+          "n_epoch": 20,
+          "sigma_meas_kms": 4.0,
+          "seed": 20264150,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 980,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.49,
+          "selected_binary_median_K_sum_kms": 24.35664271406454,
+          "selected_binary_median_flux_fraction": 0.1433124961515314,
+          "auc_test": {
+            "CMD_only": 0.7036222222222221,
+            "RVS_phase_only": 0.7133444444444444,
+            "CMD_plus_RVS_phase": 0.7762666666666667,
+            "CMD_plus_phase_scrambled_negative_control": 0.7032777777777779
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.07264444444444451,
+              "95pct_percentile_CI": [
+                0.04092583333333331,
+                0.10613472222222221
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.07298888888888877,
+              "95pct_percentile_CI": [
+                0.03774194444444454,
+                0.1100008333333332
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        },
+        {
+          "n_epoch": 20,
+          "sigma_meas_kms": 4.0,
+          "seed": 20265159,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 955,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.4775,
+          "selected_binary_median_K_sum_kms": 23.754567496530893,
+          "selected_binary_median_flux_fraction": 0.1465344265933328,
+          "auc_test": {
+            "CMD_only": 0.7031333333333334,
+            "RVS_phase_only": 0.7266222222222223,
+            "CMD_plus_RVS_phase": 0.7734444444444446,
+            "CMD_plus_phase_scrambled_negative_control": 0.708488888888889
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.07031111111111121,
+              "95pct_percentile_CI": [
+                0.03455055555555548,
+                0.10578916666666659
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.06495555555555566,
+              "95pct_percentile_CI": [
+                0.028096111111111006,
+                0.09886944444444444
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        }
+      ],
+      "replicate_summary": {
+        "n_replicates": 3,
+        "mean_auc": {
+          "CMD_only": 0.7026407407407408,
+          "RVS_phase_only": 0.6958888888888889,
+          "CMD_plus_RVS_phase": 0.7569,
+          "CMD_plus_phase_scrambled_negative_control": 0.7044
+        },
+        "mean_delta_auc_joint_minus_cmd": 0.05425925925925934,
+        "delta_auc_range_across_replicates": [
+          0.019822222222222297,
+          0.07264444444444451
+        ],
+        "replicates_with_95pct_bootstrap_CI_above_zero": 2,
+        "replicate_bootstrap_CIs": [
+          [
+            -0.012481111111111012,
+            0.0533352777777778
+          ],
+          [
+            0.04092583333333331,
+            0.10613472222222221
+          ],
+          [
+            0.03455055555555548,
+            0.10578916666666659
+          ]
+        ]
+      }
+    },
+    {
+      "n_epoch": 20,
+      "sigma_meas_kms": 8.0,
+      "seed": 20263181,
+      "n_train": 1400,
+      "n_test": 600,
+      "n_sb1_binary_injections": 1000,
+      "SB2_rejected_by_A6": true,
+      "A6_rejection_count_during_sampling": 989,
+      "A6_attempted_draws": 2000,
+      "A6_rejection_fraction_of_attempted_draws": 0.4945,
+      "selected_binary_median_K_sum_kms": 24.270450632119157,
+      "selected_binary_median_flux_fraction": 0.14402942022418708,
+      "auc_test": {
+        "CMD_only": 0.6731222222222223,
+        "RVS_phase_only": 0.6260888888888889,
+        "CMD_plus_RVS_phase": 0.7055555555555556,
+        "CMD_plus_phase_scrambled_negative_control": 0.6737888888888889
+      },
+      "paired_delta_auc": {
+        "CMD_plus_RVS_minus_CMD_only": {
+          "point": 0.032433333333333314,
+          "95pct_percentile_CI": [
+            0.011894444444444359,
+            0.05363916666666668
+          ]
+        },
+        "CMD_plus_RVS_minus_scrambled_control": {
+          "point": 0.03176666666666672,
+          "95pct_percentile_CI": [
+            0.007532222222222279,
+            0.05473194444444448
+          ]
+        }
+      },
+      "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data.",
+      "replicate_runs": [
+        {
+          "n_epoch": 20,
+          "sigma_meas_kms": 8.0,
+          "seed": 20263181,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 989,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.4945,
+          "selected_binary_median_K_sum_kms": 24.270450632119157,
+          "selected_binary_median_flux_fraction": 0.14402942022418708,
+          "auc_test": {
+            "CMD_only": 0.6731222222222223,
+            "RVS_phase_only": 0.6260888888888889,
+            "CMD_plus_RVS_phase": 0.7055555555555556,
+            "CMD_plus_phase_scrambled_negative_control": 0.6737888888888889
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.032433333333333314,
+              "95pct_percentile_CI": [
+                0.011894444444444359,
+                0.05363916666666668
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.03176666666666672,
+              "95pct_percentile_CI": [
+                0.007532222222222279,
+                0.05473194444444448
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        },
+        {
+          "n_epoch": 20,
+          "sigma_meas_kms": 8.0,
+          "seed": 20264190,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 948,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.474,
+          "selected_binary_median_K_sum_kms": 24.41518802099059,
+          "selected_binary_median_flux_fraction": 0.14509542879313397,
+          "auc_test": {
+            "CMD_only": 0.6745444444444445,
+            "RVS_phase_only": 0.6000000000000001,
+            "CMD_plus_RVS_phase": 0.696388888888889,
+            "CMD_plus_phase_scrambled_negative_control": 0.6755777777777778
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.021844444444444444,
+              "95pct_percentile_CI": [
+                0.004376388888888943,
+                0.03847250000000002
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.020811111111111114,
+              "95pct_percentile_CI": [
+                0.004762499999999959,
+                0.036331388888888955
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        },
+        {
+          "n_epoch": 20,
+          "sigma_meas_kms": 8.0,
+          "seed": 20265199,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 987,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.4935,
+          "selected_binary_median_K_sum_kms": 24.351355061469967,
+          "selected_binary_median_flux_fraction": 0.1466628986664821,
+          "auc_test": {
+            "CMD_only": 0.7014111111111111,
+            "RVS_phase_only": 0.5938444444444445,
+            "CMD_plus_RVS_phase": 0.7258,
+            "CMD_plus_phase_scrambled_negative_control": 0.7012444444444443
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.024388888888888904,
+              "95pct_percentile_CI": [
+                0.001231666666666695,
+                0.04504166666666661
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.024555555555555664,
+              "95pct_percentile_CI": [
+                0.004087222222222162,
+                0.04647833333333326
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        }
+      ],
+      "replicate_summary": {
+        "n_replicates": 3,
+        "mean_auc": {
+          "CMD_only": 0.6830259259259259,
+          "RVS_phase_only": 0.6066444444444445,
+          "CMD_plus_RVS_phase": 0.7092481481481482,
+          "CMD_plus_phase_scrambled_negative_control": 0.6835370370370369
+        },
+        "mean_delta_auc_joint_minus_cmd": 0.02622222222222222,
+        "delta_auc_range_across_replicates": [
+          0.021844444444444444,
+          0.032433333333333314
+        ],
+        "replicates_with_95pct_bootstrap_CI_above_zero": 3,
+        "replicate_bootstrap_CIs": [
+          [
+            0.011894444444444359,
+            0.05363916666666668
+          ],
+          [
+            0.004376388888888943,
+            0.03847250000000002
+          ],
+          [
+            0.001231666666666695,
+            0.04504166666666661
+          ]
+        ]
+      }
+    },
+    {
+      "n_epoch": 40,
+      "sigma_meas_kms": 2.0,
+      "seed": 20265121,
+      "n_train": 1400,
+      "n_test": 600,
+      "n_sb1_binary_injections": 1000,
+      "SB2_rejected_by_A6": true,
+      "A6_rejection_count_during_sampling": 973,
+      "A6_attempted_draws": 2000,
+      "A6_rejection_fraction_of_attempted_draws": 0.4865,
+      "selected_binary_median_K_sum_kms": 23.86231502256961,
+      "selected_binary_median_flux_fraction": 0.1460271122876087,
+      "auc_test": {
+        "CMD_only": 0.7061222222222221,
+        "RVS_phase_only": 0.8049111111111111,
+        "CMD_plus_RVS_phase": 0.8413555555555555,
+        "CMD_plus_phase_scrambled_negative_control": 0.7057777777777777
+      },
+      "paired_delta_auc": {
+        "CMD_plus_RVS_minus_CMD_only": {
+          "point": 0.13523333333333343,
+          "95pct_percentile_CI": [
+            0.09681694444444443,
+            0.17288277777777775
+          ]
+        },
+        "CMD_plus_RVS_minus_scrambled_control": {
+          "point": 0.1355777777777778,
+          "95pct_percentile_CI": [
+            0.09910416666666665,
+            0.17426916666666661
+          ]
+        }
+      },
+      "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data.",
+      "replicate_runs": [
+        {
+          "n_epoch": 40,
+          "sigma_meas_kms": 2.0,
+          "seed": 20265121,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 973,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.4865,
+          "selected_binary_median_K_sum_kms": 23.86231502256961,
+          "selected_binary_median_flux_fraction": 0.1460271122876087,
+          "auc_test": {
+            "CMD_only": 0.7061222222222221,
+            "RVS_phase_only": 0.8049111111111111,
+            "CMD_plus_RVS_phase": 0.8413555555555555,
+            "CMD_plus_phase_scrambled_negative_control": 0.7057777777777777
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.13523333333333343,
+              "95pct_percentile_CI": [
+                0.09681694444444443,
+                0.17288277777777775
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.1355777777777778,
+              "95pct_percentile_CI": [
+                0.09910416666666665,
+                0.17426916666666661
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        },
+        {
+          "n_epoch": 40,
+          "sigma_meas_kms": 2.0,
+          "seed": 20266130,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 964,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.482,
+          "selected_binary_median_K_sum_kms": 24.790212607649444,
+          "selected_binary_median_flux_fraction": 0.14127187860529872,
+          "auc_test": {
+            "CMD_only": 0.6775000000000001,
+            "RVS_phase_only": 0.8023444444444444,
+            "CMD_plus_RVS_phase": 0.8203555555555555,
+            "CMD_plus_phase_scrambled_negative_control": 0.6763777777777777
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.1428555555555554,
+              "95pct_percentile_CI": [
+                0.09840416666666671,
+                0.1832302777777777
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.14397777777777776,
+              "95pct_percentile_CI": [
+                0.1034986111111112,
+                0.18279000000000006
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        },
+        {
+          "n_epoch": 40,
+          "sigma_meas_kms": 2.0,
+          "seed": 20267139,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 966,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.483,
+          "selected_binary_median_K_sum_kms": 23.966989202055558,
+          "selected_binary_median_flux_fraction": 0.14722013715152127,
+          "auc_test": {
+            "CMD_only": 0.6881555555555556,
+            "RVS_phase_only": 0.8251888888888889,
+            "CMD_plus_RVS_phase": 0.8441000000000001,
+            "CMD_plus_phase_scrambled_negative_control": 0.6904777777777779
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.15594444444444444,
+              "95pct_percentile_CI": [
+                0.11557138888888893,
+                0.1954938888888888
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.15362222222222222,
+              "95pct_percentile_CI": [
+                0.11534805555555551,
+                0.1895636111111112
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        }
+      ],
+      "replicate_summary": {
+        "n_replicates": 3,
+        "mean_auc": {
+          "CMD_only": 0.6905925925925928,
+          "RVS_phase_only": 0.8108148148148149,
+          "CMD_plus_RVS_phase": 0.8352703703703703,
+          "CMD_plus_phase_scrambled_negative_control": 0.6908777777777777
+        },
+        "mean_delta_auc_joint_minus_cmd": 0.14467777777777777,
+        "delta_auc_range_across_replicates": [
+          0.13523333333333343,
+          0.15594444444444444
+        ],
+        "replicates_with_95pct_bootstrap_CI_above_zero": 3,
+        "replicate_bootstrap_CIs": [
+          [
+            0.09681694444444443,
+            0.17288277777777775
+          ],
+          [
+            0.09840416666666671,
+            0.1832302777777777
+          ],
+          [
+            0.11557138888888893,
+            0.1954938888888888
+          ]
+        ]
+      }
+    },
+    {
+      "n_epoch": 40,
+      "sigma_meas_kms": 4.0,
+      "seed": 20265141,
+      "n_train": 1400,
+      "n_test": 600,
+      "n_sb1_binary_injections": 1000,
+      "SB2_rejected_by_A6": true,
+      "A6_rejection_count_during_sampling": 991,
+      "A6_attempted_draws": 2000,
+      "A6_rejection_fraction_of_attempted_draws": 0.4955,
+      "selected_binary_median_K_sum_kms": 24.30785423170575,
+      "selected_binary_median_flux_fraction": 0.14950696702163144,
+      "auc_test": {
+        "CMD_only": 0.6708222222222223,
+        "RVS_phase_only": 0.746211111111111,
+        "CMD_plus_RVS_phase": 0.7788666666666667,
+        "CMD_plus_phase_scrambled_negative_control": 0.6697444444444444
+      },
+      "paired_delta_auc": {
+        "CMD_plus_RVS_minus_CMD_only": {
+          "point": 0.10804444444444439,
+          "95pct_percentile_CI": [
+            0.0785333333333333,
+            0.14444444444444438
+          ]
+        },
+        "CMD_plus_RVS_minus_scrambled_control": {
+          "point": 0.10912222222222234,
+          "95pct_percentile_CI": [
+            0.07817361111111112,
+            0.14070166666666667
+          ]
+        }
+      },
+      "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data.",
+      "replicate_runs": [
+        {
+          "n_epoch": 40,
+          "sigma_meas_kms": 4.0,
+          "seed": 20265141,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 991,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.4955,
+          "selected_binary_median_K_sum_kms": 24.30785423170575,
+          "selected_binary_median_flux_fraction": 0.14950696702163144,
+          "auc_test": {
+            "CMD_only": 0.6708222222222223,
+            "RVS_phase_only": 0.746211111111111,
+            "CMD_plus_RVS_phase": 0.7788666666666667,
+            "CMD_plus_phase_scrambled_negative_control": 0.6697444444444444
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.10804444444444439,
+              "95pct_percentile_CI": [
+                0.0785333333333333,
+                0.14444444444444438
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.10912222222222234,
+              "95pct_percentile_CI": [
+                0.07817361111111112,
+                0.14070166666666667
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        },
+        {
+          "n_epoch": 40,
+          "sigma_meas_kms": 4.0,
+          "seed": 20266150,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 945,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.4725,
+          "selected_binary_median_K_sum_kms": 23.83132038758341,
+          "selected_binary_median_flux_fraction": 0.14412648784602966,
+          "auc_test": {
+            "CMD_only": 0.6763555555555555,
+            "RVS_phase_only": 0.7722222222222221,
+            "CMD_plus_RVS_phase": 0.8013111111111111,
+            "CMD_plus_phase_scrambled_negative_control": 0.6761555555555555
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.1249555555555556,
+              "95pct_percentile_CI": [
+                0.09017222222222233,
+                0.1610077777777778
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.12515555555555558,
+              "95pct_percentile_CI": [
+                0.0890930555555555,
+                0.15869638888888876
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        },
+        {
+          "n_epoch": 40,
+          "sigma_meas_kms": 4.0,
+          "seed": 20267159,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 997,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.4985,
+          "selected_binary_median_K_sum_kms": 24.171470359717855,
+          "selected_binary_median_flux_fraction": 0.14546639732106742,
+          "auc_test": {
+            "CMD_only": 0.6701111111111111,
+            "RVS_phase_only": 0.7448,
+            "CMD_plus_RVS_phase": 0.7786666666666666,
+            "CMD_plus_phase_scrambled_negative_control": 0.6668777777777778
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.10855555555555552,
+              "95pct_percentile_CI": [
+                0.0704911111111112,
+                0.1435558333333333
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.11178888888888883,
+              "95pct_percentile_CI": [
+                0.07671694444444457,
+                0.14640805555555556
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        }
+      ],
+      "replicate_summary": {
+        "n_replicates": 3,
+        "mean_auc": {
+          "CMD_only": 0.6724296296296296,
+          "RVS_phase_only": 0.7544111111111111,
+          "CMD_plus_RVS_phase": 0.7862814814814815,
+          "CMD_plus_phase_scrambled_negative_control": 0.6709259259259258
+        },
+        "mean_delta_auc_joint_minus_cmd": 0.11385185185185183,
+        "delta_auc_range_across_replicates": [
+          0.10804444444444439,
+          0.1249555555555556
+        ],
+        "replicates_with_95pct_bootstrap_CI_above_zero": 3,
+        "replicate_bootstrap_CIs": [
+          [
+            0.0785333333333333,
+            0.14444444444444438
+          ],
+          [
+            0.09017222222222233,
+            0.1610077777777778
+          ],
+          [
+            0.0704911111111112,
+            0.1435558333333333
+          ]
+        ]
+      }
+    },
+    {
+      "n_epoch": 40,
+      "sigma_meas_kms": 8.0,
+      "seed": 20265181,
+      "n_train": 1400,
+      "n_test": 600,
+      "n_sb1_binary_injections": 1000,
+      "SB2_rejected_by_A6": true,
+      "A6_rejection_count_during_sampling": 950,
+      "A6_attempted_draws": 2000,
+      "A6_rejection_fraction_of_attempted_draws": 0.475,
+      "selected_binary_median_K_sum_kms": 24.22338592086258,
+      "selected_binary_median_flux_fraction": 0.14985642029723345,
+      "auc_test": {
+        "CMD_only": 0.7049111111111112,
+        "RVS_phase_only": 0.6294222222222222,
+        "CMD_plus_RVS_phase": 0.7312555555555557,
+        "CMD_plus_phase_scrambled_negative_control": 0.7047111111111111
+      },
+      "paired_delta_auc": {
+        "CMD_plus_RVS_minus_CMD_only": {
+          "point": 0.026344444444444504,
+          "95pct_percentile_CI": [
+            0.0016447222222222672,
+            0.05184944444444447
+          ]
+        },
+        "CMD_plus_RVS_minus_scrambled_control": {
+          "point": 0.026544444444444593,
+          "95pct_percentile_CI": [
+            0.0022019444444444265,
+            0.05251666666666656
+          ]
+        }
+      },
+      "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data.",
+      "replicate_runs": [
+        {
+          "n_epoch": 40,
+          "sigma_meas_kms": 8.0,
+          "seed": 20265181,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 950,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.475,
+          "selected_binary_median_K_sum_kms": 24.22338592086258,
+          "selected_binary_median_flux_fraction": 0.14985642029723345,
+          "auc_test": {
+            "CMD_only": 0.7049111111111112,
+            "RVS_phase_only": 0.6294222222222222,
+            "CMD_plus_RVS_phase": 0.7312555555555557,
+            "CMD_plus_phase_scrambled_negative_control": 0.7047111111111111
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.026344444444444504,
+              "95pct_percentile_CI": [
+                0.0016447222222222672,
+                0.05184944444444447
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.026544444444444593,
+              "95pct_percentile_CI": [
+                0.0022019444444444265,
+                0.05251666666666656
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        },
+        {
+          "n_epoch": 40,
+          "sigma_meas_kms": 8.0,
+          "seed": 20266190,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 950,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.475,
+          "selected_binary_median_K_sum_kms": 24.36821575365922,
+          "selected_binary_median_flux_fraction": 0.1397727171512176,
+          "auc_test": {
+            "CMD_only": 0.6987444444444444,
+            "RVS_phase_only": 0.6336222222222223,
+            "CMD_plus_RVS_phase": 0.7316777777777778,
+            "CMD_plus_phase_scrambled_negative_control": 0.6974888888888889
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.03293333333333337,
+              "95pct_percentile_CI": [
+                0.005170277777777852,
+                0.060450277777777804
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.034188888888888824,
+              "95pct_percentile_CI": [
+                0.009343888888888801,
+                0.05944999999999996
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        },
+        {
+          "n_epoch": 40,
+          "sigma_meas_kms": 8.0,
+          "seed": 20267199,
+          "n_train": 1400,
+          "n_test": 600,
+          "n_sb1_binary_injections": 1000,
+          "SB2_rejected_by_A6": true,
+          "A6_rejection_count_during_sampling": 969,
+          "A6_attempted_draws": 2000,
+          "A6_rejection_fraction_of_attempted_draws": 0.4845,
+          "selected_binary_median_K_sum_kms": 23.692684365359916,
+          "selected_binary_median_flux_fraction": 0.1466599453712183,
+          "auc_test": {
+            "CMD_only": 0.7562000000000001,
+            "RVS_phase_only": 0.6727333333333333,
+            "CMD_plus_RVS_phase": 0.788788888888889,
+            "CMD_plus_phase_scrambled_negative_control": 0.7522444444444444
+          },
+          "paired_delta_auc": {
+            "CMD_plus_RVS_minus_CMD_only": {
+              "point": 0.03258888888888889,
+              "95pct_percentile_CI": [
+                0.00666305555555556,
+                0.05869333333333334
+              ]
+            },
+            "CMD_plus_RVS_minus_scrambled_control": {
+              "point": 0.0365444444444446,
+              "95pct_percentile_CI": [
+                0.012156111111111142,
+                0.05859583333333339
+              ]
+            }
+          },
+          "warning": "SYNTHETIC INJECTION-RECOVERY ONLY; not Gaia DR3/DR4 data."
+        }
+      ],
+      "replicate_summary": {
+        "n_replicates": 3,
+        "mean_auc": {
+          "CMD_only": 0.7199518518518518,
+          "RVS_phase_only": 0.6452592592592593,
+          "CMD_plus_RVS_phase": 0.7505740740740742,
+          "CMD_plus_phase_scrambled_negative_control": 0.7181481481481482
+        },
+        "mean_delta_auc_joint_minus_cmd": 0.030622222222222256,
+        "delta_auc_range_across_replicates": [
+          0.026344444444444504,
+          0.03293333333333337
+        ],
+        "replicates_with_95pct_bootstrap_CI_above_zero": 3,
+        "replicate_bootstrap_CIs": [
+          [
+            0.0016447222222222672,
+            0.05184944444444447
+          ],
+          [
+            0.005170277777777852,
+            0.060450277777777804
+          ],
+          [
+            0.00666305555555556,
+            0.05869333333333334
+          ]
+        ]
+      }
+    }
+  ],
+  "interpretation": "Tests whether phase-aligned epoch-width data can add information under the assumed injected line-width law across independent random seeds. Not observed Gaia evidence."
+}

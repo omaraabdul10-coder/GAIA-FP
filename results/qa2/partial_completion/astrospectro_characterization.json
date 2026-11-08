@@ -1,0 +1,293 @@
+{
+  "status": "LOCAL REAL-DATA CHARACTERIZATION COMPLETED FOR THE 95-OBJECT ASTROSPECTROSB1 SUBSET; EXPLORATORY/SELECTED SAMPLE",
+  "sample": {
+    "n": 95,
+    "historical_A3_400_draw_labels": {
+      "impostor": 42,
+      "dark_compatible": 2,
+      "undetermined": 51
+    },
+    "highdraw_full_50000_seed_counts": {
+      "0": {
+        "impostor": 42,
+        "dark_compatible": 2,
+        "undetermined": 51
+      },
+      "1": {
+        "impostor": 42,
+        "dark_compatible": 2,
+        "undetermined": 51
+      },
+      "17": {
+        "impostor": 41,
+        "dark_compatible": 2,
+        "undetermined": 52
+      }
+    },
+    "highdraw_stable_across_seeds_0_1_17": 94,
+    "highdraw_unstable_objects": [
+      {
+        "source_id": 343142288945918848,
+        "label_seed0": 1,
+        "label_seed1": 1,
+        "label_seed17": -1,
+        "highdraw_stable_all_3_seeds": false,
+        "highdraw_label_seed0": 1
+      }
+    ],
+    "historical_to_highdraw_seed_label_changes": {
+      "0": 2,
+      "1": 2,
+      "17": 3
+    }
+  },
+  "highdraw_seed0_impostor_rule_reasons": {
+    "undetermined": 51,
+    "both_mass_and_rho": 38,
+    "mass_only": 3,
+    "dark_compatible": 2,
+    "rho_only": 1
+  },
+  "group_characteristics_by_highdraw_seed0_label": {
+    "impostor_sensitivity": {
+      "n": 42,
+      "metrics": {
+        "rho": {
+          "n": 42,
+          "median": 0.31927689301227413,
+          "q25": 0.21586006575970462,
+          "q75": 0.4137122453443121
+        },
+        "m2_dyn": {
+          "n": 42,
+          "median": 245.3850931303416,
+          "q25": 192.15777713922603,
+          "q75": 357.72533548718206
+        },
+        "P_impostor": {
+          "n": 42,
+          "median": 0.9900706513678919,
+          "q25": 0.9349876848725913,
+          "q75": 0.9992311701049752
+        },
+        "dm": {
+          "n": 42,
+          "median": -0.6195691719108227,
+          "q25": -0.7776458903363499,
+          "q75": -0.4647315435539081
+        },
+        "ruwe": {
+          "n": 42,
+          "median": 1.8028925500000001,
+          "q25": 1.493123625,
+          "q75": 2.198551425
+        },
+        "P": {
+          "n": 42,
+          "median": 406.8114220174358,
+          "q25": 178.30694168100462,
+          "q75": 589.1115073379276
+        },
+        "significance": {
+          "n": 42,
+          "median": 18.641315499999997,
+          "q25": 13.181177250000001,
+          "q75": 27.54058675
+        }
+      }
+    },
+    "dark_compatible_sensitivity": {
+      "n": 2,
+      "metrics": {
+        "rho": {
+          "n": 2,
+          "median": 1.1783766086956997,
+          "q25": 1.1150231466253484,
+          "q75": 1.241730070766051
+        },
+        "m2_dyn": {
+          "n": 2,
+          "median": 58.37744754849992,
+          "q25": 52.20430940693072,
+          "q75": 64.55058569006913
+        },
+        "P_impostor": {
+          "n": 2,
+          "median": 0.5798417710614743,
+          "q25": 0.5557127552307999,
+          "q75": 0.6039707868921487
+        },
+        "dm": {
+          "n": 2,
+          "median": 0.1181526636877903,
+          "q25": 0.03148438475097005,
+          "q75": 0.20482094262461056
+        },
+        "ruwe": {
+          "n": 2,
+          "median": 2.2859712500000002,
+          "q25": 2.085581875,
+          "q75": 2.486360625
+        },
+        "P": {
+          "n": 2,
+          "median": 196.64319197074784,
+          "q25": 170.9768181858028,
+          "q75": 222.30956575569286
+        },
+        "significance": {
+          "n": 2,
+          "median": 34.6411715,
+          "q25": 25.30896925,
+          "q75": 43.97337375
+        }
+      }
+    },
+    "undetermined_sensitivity": {
+      "n": 51,
+      "metrics": {
+        "rho": {
+          "n": 51,
+          "median": 0.8351985574469917,
+          "q25": 0.6450352275255486,
+          "q75": 0.9566417606198498
+        },
+        "m2_dyn": {
+          "n": 51,
+          "median": 82.7567438228146,
+          "q25": 70.17272167267589,
+          "q75": 112.1302052682666
+        },
+        "P_impostor": {
+          "n": 51,
+          "median": 0.906290409741182,
+          "q25": 0.7497983072979681,
+          "q75": 0.976017168373829
+        },
+        "dm": {
+          "n": 51,
+          "median": -0.2915307605175696,
+          "q25": -0.6816758356504891,
+          "q75": -0.06810452082280655
+        },
+        "ruwe": {
+          "n": 51,
+          "median": 2.0004895,
+          "q25": 1.7294540999999999,
+          "q75": 2.7313539000000002
+        },
+        "P": {
+          "n": 51,
+          "median": 316.7595682327285,
+          "q25": 195.896838221174,
+          "q75": 434.25358765023066
+        },
+        "significance": {
+          "n": 51,
+          "median": 20.831997,
+          "q25": 14.121732999999999,
+          "q75": 31.915844
+        }
+      }
+    }
+  },
+  "classifier_comparison_historical_labels_44_determined": {
+    "n_boot": 20000,
+    "seed": 20261101,
+    "auc": {
+      "GAIA-FP posterior": {
+        "point": 0.9642857142857143,
+        "percentile_95_ci": [
+          0.9047619047619048,
+          1.0
+        ]
+      },
+      "CMD baseline (-delta_MG)": {
+        "point": 0.9880952380952381,
+        "percentile_95_ci": [
+          0.9523809523809523,
+          1.0
+        ]
+      },
+      "CMD standardized (-delta_MG/sigma)": {
+        "point": 0.9880952380952381,
+        "percentile_95_ci": [
+          0.9523809523809523,
+          1.0
+        ]
+      },
+      "Likelihood ratio only": {
+        "point": 0.9642857142857143,
+        "percentile_95_ci": [
+          0.9047619047619048,
+          1.0
+        ]
+      },
+      "RUWE baseline": {
+        "point": 0.2857142857142857,
+        "percentile_95_ci": [
+          0.14285714285714285,
+          0.44047619047619047
+        ]
+      },
+      "Orbit significance": {
+        "point": 0.36904761904761907,
+        "percentile_95_ci": [
+          0.047619047619047616,
+          0.7380952380952381
+        ]
+      }
+    },
+    "paired_delta_vs_baseline": {
+      "CMD baseline (-delta_MG)": {
+        "point": -0.023809523809523836,
+        "percentile_95_ci": [
+          -0.07142857142857151,
+          0.0
+        ]
+      },
+      "CMD standardized (-delta_MG/sigma)": {
+        "point": -0.023809523809523836,
+        "percentile_95_ci": [
+          -0.07142857142857151,
+          0.0
+        ]
+      },
+      "Likelihood ratio only": {
+        "point": 0.0,
+        "percentile_95_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "RUWE baseline": {
+        "point": 0.6785714285714286,
+        "percentile_95_ci": [
+          0.511904761904762,
+          0.8333333333333333
+        ]
+      },
+      "Orbit significance": {
+        "point": 0.5952380952380952,
+        "percentile_95_ci": [
+          0.2142857142857143,
+          0.9523809523809523
+        ]
+      }
+    }
+  },
+  "frozen_GAIA_FP_verdict_on_historical_labels": {
+    "(-1, 'ambiguous_followup_needed')": 19,
+    "(-1, 'likely_impostor')": 32,
+    "(0, 'ambiguous_followup_needed')": 2,
+    "(0, 'likely_impostor')": 0,
+    "(1, 'ambiguous_followup_needed')": 2,
+    "(1, 'likely_impostor')": 40
+  },
+  "interpretation_limits": [
+    "The 95 objects are a selected AstroSpectroSB1 subset, not a representative random sample of the full candidate population.",
+    "Only two historical dark-compatible objects are labelled negative; AUC and bootstrap intervals are therefore highly sensitive to those two objects.",
+    "The high-draw 50,000 Monte Carlo output is a supplementary sensitivity analysis; it does not replace the historical registered A3 labels.",
+    "Quoted parameter errors are sampled independently because the full covariance matrix is not in the supplied export."
+  ]
+}

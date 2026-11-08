@@ -1,0 +1,31 @@
+{
+  "n_rows": 10118,
+  "n_corrected_scores": 10118,
+  "n_labelled_valid": 1926,
+  "n_luminous": 841,
+  "n_dark_consistent": 1085,
+  "auc_S1_corrected_c1": 0.7763272820923084,
+  "auc_B2": 0.73183230409267,
+  "auc_VB": 0.7548145996920498,
+  "auc_B2_plus_VB": 0.7955407486150459,
+  "score_direction": "higher = more luminous-impostor-like; lower = more dark-companion-consistent",
+  "formula": "S1 = CMDLR + lr_vbroad; K_sum_kms receives period in days (P_years*365.25); c=1.0",
+  "input_sha256": "ccd5ca2603d7b1c6540883d2c55c549fa995e97d7d4a8913292bba821484a5be",
+  "output_csv_sha256": "1e0cc0623cda32bb10bf9050faadd4bf1749167ef43057a6f39aec0d8b58d92f",
+  "reference_auc_from_erratum_json": 0.7763657226444883,
+  "absolute_auc_difference_from_reference": 3.8440552179941356e-05,
+  "reference_reproduction_pass": true,
+  "external_NS_reference_1801110822095134848": {
+    "n_rows_matched": 1,
+    "label_in_H10": "unlabelled/undetermined (-1)",
+    "S1_corrected_c1": -0.5599712464283264,
+    "B2": -1.296249343065338,
+    "VB": -0.8960669369849749,
+    "a0_mas": 5.958158328563835,
+    "m2dyn_msun": 1.5446205683483507,
+    "S1_percentile_within_dark_consistent_group": 0.08202764976958525,
+    "S1_percentile_within_luminous_group": 0.0023781212841854932,
+    "S1_percentile_within_all_labelled": 0.047248182762201454,
+    "interpretation": "One external, literature RV-followed NS-system reference only; not part of the 95-object substellar validation cohort. Descriptive single-object check, not a new performance estimate."
+  }
+}
