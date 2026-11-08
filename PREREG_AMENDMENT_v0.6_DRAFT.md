@@ -108,6 +108,24 @@ Sources: everything below was learnt on Gaia DR3 (development data) or from read
   - BJK m2 through the DR3 counterpart in the same id map.
 - **Rule:** paired stratified bootstrap, B = 2000, seed 7; "better" or "worse" only if the 95% CI excludes 0.
 - **Comparator file:** written and hashed before unblinding. | clarification |
+| A38 | **Lost label file: reconstruction rule (written 8 Nov 2026, before reconstruction and before DR4).**
+
+The sealed file `labels_v2.json` (SHA-256 d6b0aabb…) can no longer be found; only its hash survives. It is rebuilt as `labels_v2r.json` under fixed constraints, so there is no freedom to choose objects or labels.
+
+**(1) Same objects.** Exactly the 76 Gaia DR3 ids frozen on 9 Oct 2026 in `realdata/excluded_sealed_ids.csv`. No object is added or removed.
+
+**(2) Same sources and rules (PREREGISTRATION §5).**
+- **Sources:** the 11 listed papers.
+- **Labels:** only from ground-based spectroscopy, RV or imaging.
+- **Exclusions:** conflicting or low-confidence → unresolved, excluded. Gaia-4 → excluded_inspected.
+
+**(3) Consistency checks, reported whatever they show.**
+- (a) The 33 entries of the hash-verified v1 file (44f30e22…), with ids resolved, must carry the same labels in v2r. Any disagreement is listed.
+- (b) The v2r counts are compared with the registered v2 counts (39 impostors, 26 substellar, 10 unresolved, 1 excluded).
+
+**(4) Freeze before DR4.** The v2r SHA-256 is registered before DR4. The DR4 runner checks the v2r hash in place of the v2 hash.
+
+**(5) Labels only.** No Gaia DR3 or DR4 feature of these objects is looked at while rebuilding, and no score is computed on them before DR4. | criterion |
 | A22 | **Schema guard:** the day-1 runner checks every required table, column, unit and dtype against `src/dr4_schema.py` and **stops** on any mismatch. A mapping to new DR4 names may be added only as a logged deviation, before any score is computed. | implementation |
 
 | A24 | **Fallbacks fixed now** (`DR4_READINESS.md` §4).<br>(a) If `dr3_neighbourhood` is unavailable: positional match after propagating DR3 positions to J2017.5 with DR3 proper motions, nearest within 1″.<br>(b) If per-transit widths are missing: H2 is NOT CONDUCTED, and P_impostor is computed with a neutral RVS term.<br>(c) If combined solutions are missing: H8, A5 and H12–H14 are NOT CONDUCTED. | criterion |
