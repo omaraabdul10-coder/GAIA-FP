@@ -1,0 +1,31 @@
+-- GAIA-FP full-population supplementary export (template; not executed here)
+-- Upload a two-column table named TAP_UPLOAD.gaiafp_ids with one BIGINT source_id per row.
+-- First run a TOP 5 schema smoke test in Gaia Archive TAP before the full export.
+-- Confirm exact column availability and table joins in the live DR3 schema before submitting.
+
+SELECT
+    ids.source_id,
+    g.vbroad,
+    g.vbroad_error,
+    g.vbroad_nb_transits,
+    g.grvs_mag,
+    o.period,
+    o.eccentricity,
+    o.a_thiele_innes,
+    o.b_thiele_innes,
+    o.f_thiele_innes,
+    o.g_thiele_innes,
+    o.c_thiele_innes,
+    o.h_thiele_innes,
+    o.corr_vec,
+    bm.m1,
+    bm.m1_lower,
+    bm.m1_upper
+FROM TAP_UPLOAD.gaiafp_ids AS ids
+JOIN gaiadr3.gaia_source AS g
+  ON g.source_id = ids.source_id
+LEFT JOIN gaiadr3.nss_two_body_orbit AS o
+  ON o.source_id = ids.source_id
+LEFT JOIN gaiadr3.binary_masses AS bm
+  ON bm.source_id = ids.source_id
+ORDER BY ids.source_id

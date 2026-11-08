@@ -1,0 +1,18 @@
+# NEVER commit the sealed labels (only their hashes are public)
+*PRIVATE*
+labels_v1*.json
+labels_v2*.json
+sealed/*.json
+sealed_work/
+# local / generated
+dl/
+dryrun/
+smoke/
+audit/scratch/
+dr4_raw/
+dr3_fetch_test/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store

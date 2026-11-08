@@ -1,0 +1,16 @@
+-- Run before gaia_archive_export_template.adql. Confirms the required Gaia DR3 columns
+-- exist in the live archive schema. If any required row is absent, stop and revise the
+-- mapping as a dated deviation before exporting/scoring.
+SELECT table_name, column_name, datatype
+FROM TAP_SCHEMA.columns
+WHERE schema_name = 'gaiadr3'
+  AND (
+       (table_name = 'gaia_source' AND column_name IN
+          ('source_id','vbroad','vbroad_error','vbroad_nb_transits','grvs_mag'))
+    OR (table_name = 'nss_two_body_orbit' AND column_name IN
+          ('source_id','period','eccentricity','a_thiele_innes','b_thiele_innes',
+           'f_thiele_innes','g_thiele_innes','c_thiele_innes','h_thiele_innes','corr_vec'))
+    OR (table_name = 'binary_masses' AND column_name IN
+          ('source_id','m1','m1_lower','m1_upper'))
+  )
+ORDER BY table_name, column_name
