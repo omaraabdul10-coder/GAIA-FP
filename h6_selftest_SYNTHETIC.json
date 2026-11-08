@@ -1,0 +1,18 @@
+{
+ "status": "CONDUCTED",
+ "n": 80,
+ "n_impostor": 40,
+ "n_substellar": 40,
+ "auc_ml": 0.7525,
+ "auc_gaiafp": 0.61,
+ "diff_ml_minus_gaiafp": 0.14249999999999996,
+ "ci95": [
+  -0.027499999999999972,
+  0.31628124999999985
+ ],
+ "bootstrap_replicates": 2000,
+ "bootstrap_seed": 7,
+ "registered_falsified": false,
+ "non_inferiority_holds": true,
+ "DATA": "SYNTHETIC SELFTEST - NOT A SCIENTIFIC RESULT"
+}

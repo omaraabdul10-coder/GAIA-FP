@@ -1,0 +1,56 @@
+{
+  "statistic": "auc",
+  "n_rep": 10000,
+  "n_pos": 39,
+  "n_neg": 26,
+  "n_boot": 2000,
+  "chunk_seeds": [
+    20261101,
+    20261102,
+    20261103,
+    20261104,
+    20261105,
+    20261106,
+    20261107,
+    20261108,
+    20261109,
+    20261110
+  ],
+  "data": "SYNTHETIC NULL ONLY; this evaluates bootstrap type-I behaviour, not model discrimination or Gaia outcomes.",
+  "rejection": {
+    "0.05": {
+      "count": 490,
+      "rate": 0.049,
+      "wilson95": [
+        0.04493944517385872,
+        0.05340693408108669
+      ],
+      "mc_se": 0.0021586801523152985
+    },
+    "0.025": {
+      "count": 241,
+      "rate": 0.0241,
+      "wilson95": [
+        0.021271927639023674,
+        0.027293575437314515
+      ],
+      "mc_se": 0.001533596752735216
+    }
+  },
+  "ks_vs_uniform_p": 0.4750927149058507,
+  "decile_counts": [
+    1022,
+    978,
+    999,
+    972,
+    980,
+    984,
+    1051,
+    949,
+    1026,
+    1039
+  ],
+  "p_median": 0.5047476261869065,
+  "scientific_calibration_complete": false,
+  "status": "10,000-REPLICATE SYNTHETIC NULL DIAGNOSTIC; not real Gaia validation"
+}

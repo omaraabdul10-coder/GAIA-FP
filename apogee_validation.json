@@ -1,0 +1,57 @@
+{
+ "status": "EXPLORATORY (DR3 development, external APOGEE DR17 data)",
+ "n_apogee_multivisit": 485709,
+ "A_H10_SB2_detection": {
+  "luminous": [
+   12,
+   51,
+   [
+    0.12790810025182783,
+    0.3749305083598585
+   ]
+  ],
+  "dark": [
+   2,
+   69,
+   [
+    0.0035297593822015724,
+    0.10081538048207246
+   ]
+  ],
+  "median_s_HRV_luminous": 0.3293,
+  "median_s_HRV_dark": 0.2702
+ },
+ "B_candidates": {
+  "n_with_apogee": 61,
+  "n_rv_incompatible_with_substellar": 8,
+  "n_rv_quiet": 19,
+  "K80_median_kms": 2.5977934403380094,
+  "auc_P_impostor_vs_rv_incompatible": [
+   0.7334905660377359,
+   0.5754716981132075,
+   0.8750589622641506
+  ],
+  "auc_log_lr_vs_rv_incompatible": [
+   0.6179245283018868,
+   0.41273584905660377,
+   0.8019457547169808
+  ],
+  "auc_B2_vs_rv_incompatible": [
+   0.5966981132075472,
+   0.3632075471698113,
+   0.8089622641509434
+  ],
+  "rv_incompatible_rate_likely_impostor": [
+   8,
+   53
+  ],
+  "rv_incompatible_rate_ambiguous_followup_needed": [
+   0,
+   8
+  ],
+  "rv_incompatible_rate_likely_substellar": [
+   0,
+   0
+  ]
+ }
+}

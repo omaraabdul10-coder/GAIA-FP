@@ -1,0 +1,25 @@
+{
+ "n": 95,
+ "impostor": 42,
+ "genuine_consistent": 2,
+ "undetermined": 51,
+ "rho_median": 0.5821134162465619,
+ "m2dyn_median": 127.8821744712489,
+ "auc": {
+  "GAIA-FP posterior (frozen, EM C=1)": 0.9642857142857143,
+  "likelihood only (fixed prior)": 0.9642857142857143,
+  "B2 CMD excess": 0.9880952380952381,
+  "B1 RUWE": 0.2857142857142857
+ },
+ "frozen_verdicts_on_labelled": {
+  "ambiguous_followup_needed": {
+   "0": 2,
+   "1": 2
+  },
+  "likely_impostor": {
+   "0": 0,
+   "1": 40
+  }
+ },
+ "n_scored_labelled": 44
+}

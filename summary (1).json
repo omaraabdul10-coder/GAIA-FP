@@ -1,0 +1,166 @@
+{
+  "status": "REGISTERED_400_DRAW_SEED_SENSITIVITY_AUDIT",
+  "n_objects": 95,
+  "n_mc": 400,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "seed_results": {
+    "0": {
+      "counts": {
+        "-1": 51,
+        "1": 42,
+        "0": 2
+      },
+      "agreement_with_historical_seed0": 1.0,
+      "changed_vs_historical": 0,
+      "metrics": {
+        "auc": {
+          "GAIA-FP posterior (frozen, EM C=1)": 0.9642857142857143,
+          "likelihood only (fixed prior)": 0.9642857142857143,
+          "B2 CMD excess": 0.9880952380952381,
+          "B1 RUWE": 0.2857142857142857
+        },
+        "n_scored_labelled": 44
+      }
+    },
+    "1": {
+      "counts": {
+        "-1": 51,
+        "1": 42,
+        "0": 2
+      },
+      "agreement_with_historical_seed0": 0.9789473684210527,
+      "changed_vs_historical": 2,
+      "metrics": {
+        "auc": {
+          "GAIA-FP posterior (frozen, EM C=1)": 0.9642857142857143,
+          "likelihood only (fixed prior)": 0.9642857142857143,
+          "B2 CMD excess": 0.9880952380952381,
+          "B1 RUWE": 0.2976190476190476
+        },
+        "n_scored_labelled": 44
+      }
+    },
+    "2": {
+      "counts": {
+        "-1": 51,
+        "1": 42,
+        "0": 2
+      },
+      "agreement_with_historical_seed0": 0.9368421052631579,
+      "changed_vs_historical": 6,
+      "metrics": {
+        "auc": {
+          "GAIA-FP posterior (frozen, EM C=1)": 0.9642857142857143,
+          "likelihood only (fixed prior)": 0.9642857142857143,
+          "B2 CMD excess": 0.9761904761904762,
+          "B1 RUWE": 0.27380952380952384
+        },
+        "n_scored_labelled": 44
+      }
+    },
+    "3": {
+      "counts": {
+        "-1": 50,
+        "1": 43,
+        "0": 2
+      },
+      "agreement_with_historical_seed0": 0.9894736842105263,
+      "changed_vs_historical": 1,
+      "metrics": {
+        "auc": {
+          "GAIA-FP posterior (frozen, EM C=1)": 0.9651162790697675,
+          "likelihood only (fixed prior)": 0.9651162790697675,
+          "B2 CMD excess": 0.9883720930232558,
+          "B1 RUWE": 0.29069767441860467
+        },
+        "n_scored_labelled": 45
+      }
+    },
+    "4": {
+      "counts": {
+        "-1": 53,
+        "1": 40,
+        "0": 2
+      },
+      "agreement_with_historical_seed0": 0.9789473684210527,
+      "changed_vs_historical": 2,
+      "metrics": {
+        "auc": {
+          "GAIA-FP posterior (frozen, EM C=1)": 0.9625,
+          "likelihood only (fixed prior)": 0.9625,
+          "B2 CMD excess": 0.9875,
+          "B1 RUWE": 0.275
+        },
+        "n_scored_labelled": 42
+      }
+    }
+  },
+  "stable_all_seeds": 88,
+  "seed_sensitive_count": 7,
+  "seed_sensitive_objects": [
+    {
+      "source_id": "6184020292194985600",
+      "seed_0": 1,
+      "seed_1": -1,
+      "seed_2": -1,
+      "seed_3": 1,
+      "seed_4": -1
+    },
+    {
+      "source_id": "1399474858147972480",
+      "seed_0": -1,
+      "seed_1": 1,
+      "seed_2": -1,
+      "seed_3": -1,
+      "seed_4": -1
+    },
+    {
+      "source_id": "2984506979388898560",
+      "seed_0": 1,
+      "seed_1": 1,
+      "seed_2": -1,
+      "seed_3": 1,
+      "seed_4": 1
+    },
+    {
+      "source_id": "343142288945918848",
+      "seed_0": 1,
+      "seed_1": 1,
+      "seed_2": -1,
+      "seed_3": 1,
+      "seed_4": -1
+    },
+    {
+      "source_id": "5247351245639945856",
+      "seed_0": -1,
+      "seed_1": -1,
+      "seed_2": 1,
+      "seed_3": -1,
+      "seed_4": -1
+    },
+    {
+      "source_id": "5717845568382853120",
+      "seed_0": -1,
+      "seed_1": -1,
+      "seed_2": 1,
+      "seed_3": -1,
+      "seed_4": -1
+    },
+    {
+      "source_id": "4715224868048058880",
+      "seed_0": -1,
+      "seed_1": -1,
+      "seed_2": 1,
+      "seed_3": 1,
+      "seed_4": -1
+    }
+  ],
+  "code_path_limitation": "Current astrospectro_check.py draws all n_mc values for rho but computes m2 from only the first 150 Monte Carlo draws. This audit reproduces that code exactly; see audit_astrospectro_mc_precision.py for an independent all-draw sensitivity analysis.",
+  "historical_output_unchanged": true
+}

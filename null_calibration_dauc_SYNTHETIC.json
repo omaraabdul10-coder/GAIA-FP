@@ -1,0 +1,44 @@
+{
+ "statistic": "dauc",
+ "n_rep": 300,
+ "n_pos": 39,
+ "n_neg": 26,
+ "n_boot": 2000,
+ "seed": 20261101,
+ "rho": 0.7,
+ "data": "SYNTHETIC NULL (pure noise)",
+ "rejection": {
+  "0.05": {
+   "rate": 0.056666666666666664,
+   "wilson95": [
+    0.03567717591318777,
+    0.08886666535147117
+   ],
+   "nominal_inside_wilson95": true
+  },
+  "0.025": {
+   "rate": 0.02,
+   "wilson95": [
+    0.009197506067771085,
+    0.042940186730055147
+   ],
+   "nominal_inside_wilson95": true
+  }
+ },
+ "ks_vs_uniform_p": 0.45104987972714505,
+ "decile_counts": [
+  29,
+  26,
+  37,
+  34,
+  35,
+  22,
+  36,
+  26,
+  33,
+  22
+ ],
+ "p_median": 0.4667666166916542,
+ "scientific_calibration_complete": false,
+ "status": "IMPLEMENTED_AND_TESTED_DIAGNOSTIC (synthetic null); NOT a completed scientific calibration"
+}

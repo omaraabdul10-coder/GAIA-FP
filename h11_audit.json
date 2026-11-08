@@ -1,0 +1,63 @@
+{
+  "pipeline": "GAIA-FP H11 preregistered DR3 control matching",
+  "seed": 11,
+  "matching": "greedy one-to-one nearest neighbour without replacement in G, log10(P), significance; standardized by control-pool SD",
+  "mass_selection_MJ": [
+    80,
+    300
+  ],
+  "stages": {
+    "raw_rows": 71759,
+    "raw_unique_source_id": 71759,
+    "raw_solution_type_counts": {
+      "Orbital": 49632,
+      "AstroSpectroSB1": 22127
+    },
+    "after_solution_type": 71759,
+    "after_quality_parallax_cuts": 71759,
+    "candidate_rows": 2102,
+    "sealed_ids": 76,
+    "matched": 2102,
+    "unique_control_source_ids": 2102,
+    "control_pool_before_matching": 31349
+  },
+  "balance": {
+    "G": {
+      "candidate_mean": 14.37362522216936,
+      "control_mean": 14.324603483491915,
+      "candidate_sd": 1.6972604661900703,
+      "control_sd": 1.6497601809868871,
+      "pooled_sd": 1.673678843873821,
+      "SMD_candidate_minus_control": 0.029289811995222806
+    },
+    "log10(P)": {
+      "candidate_mean": 2.618242752472248,
+      "control_mean": 2.621243991496757,
+      "candidate_sd": 0.2546145138413176,
+      "control_sd": 0.25217467910708785,
+      "pooled_sd": 0.2533975329807033,
+      "SMD_candidate_minus_control": -0.01184399464827242
+    },
+    "significance": {
+      "candidate_mean": 25.879324501332064,
+      "control_mean": 25.554063444338727,
+      "candidate_sd": 25.39785312277306,
+      "control_sd": 25.241205040850602,
+      "pooled_sd": 25.3196502262592,
+      "SMD_candidate_minus_control": 0.012846190768307167
+    }
+  },
+  "validation": {
+    "candidate_pair_order_exact": true,
+    "control_ids_unique": true,
+    "candidate_ids_excluded": true,
+    "sealed_ids_excluded": true,
+    "all_2102_matched": true
+  },
+  "output_sha256": "cd56e49a6d1ae0baccfd7b334780bee29c351fff3b0751fa803d246570d3b42d",
+  "notes": [
+    "mfit is an approximate first-order mass proxy from the project code, not a dynamical companion mass.",
+    "The raw input contains no m1 column; project code therefore uses its photometric main-sequence mass relation.",
+    "This verifies construction of the DR3 H11 control set only; it does not test DR4 outcomes."
+  ]
+}

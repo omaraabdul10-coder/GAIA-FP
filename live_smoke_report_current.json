@@ -1,0 +1,28 @@
+{
+ "tool": "gaia_live_smoke.py",
+ "utc": "2026-10-31T22:55:04Z",
+ "release": "gaiadr3",
+ "source_id": "4318465066420528000",
+ "timeout_s": 20.0,
+ "live_attempt": true,
+ "stages": [
+  {
+   "stage": "tap",
+   "status": "FAIL",
+   "category": "DNS",
+   "detail": "ConnectionError: HTTPSConnectionPool(host='gea.esac.esa.int', port=443): Max retries exceeded with url: /tap-server/tap/sync (Caused by NameResolutionError(\"HTTPSConnection(host='gea.esac.esa.int', port=443): Failed to resolve 'gea.esac.esa.int' ([Errno -3] Temporary failure in name resolution)\"))",
+   "adql": "SELECT TOP 3 source_id, phot_g_mean_mag, ref_epoch FROM gaiadr3.gaia_source",
+   "seconds": 0.0
+  },
+  {
+   "stage": "datalink",
+   "status": "FAIL",
+   "category": "DNS",
+   "detail": "ConnectionError: HTTPSConnectionPool(host='gea.esac.esa.int', port=443): Max retries exceeded with url: /data-server/datalink/links?ID=Gaia+DR3+4318465066420528000 (Caused by NameResolutionError(\"HTTPSConnection(host='gea.esac.esa.int', port=443): Failed to resolve 'gea.esac.esa.int' ([Errno -3] Temporary failure in",
+   "identifier": "Gaia DR3 4318465066420528000",
+   "seconds": 5.01
+  }
+ ],
+ "overall": "FAIL",
+ "note": "A PASS here means only that the public archive endpoints answered in the expected format for this one source; it does NOT validate DR4 (use --release gaiadr4 on release day) nor the science pipeline."
+}

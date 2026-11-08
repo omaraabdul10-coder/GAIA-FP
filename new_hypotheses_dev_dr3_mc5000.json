@@ -1,0 +1,34 @@
+{
+ "H18": {
+  "n_total": 190,
+  "n_resolved": 81,
+  "n_luminous": 80,
+  "n_dark": 1,
+  "n_unresolved": 109,
+  "status": "CONDUCTED",
+  "fraction": 0.9876543209876543,
+  "ci95": [
+   0.9331243790677892,
+   0.9996874833128462
+  ],
+  "pass_": true,
+  "median_m2dyn_Msun": 1.7409725986084932
+ },
+ "H19": {
+  "n_total": 80,
+  "n_resolved": 35,
+  "n_luminous": 33,
+  "n_dark": 2,
+  "n_unresolved": 45,
+  "status": "CONDUCTED",
+  "fraction": 0.9428571428571428,
+  "ci95": [
+   0.8084285936547608,
+   0.9930032363716905
+  ],
+  "pass_": true,
+  "median_true_m2_of_luminous_MJ": 273.0150584194869
+ },
+ "n_mc": 5000,
+ "changed_labels_vs_n_mc_200": 2
+}

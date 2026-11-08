@@ -1,0 +1,159 @@
+{
+ "qa": {
+  "n_raw_rows": 2138,
+  "n_unique_sources": 2119,
+  "n_sealed_dropped": 0,
+  "n_after_m2_cut_recomputed": 2119,
+  "n_dropped_missing_or_invalid": 17
+ },
+ "ridge_sigma_median": 0.46242010424474117,
+ "P1_LAMOST_population": {
+  "n_pos": 1,
+  "n_neg": 10,
+  "auc": {
+   "GAIA-FP": 0.5,
+   "B1 RUWE": 0.2,
+   "B2 CMD excess": 0.4,
+   "B3 inverse significance": 0.4,
+   "B4 random": 0.3
+  },
+  "auc_ci": {
+   "GAIA-FP": [
+    0.2,
+    0.8
+   ],
+   "B1 RUWE": [
+    0.0,
+    0.5
+   ],
+   "B2 CMD excess": [
+    0.1,
+    0.7
+   ],
+   "B3 inverse significance": [
+    0.1,
+    0.7
+   ],
+   "B4 random": [
+    0.0,
+    0.6
+   ]
+  },
+  "diff_vs_baselines": {
+   "B1 RUWE": [
+    0.30535,
+    0.09750000000000011,
+    0.6
+   ],
+   "B2 CMD excess": [
+    0.0985,
+    0.0,
+    0.30000000000000004
+   ],
+   "B3 inverse significance": [
+    0.1011,
+    -0.30000000000000004,
+    0.5
+   ],
+   "B4 random": [
+    0.2053,
+    -0.3,
+    0.6000000000000001
+   ]
+  },
+  "status": "UNDERPOWERED (n_pos < 10)"
+ },
+ "P2_PU_all": {
+  "n_pos": 16,
+  "n_neg": 2086,
+  "auc": {
+   "GAIA-FP": 0.6434863374880153,
+   "B1 RUWE": 0.5728367689357622,
+   "B2 CMD excess": 0.6935222914669223,
+   "B3 inverse significance": 0.5395194151486098,
+   "B4 random": 0.4475071907957814
+  },
+  "auc_ci": {
+   "GAIA-FP": [
+    0.4870251078619367,
+    0.7883299376797699
+   ],
+   "B1 RUWE": [
+    0.4408227468839885,
+    0.7051054650047938
+   ],
+   "B2 CMD excess": [
+    0.5676526546021092,
+    0.8134917305848515
+   ],
+   "B3 inverse significance": [
+    0.4130041047459252,
+    0.665239243767977
+   ],
+   "B4 random": [
+    0.30749265939597314,
+    0.5963738914189837
+   ]
+  },
+  "diff_vs_baselines": {
+   "B1 RUWE": [
+    0.06930975850910835,
+    -0.13096910953978902,
+    0.27969723753595377
+   ],
+   "B2 CMD excess": [
+    -0.05081145134228188,
+    -0.16168054889741135,
+    0.059103098034515716
+   ],
+   "B3 inverse significance": [
+    0.10276035174976031,
+    -0.0532073945349952,
+    0.2558522591083413
+   ],
+   "B4 random": [
+    0.19608594499041226,
+    -0.027015669942473647,
+    0.40918848873441993
+   ]
+  },
+  "status": "FAILURE",
+  "note": "positive-unlabelled: lower bound"
+ },
+ "P3_recall": {
+  "P>=0.85": [
+   14,
+   16,
+   [
+    0.6165237631507364,
+    0.9844863961845861
+   ]
+  ],
+  "P>=0.5": [
+   16,
+   16,
+   [
+    0.7940927857921772,
+    1.0
+   ]
+  ],
+  "ambiguous": [
+   2,
+   16
+  ]
+ },
+ "counts": {
+  "n_scored": 2102,
+  "sb2_lamost": 1,
+  "sb2_galah": 2,
+  "sb2_apogee": 13,
+  "apogee_ambiguous": 0,
+  "lamost_observed_ge2": 10,
+  "verdicts": {
+   "likely_impostor": 1911,
+   "ambiguous_followup_needed": 174,
+   "likely_substellar": 17
+  },
+  "label_free_contamination_mean_P": 0.9401664606746319
+ }
+}

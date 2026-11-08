@@ -1,0 +1,34 @@
+{
+ "H18": {
+  "n_total": 190,
+  "n_resolved": 83,
+  "n_luminous": 80,
+  "n_dark": 3,
+  "n_unresolved": 107,
+  "status": "CONDUCTED",
+  "fraction": 0.963855421686747,
+  "ci95": [
+   0.897985117664238,
+   0.9924831797648034
+  ],
+  "pass_": true,
+  "median_m2dyn_Msun": 1.7409725986084932
+ },
+ "H19": {
+  "n_total": 80,
+  "n_resolved": 35,
+  "n_luminous": 33,
+  "n_dark": 2,
+  "n_unresolved": 45,
+  "status": "CONDUCTED",
+  "fraction": 0.9428571428571428,
+  "ci95": [
+   0.8084285936547608,
+   0.9930032363716905
+  ],
+  "pass_": true,
+  "median_true_m2_of_luminous_MJ": 273.0150584194869
+ },
+ "status": "DRY RUN on DR3 (development values, not a test)",
+ "note": "AstroSpectroSB1 needs a detectable RV orbit, which favours massive companions: the DR3 fractions describe that selection, not all Gaia orbits."
+}

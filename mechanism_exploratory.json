@@ -1,0 +1,97 @@
+{
+ "E1 beta>0.05 all K": {
+  "n": 2489,
+  "pcorr_VB_v2_given_beta": [
+   0.10392453886274271,
+   0.0626539321364987,
+   0.1429468640229263
+  ]
+ },
+ "E1 beta>0.05 & Ksum*sqrt(pavg)<30": {
+  "n": 2330,
+  "pcorr_VB_v2_given_beta": [
+   0.10855538654581053,
+   0.062408461850642714,
+   0.14983516976217715
+  ]
+ },
+ "E2 bright-companion fraction by Kmax": [
+  {
+   "Kmax": "0-15",
+   "n_obs": 244,
+   "f_obs": 0.020491803278688523,
+   "f_model": 0.3712992889463478,
+   "f_obs_beta_ge_0p1": 0.036885245901639344,
+   "f_model_beta_ge_0p1": 0.5436328377504848
+  },
+  {
+   "Kmax": "15-30",
+   "n_obs": 2934,
+   "f_obs": 0.013974096796182686,
+   "f_model": 0.27284860394661425,
+   "f_obs_beta_ge_0p1": 0.07157464212678936,
+   "f_model_beta_ge_0p1": 0.4312781462376157
+  },
+  {
+   "Kmax": "30-50",
+   "n_obs": 4782,
+   "f_obs": 0.020075282308657464,
+   "f_model": 0.32279669278261186,
+   "f_obs_beta_ge_0p1": 0.10351317440401506,
+   "f_model_beta_ge_0p1": 0.484145394808102
+  },
+  {
+   "Kmax": "50-80",
+   "n_obs": 1896,
+   "f_obs": 0.03481012658227848,
+   "f_model": 0.3746068211828107,
+   "f_obs_beta_ge_0p1": 0.14187763713080168,
+   "f_model_beta_ge_0p1": 0.5390065592425202
+  },
+  {
+   "Kmax": "80-1e+09",
+   "n_obs": 262,
+   "f_obs": 0.0648854961832061,
+   "f_model": 0.4350630526163212,
+   "f_obs_beta_ge_0p1": 0.17938931297709923,
+   "f_model_beta_ge_0p1": 0.5960284099144804
+  }
+ ],
+ "E3 forward model with RV-centroid dilution (v_res=26, untuned)": [
+  {
+   "Kmax": "0-15",
+   "f_obs": 0.0205,
+   "f_model_dilution": 0.137,
+   "f_obs_0p1": 0.0369,
+   "f_model_dilution_0p1": 0.2808
+  },
+  {
+   "Kmax": "15-30",
+   "f_obs": 0.014,
+   "f_model_dilution": 0.1938,
+   "f_obs_0p1": 0.0716,
+   "f_model_dilution_0p1": 0.3413
+  },
+  {
+   "Kmax": "30-50",
+   "f_obs": 0.0201,
+   "f_model_dilution": 0.2759,
+   "f_obs_0p1": 0.1035,
+   "f_model_dilution_0p1": 0.4357
+  },
+  {
+   "Kmax": "50-80",
+   "f_obs": 0.0348,
+   "f_model_dilution": 0.3502,
+   "f_obs_0p1": 0.1419,
+   "f_model_dilution_0p1": 0.5161
+  },
+  {
+   "Kmax": "80-1e+09",
+   "f_obs": 0.0649,
+   "f_model_dilution": 0.425,
+   "f_obs_0p1": 0.1794,
+   "f_model_dilution_0p1": 0.5863
+  }
+ ]
+}

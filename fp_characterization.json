@@ -1,0 +1,61 @@
+{
+ "status": "EXPLORATORY, DR3 development data",
+ "labels": "dynamical (rho), independent of CMD and vbroad",
+ "luminous_impostor_type": {
+  "n": 1186,
+  "q_median": 0.5783758705522641,
+  "light_fraction_median": 0.14885144642742673,
+  "P_days_median": 433.9761475915225,
+  "e_median": 0.46393611989631256,
+  "dM_G_median": -0.6840142554516984,
+  "frac_overluminous_dm_lt_m0p3": 0.8920741989881956,
+  "ruwe_median": 3.2295,
+  "frac_ruwe_gt_1p4": 1.0,
+  "vbroad_median": 14.8944,
+  "m2_true_MJ_median": 602.8214201161429,
+  "m2_dark_MJ_median": 253.51740138887325
+ },
+ "dark_consistent": {
+  "n": 2060,
+  "q_median": 0.358864348607842,
+  "light_fraction_median": 0.0,
+  "P_days_median": 445.96041748847,
+  "e_median": 0.4102374491092523,
+  "dM_G_median": -0.4103501919155952,
+  "frac_overluminous_dm_lt_m0p3": 0.5713592233009709,
+  "ruwe_median": 4.812,
+  "frac_ruwe_gt_1p4": 1.0,
+  "vbroad_median": 8.14595,
+  "m2_true_MJ_median": 404.00297199090994,
+  "m2_dark_MJ_median": 392.526042389017
+ },
+ "masquerade": {
+  "n_luminous": 1186,
+  "n_would_look_substellar": 37,
+  "n_look_substellar_but_true_stellar": 37,
+  "underestimate_factor_median": 2.3909464225700257,
+  "note": "luminous-companion binaries whose astrometry-only (dark-companion) mass is < 80 MJ although the true companion is a star"
+ },
+ "masquerade_by_light_fraction": [
+  {
+   "beta": "0-0.05",
+   "n": 4,
+   "median_underestimate": 1.58609549382895
+  },
+  {
+   "beta": "0.05-0.1",
+   "n": 243,
+   "median_underestimate": 1.7821356389366032
+  },
+  {
+   "beta": "0.1-0.2",
+   "n": 644,
+   "median_underestimate": 2.331441302722206
+  },
+  {
+   "beta": "0.2-0.5",
+   "n": 278,
+   "median_underestimate": 3.8930710120209797
+  }
+ ]
+}

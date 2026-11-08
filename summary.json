@@ -1,0 +1,76 @@
+{
+  "status": "SUPPLEMENTARY_HIGH_DRAW_MONTE_CARLO_AUDIT_NOT_PRIMARY_A3_RESULT",
+  "n_objects": 95,
+  "n_mc_per_seed": 50000,
+  "seeds": [
+    0,
+    1,
+    17
+  ],
+  "counts_by_seed": {
+    "0": {
+      "-1": 51,
+      "1": 42,
+      "0": 2
+    },
+    "1": {
+      "-1": 51,
+      "1": 42,
+      "0": 2
+    },
+    "17": {
+      "-1": 52,
+      "1": 41,
+      "0": 2
+    }
+  },
+  "agreement_across_precision_seeds": 94,
+  "n_precision_seed_sensitive": 1,
+  "seed_sensitive_objects": [
+    {
+      "source_id": "343142288945918848",
+      "seed_0": 1,
+      "seed_1": 1,
+      "seed_17": -1
+    }
+  ],
+  "historical_400_draw_comparison": {
+    "0": {
+      "historical_400draw_agreement": 0.9789473684210527,
+      "changed_objects": 2,
+      "counts": {
+        "-1": 51,
+        "1": 42,
+        "0": 2
+      }
+    },
+    "1": {
+      "historical_400draw_agreement": 0.9789473684210527,
+      "changed_objects": 2,
+      "counts": {
+        "-1": 51,
+        "1": 42,
+        "0": 2
+      }
+    },
+    "17": {
+      "historical_400draw_agreement": 0.968421052631579,
+      "changed_objects": 3,
+      "counts": {
+        "-1": 52,
+        "1": 41,
+        "0": 2
+      }
+    }
+  },
+  "solver_validation": {
+    "method": "vectorized monotone bisection vs scipy.brentq",
+    "n": 1000,
+    "max_relative_error": 1.0913886910542143e-10
+  },
+  "limitations": [
+    "The error draws assume independence because the source export supplies marginal errors, not full covariance matrices.",
+    "This diagnostic uses all n_mc draws for both rho and m2; the historical A3 code computes m2 from only the first 150 draws.",
+    "The full-draw diagnostic is a sensitivity audit and must not silently overwrite the registered/historical A3 output."
+  ]
+}

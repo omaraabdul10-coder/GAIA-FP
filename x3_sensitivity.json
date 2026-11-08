@@ -1,0 +1,142 @@
+{
+ "nominal_DV8_SZ0.12": {
+  "n_ambiguous": 300,
+  "budget": 270.0,
+  "policies": {
+   "EIG_per_cost": {
+    "observed": 270,
+    "resolved_correct": 261,
+    "resolved_wrong": 0,
+    "cost": 270.0
+   },
+   "ambiguity_RV": {
+    "observed": 90,
+    "resolved_correct": 50,
+    "resolved_wrong": 3,
+    "cost": 270.0
+   },
+   "random_RV": {
+    "observed": 90,
+    "resolved_correct": 62,
+    "resolved_wrong": 1,
+    "cost": 270.0
+   },
+   "EIG_RV_only": {
+    "observed": 90,
+    "resolved_correct": 74,
+    "resolved_wrong": 1,
+    "cost": 270.0
+   }
+  },
+  "eig_choice": {
+   "O3_spec_1ep": 278,
+   "O1_RV_3ep": 14,
+   "O2_imaging": 8
+  }
+ },
+ "DV15": {
+  "n_ambiguous": 300,
+  "budget": 270.0,
+  "policies": {
+   "EIG_per_cost": {
+    "observed": 270,
+    "resolved_correct": 261,
+    "resolved_wrong": 0,
+    "cost": 270.0
+   },
+   "ambiguity_RV": {
+    "observed": 90,
+    "resolved_correct": 18,
+    "resolved_wrong": 1,
+    "cost": 270.0
+   },
+   "random_RV": {
+    "observed": 90,
+    "resolved_correct": 21,
+    "resolved_wrong": 0,
+    "cost": 270.0
+   },
+   "EIG_RV_only": {
+    "observed": 90,
+    "resolved_correct": 49,
+    "resolved_wrong": 2,
+    "cost": 270.0
+   }
+  },
+  "eig_choice": {
+   "O3_spec_1ep": 280,
+   "O1_RV_3ep": 12,
+   "O2_imaging": 8
+  }
+ },
+ "SZ0.20": {
+  "n_ambiguous": 300,
+  "budget": 270.0,
+  "policies": {
+   "EIG_per_cost": {
+    "observed": 270,
+    "resolved_correct": 231,
+    "resolved_wrong": 4,
+    "cost": 270.0
+   },
+   "ambiguity_RV": {
+    "observed": 90,
+    "resolved_correct": 51,
+    "resolved_wrong": 0,
+    "cost": 270.0
+   },
+   "random_RV": {
+    "observed": 90,
+    "resolved_correct": 60,
+    "resolved_wrong": 3,
+    "cost": 270.0
+   },
+   "EIG_RV_only": {
+    "observed": 90,
+    "resolved_correct": 72,
+    "resolved_wrong": 2,
+    "cost": 270.0
+   }
+  },
+  "eig_choice": {
+   "O3_spec_1ep": 272,
+   "O1_RV_3ep": 15,
+   "O2_imaging": 13
+  }
+ },
+ "DV15_SZ0.20": {
+  "n_ambiguous": 300,
+  "budget": 270.0,
+  "policies": {
+   "EIG_per_cost": {
+    "observed": 270,
+    "resolved_correct": 212,
+    "resolved_wrong": 2,
+    "cost": 270.0
+   },
+   "ambiguity_RV": {
+    "observed": 90,
+    "resolved_correct": 17,
+    "resolved_wrong": 0,
+    "cost": 270.0
+   },
+   "random_RV": {
+    "observed": 90,
+    "resolved_correct": 20,
+    "resolved_wrong": 1,
+    "cost": 270.0
+   },
+   "EIG_RV_only": {
+    "observed": 90,
+    "resolved_correct": 44,
+    "resolved_wrong": 2,
+    "cost": 270.0
+   }
+  },
+  "eig_choice": {
+   "O3_spec_1ep": 274,
+   "O1_RV_3ep": 13,
+   "O2_imaging": 13
+  }
+ }
+}

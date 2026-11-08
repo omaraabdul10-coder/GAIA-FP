@@ -1,0 +1,44 @@
+{
+ "statistic": "auc",
+ "n_rep": 500,
+ "n_pos": 39,
+ "n_neg": 26,
+ "n_boot": 2000,
+ "seed": 20261101,
+ "rho": null,
+ "data": "SYNTHETIC NULL (pure noise)",
+ "rejection": {
+  "0.05": {
+   "rate": 0.062,
+   "wilson95": [
+    0.04401893261361028,
+    0.08666023321946106
+   ],
+   "nominal_inside_wilson95": true
+  },
+  "0.025": {
+   "rate": 0.03,
+   "wilson95": [
+    0.018263049234083534,
+    0.04890409218496562
+   ],
+   "nominal_inside_wilson95": true
+  }
+ },
+ "ks_vs_uniform_p": 0.5340293491190193,
+ "decile_counts": [
+  56,
+  47,
+  50,
+  48,
+  41,
+  49,
+  46,
+  55,
+  60,
+  48
+ ],
+ "p_median": 0.5247376311844079,
+ "scientific_calibration_complete": false,
+ "status": "IMPLEMENTED_AND_TESTED_DIAGNOSTIC (synthetic null); NOT a completed scientific calibration"
+}

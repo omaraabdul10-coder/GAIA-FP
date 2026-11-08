@@ -1,0 +1,17 @@
+{
+ "n_candidates_with_combined_orbit": 95,
+ "n_impostor_labelled": 42,
+ "n_genuine_labelled": 2,
+ "median_ratio": 3.967208664090939,
+ "ratio_ci95": [
+  3.4767258812350574,
+  5.484100003867441
+ ],
+ "ratio_quartiles": [
+  2.8985823445799683,
+  5.957303563503961
+ ],
+ "median_mfit_MJ": 64.27572065340583,
+ "median_m2dyn_MJ": 252.1697133141348,
+ "frac_impostors_true_mass_above_80MJ": 1.0
+}

@@ -1,0 +1,54 @@
+{
+ "n_overlap": 1856,
+ "plan_sha": "b55a1e7e9d1b435b\u2026",
+ "L1_APOGEE": {
+  "label": "APOGEE rv_incompatible (PU)",
+  "n_pos": 7,
+  "n_unlabelled": 47,
+  "auc": {
+   "GAIA_FP": 0.6838905775075987,
+   "BJK_m2": 0.7173252279635258,
+   "BJK_neg_log_flux_ratio": 0.6504559270516718
+  },
+  "dAUC_GAIAFP_minus_BJKm2": {
+   "est": -0.033434650455927084,
+   "ci95": [
+    -0.1914893617021276,
+    0.11550151975683898
+   ],
+   "verdict": "no detectable difference"
+  }
+ },
+ "L2_SB2": {
+  "label": "survey SB2 (PU)",
+  "n_pos": 14,
+  "n_unlabelled": 1842,
+  "auc": {
+   "GAIA_FP": 0.6552660152008686,
+   "BJK_m2": 0.43155731347913756,
+   "BJK_neg_log_flux_ratio": 0.33364355514192645
+  },
+  "dAUC_GAIAFP_minus_BJKm2": {
+   "est": 0.22370870172173102,
+   "ci95": [
+    0.07843085931440984,
+    0.38880680936869855
+   ],
+   "verdict": "GAIA-FP better"
+  }
+ },
+ "agreement": {
+  "likely_impostor": {
+   "n": 1716,
+   "frac_BJK_m2lo_above_80MJ": 0.10839160839160839
+  },
+  "ambiguous_followup_needed": {
+   "n": 127,
+   "frac_BJK_m2lo_above_80MJ": 0.0
+  },
+  "likely_substellar": {
+   "n": 13,
+   "frac_BJK_m2lo_above_80MJ": 0.0
+  }
+ }
+}
