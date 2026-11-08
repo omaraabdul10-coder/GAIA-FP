@@ -125,7 +125,16 @@ The sealed file `labels_v2.json` (SHA-256 d6b0aabb…) can no longer be found; o
 
 **(4) Freeze before DR4.** The v2r SHA-256 is registered before DR4. The DR4 runner checks the v2r hash in place of the v2 hash.
 
-**(5) Labels only.** No Gaia DR3 or DR4 feature of these objects is looked at while rebuilding, and no score is computed on them before DR4. | criterion |
+**(5) Labels only.** No Gaia DR3 or DR4 feature of these objects is looked at while rebuilding, and no score is computed on them before DR4.
+
+**Result (8 Nov 2026).**
+- `labels_v2r` (SHA-256 `a8ccb9b6fd1b4bf97bd9669d8be866bb33bd83b3c630feb90933f9a05703d3aa`) supersedes `labels_v2`, whose file was not retained.
+- Same 76 objects, same sources and rules; label counts identical (39 impostors, 26 substellar, 10 unresolved, 1 excluded_inspected).
+- Rebuilt before DR4; no score was computed on these objects.
+- **Checks:**
+  - additions 21/18/5 with the same confidence split as the 9 Oct build log;
+  - the 26 v1 entries keep their v1 labels except the two changes the original rules require (Gaia-4 → excluded_inspected; HD 68638 → unresolved by conflict).
+- The DR4 runner checks the v2r hash. | criterion |
 | A22 | **Schema guard:** the day-1 runner checks every required table, column, unit and dtype against `src/dr4_schema.py` and **stops** on any mismatch. A mapping to new DR4 names may be added only as a logged deviation, before any score is computed. | implementation |
 
 | A24 | **Fallbacks fixed now** (`DR4_READINESS.md` §4).<br>(a) If `dr3_neighbourhood` is unavailable: positional match after propagating DR3 positions to J2017.5 with DR3 proper motions, nearest within 1″.<br>(b) If per-transit widths are missing: H2 is NOT CONDUCTED, and P_impostor is computed with a neutral RVS term.<br>(c) If combined solutions are missing: H8, A5 and H12–H14 are NOT CONDUCTED. | criterion |

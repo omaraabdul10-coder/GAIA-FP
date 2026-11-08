@@ -20,7 +20,7 @@ from scipy.special import expit, logit
 from scipy.stats import rankdata, beta as beta_dist
 
 SEED, NBOOT, ALPHA_FW = 7, 2000, 0.025
-LABELS_V2_SHA = 'd6b0aabbf164692e8b5d11042989017dbf624362b8e0192484420ee760b38169'
+LABELS_V2_SHA = 'a8ccb9b6fd1b4bf97bd9669d8be866bb33bd83b3c630feb90933f9a05703d3aa'   # labels_v2r (v0.6 A38); v2 was d6b0aabb...
 EXPECTED = dict(n_entries=76, impostor=39, substellar=26)
 MIN_CLASS = 10                       # v0.6 A19: an AUC-type test needs >= 10 objects in each class
 CONFIRMATORY = ('H1', 'H2', 'A5', 'H11a', 'H12')
