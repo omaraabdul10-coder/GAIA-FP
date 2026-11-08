@@ -1,0 +1,4 @@
+-r requirements.txt
+requests>=2.31
+pytest>=7.4
+astroquery>=0.4.7   # DR4 day download only
