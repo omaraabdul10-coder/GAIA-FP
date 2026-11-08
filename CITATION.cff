@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use GAIA-FP, please cite the OSF pre-registration."
+title: "GAIA-FP: hidden stars among Gaia's invisible companions (pre-registered blind test on Gaia DR4)"
+authors:
+  - family-names: Abdullayev
+    given-names: Omar
+  - given-names: Mikayıl
+doi: 10.17605/OSF.IO/TBJGY
+date-released: 2026-10-10
+license: MIT
