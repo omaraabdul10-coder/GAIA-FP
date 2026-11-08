@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "upload_type": "software",
+    "title": "GAIA-FP: Gaia DR3 development and reproducibility audit supplement (2 November 2026)",
+    "publication_date": "2026-11-02",
+    "description": "Pre-DR4 development and reproducibility supplement for GAIA-FP. Includes selected Gaia DR3 derivative tables, a 95-object label/membership crosswalk, selection diagnostics, a positive-unlabelled SB2 ranking audit, APOGEE per-object summary outputs, source scripts, and round-by-round audit reports. The SB2 ranking result is based on 16 known positive controls and 2,086 unlabelled candidates; it is not a specificity or precision estimate. Real APOGEE variability is available for a limited 46-object cohort, but the raw 351 accepted visit timestamp rows are not present in this deposit. Exact observed-cadence injection-recovery, GALAH/LAMOST per-epoch RV analyses, full upstream H10 source reconstruction, and Gaia DR4 evaluation remain not conducted because required inputs are not present or DR4 is not yet released.",
+    "creators": [],
+    "keywords": [
+      "Gaia DR3",
+      "astrometry",
+      "AstroSpectroSB1",
+      "stellar binaries",
+      "spectroscopic binaries",
+      "radial velocity",
+      "reproducibility",
+      "positive-unlabelled learning",
+      "astronomy"
+    ],
+    "notes": "DRAFT METADATA ONLY. Add and verify creators, ORCID identifiers, affiliation, license, and related identifiers before deposit. This record has no DOI until published."
+  }
+}

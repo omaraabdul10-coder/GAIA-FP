@@ -1,0 +1,7 @@
+Runtime connection tests (Python requests, 12-second timeout):
+- https://tapvizier.cds.unistra.fr/TAPVizieR/tap/sync -> DNS NameResolutionError
+- https://datacentral.org.au/services/ -> DNS NameResolutionError
+- https://dr17.sdss.org/ -> DNS NameResolutionError
+- https://nadc.china-vo.org/ -> DNS NameResolutionError
+
+No catalogue payload was downloaded. Public documentation was accessible through web search/browser reading, but not transferred into the local runtime.

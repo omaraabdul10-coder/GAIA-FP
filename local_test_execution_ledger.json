@@ -1,0 +1,11 @@
+{
+  "main_suite_groups_passed_this_turn": 112,
+  "external_epoch_rv_pipeline_tests_passed_this_turn": 30,
+  "geometry_audit_passed_this_turn": 48,
+  "geometry_expected_xfail_this_turn": 17,
+  "statistics_audit_passed_this_turn": 17,
+  "statistics_expected_xfail_this_turn": 18,
+  "total_passed_across_separately_executed_suites": 207,
+  "expected_xfail_across_geometry_and_statistics": 35,
+  "caveat": "Groups were run separately; full monolithic test run timed out. Counts are not one monolithic invocation."
+}

@@ -1,0 +1,32 @@
+{
+  "raw_extract_rows": 71759,
+  "raw_extract_unique_source_ids": 71759,
+  "raw_extract_solution_type_counts": {
+    "Orbital": 49632,
+    "AstroSpectroSB1": 22127
+  },
+  "mechanism_rows": 10118,
+  "mechanism_unique_source_ids": 10118,
+  "mechanism_ids_in_raw_extract": 9372,
+  "mechanism_ids_not_in_raw_extract": 746,
+  "match_fraction": 0.9262700138367266,
+  "selected_labels_rows": 95,
+  "selected_labels_in_mechanism": 62,
+  "selected_labels_absent_from_mechanism": 33,
+  "selected_label_counts": {
+    "-1": 51,
+    "1": 42,
+    "0": 2
+  },
+  "input_sha256": {
+    "results/mechanism_scored.csv": "6fc7ef56d1949620fb925fa1822e4c3359397eeb18267d9c2a0c11ecf6b0127a",
+    "realdata/dr3_nss_two_body_orbit_raw.csv": "ed9aa532470bb415057f16a1ebe4511a7eadc9dca59f53872d0cad15fb2afe18",
+    "results/astrospectro_labels.csv": "7e095e2163697284bad4e15ce92cf22513ddb223422717420cbbd1c29941f405",
+    "realdata/provenance_gaia.txt": "fc325dc3e529b20a83ad3db0ef19f45a7bf9a2a075a00aea5e614cae505b23de",
+    "realdata/PROVENANCE.md": "b936a899adee5692c59f5a6cdabd12df01bdc548a225b382ae6d3924c14e92df",
+    "realdata/provenance_vizier.txt": "a1d9f34798b55653a581722b436f2d1ba3ec95a9704b858c6b2c4b1ceb169b03",
+    "tools/fetch_dr3_astrospectro.py": "36ca58ce88abab53e37e28221ecdba1fb17185c8329638dd04b9543aa21ff2d8",
+    "src/dark_companion.py": "8d777d02c5f69c17b65019c8b29bd8a32866c33d5f51111f6299128912528655",
+    "src/mechanism.py": "e5350d88c42ad3c4d195c2f906b9b832b0015caac6a71b7c927186546392f60c"
+  }
+}

@@ -1,0 +1,219 @@
+{
+ "command": "dryrun",
+ "status": "COMPLETED",
+ "total_seconds": 317.7,
+ "steps": [
+  {
+   "step": "build fake DR4-like inputs",
+   "status": "OK",
+   "seconds": 0.3,
+   "info": {
+    "n_candidates": 2119,
+    "n_rvs_rows": 27977,
+    "n_ids_changed": 113
+   }
+  },
+  {
+   "step": "RVS adapter (Format A, ns since 2010, J2017.5)",
+   "status": "OK",
+   "seconds": 0.2,
+   "info": {
+    "n_sources": 1301
+   }
+  },
+  {
+   "step": "score v3.2 primary + v3.1 registered + A6-off + A7",
+   "status": "OK",
+   "seconds": 293.2,
+   "info": {
+    "n_input": 2119,
+    "n_colour_outside_ridge": 45,
+    "n_nonfinite_dropped": 17,
+    "n_a0err_from_significance": 2057,
+    "n_scored": 2057,
+    "C_star": 0.0,
+    "cv_scores": {
+     "0.0": 1128.9151959904382,
+     "0.003": 1128.5797312647737,
+     "0.03": 1127.5000386925606,
+     "0.3": 1126.915672626117,
+     "1.0": 1126.8511750920059
+    },
+    "rvs_status": {
+     "OK": 1071,
+     "NO_RVS_EPOCHS": 787,
+     "H_T_EXCLUDED_BY_A6": 146,
+     "FEWER_THAN_6_EPOCHS": 53
+    },
+    "n_rvs_ge15": 879,
+    "n_warnings": 0,
+    "warnings_first20": []
+   }
+  },
+  {
+   "step": "write + hash catalogue",
+   "status": "OK",
+   "seconds": 0.1,
+   "info": "3b2106377fde95f7bb15390411fa793cda8f0ac5e8c03f815b96b16deec3fa70"
+  },
+  {
+   "step": "unblind (SYNTHETIC labels) + Holm",
+   "status": "OK",
+   "seconds": 1.6,
+   "info": {
+    "H1": "CONDUCTED",
+    "H2": "CONDUCTED",
+    "H3": "CONDUCTED",
+    "H5": "CONDUCTED",
+    "H6": "CONDUCTED",
+    "H8": "NOT_CONDUCTED:NO_DYNAMICAL_LABEL_FILE",
+    "holm": {
+     "alpha_one_sided": 0.025,
+     "conducted": [
+      "H1",
+      "H11a",
+      "H12",
+      "H2"
+     ],
+     "not_conducted": [
+      "A5"
+     ],
+     "result": {
+      "H12": {
+       "p": 0.001,
+       "holm_threshold": 0.00625,
+       "rejected": true
+      },
+      "H11a": {
+       "p": 0.2,
+       "holm_threshold": 0.008333333333333333,
+       "rejected": false
+      },
+      "H2": {
+       "p": 0.29985007496251875,
+       "holm_threshold": 0.0125,
+       "rejected": false
+      },
+      "H1": {
+       "p": 0.8860569715142429,
+       "holm_threshold": 0.025,
+       "rejected": false
+      }
+     }
+    }
+   }
+  },
+  {
+   "step": "fake DR4 orbit tables",
+   "status": "OK",
+   "seconds": 0.1,
+   "info": {
+    "n_orbits": 2001,
+    "n_combined": 89
+   }
+  },
+  {
+   "step": "H11 outcomes (both prediction sets)",
+   "status": "OK",
+   "seconds": 4.8,
+   "info": "rc=0"
+  },
+  {
+   "step": "H8 dynamical labels (DR4 combined solutions)",
+   "status": "OK",
+   "seconds": 1.2,
+   "info": "rc=0"
+  },
+  {
+   "step": "unblind again with H8 labels and the H11a p-value",
+   "status": "OK",
+   "seconds": 2.0,
+   "info": {
+    "H8": {
+     "n_imp": 41,
+     "n_gen": 1,
+     "recall_P>=0.85": [
+      29,
+      41,
+      [
+       0.5446260168346366,
+       0.8387014302856923
+      ]
+     ],
+     "recall_pass": false,
+     "auc": {
+      "status": "NOT_CONDUCTED:BELOW_MIN_N"
+     },
+     "A5": {
+      "status": "NOT_CONDUCTED:BELOW_MIN_N"
+     }
+    },
+    "holm": {
+     "alpha_one_sided": 0.025,
+     "conducted": [
+      "H1",
+      "H11a",
+      "H12",
+      "H2"
+     ],
+     "not_conducted": [
+      "A5"
+     ],
+     "result": {
+      "H11a": {
+       "p": 0.0004997501249375312,
+       "holm_threshold": 0.00625,
+       "rejected": true
+      },
+      "H12": {
+       "p": 0.001,
+       "holm_threshold": 0.008333333333333333,
+       "rejected": true
+      },
+      "H2": {
+       "p": 0.29985007496251875,
+       "holm_threshold": 0.0125,
+       "rejected": false
+      },
+      "H1": {
+       "p": 0.8860569715142429,
+       "holm_threshold": 0.025,
+       "rejected": false
+      }
+     }
+    }
+   }
+  },
+  {
+   "step": "H7 survey SB2 (string ids)",
+   "status": "OK",
+   "seconds": 0.3,
+   "info": {
+    "n_matched": 320,
+    "n_sb2": 57,
+    "verdict": "FAIL"
+   }
+  },
+  {
+   "step": "H15 population purity (descriptive)",
+   "status": "OK",
+   "seconds": 0.1,
+   "info": [
+    0.6599344780381603,
+    0.6503076786549091,
+    0.6693633782181359
+   ]
+  },
+  {
+   "step": "H12-H14 mechanism (half the ids are DR3 ids and must be excluded)",
+   "status": "OK",
+   "seconds": 13.4,
+   "info": {
+    "n_input_rows": 3000,
+    "n_after_exclusion": 1500,
+    "n_V": 476,
+    "confirmatory": false
+   }
+  }
+ ]
+}
