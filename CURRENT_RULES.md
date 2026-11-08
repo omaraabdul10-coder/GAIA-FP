@@ -22,3 +22,5 @@ Both numbers are right. `labels_v2` seals 76 systems, and 65 of them enter the a
 
 **Is this still GAIA-FP v3, or something new?**
 Same method. We registered v3.1 in v0.3–v0.4. v3.2 (v0.6 A25) is v3.1 with the audit's corrections, and it serves as the primary DR4 score. v3.1 runs alongside it, exactly as registered.
+
+Not frozen (presentation only, may be edited after registration): `README.md`, `index.html`, `site_checker.html` and `docs/presentation/`. They are left out of `FREEZE_MANIFEST_v0.6.sha256`.

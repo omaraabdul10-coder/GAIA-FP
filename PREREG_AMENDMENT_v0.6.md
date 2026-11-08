@@ -201,3 +201,7 @@ H1–H11 keep their definitions and thresholds. v0.3–v0.5 stand, A7 included, 
 3. `dr4_day.py score`. The catalogue's SHA-256 is committed before anything else happens.
 4. Then, in order: `h11_outcomes.py`, `dr4_dynamical.py`, `dr4_mechanism.py`, `dr4_evaluate.py` (unblinding and Holm), `survey_xmatch.py`.
 5. Publish every output, whatever it says.
+
+## Use of AI tools
+
+Because the authors are not native English speakers, AI was used to draft and edit the English text of the project documentation. The authors chose the research question, designed the study, made the pre-registration and analysis decisions, and interpret the results. An AI system (Claude, Anthropic) assisted with code writing and literature search.

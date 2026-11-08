@@ -27,6 +27,10 @@ One item needs a plain account. We did not retain the original sealed label file
 
 Later changes will go into `DEVIATIONS_v0.6.md`, and `CURRENT_RULES.md` shows how v0.3 through v0.6 fit together. `FREEZE_MANIFEST_v0.6.sha256` records the SHA-256 of every file in the code and analysis repository. Code: https://github.com/omaraabdul10-coder/GAIA-FP (tag `v0.6-osf`).
 
+Use of AI tools: Because the authors are not native English speakers, AI was used to draft and edit the English text of the project documentation. The authors chose the research question, designed the study, made the pre-registration and analysis decisions, and interpret the results. An AI system (Claude, Anthropic) assisted with code writing and literature search.
+
+Not frozen (presentation only, may be edited after registration): `README.md`, `index.html`, `site_checker.html` and `docs/presentation/`. They are left out of `FREEZE_MANIFEST_v0.6.sha256`.
+
 ## Files to upload
 
 | File | What it is |

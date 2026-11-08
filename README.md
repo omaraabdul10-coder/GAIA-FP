@@ -105,7 +105,7 @@ DR4 day (2 Dec 2026) commands are in `DR4_READINESS.md`.
 
 ## Use of AI tools
 
-An AI assistant (Claude, Anthropic) was used for literature search, independent code audits and error finding, and code drafting. The research question, the pre-registered hypotheses and decisions, and the interpretation of results are the authors'. Every audit finding and fix is logged (`AUDIT_REPORT.md`, `DEVIATIONS_v0.6.md`).
+Because the authors are not native English speakers, AI was used to draft and edit the English text of the project documentation. The authors chose the research question, designed the study, made the pre-registration and analysis decisions, and interpret the results. An AI system (Claude, Anthropic) assisted with code writing and literature search.
 
 ## Licence and data
 
