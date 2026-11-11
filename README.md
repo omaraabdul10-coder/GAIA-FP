@@ -76,6 +76,10 @@ GAIA-FP's own contribution is narrower:
 
 The power of H1 was simulated before DR4 with the registered stratified-bootstrap test (B = 2000) at α = 0.01, for 39 + 26 objects and a true AUC of 0.73 (the APOGEE development value): **0.83** (0.71 if only 30 + 20 remain). Power is the chance of detecting a real effect, not the model's accuracy (`results/power_h1_bootstrap.json`). Outcomes are reported as PASS, FAIL or NOT_CONDUCTED:reason.
 
+## Ground-based follow-up (draft, not yet registered)
+
+[`SHAMAKHY_FOLLOWUP_PLAN.md`](SHAMAKHY_FOLLOWUP_PLAN.md) describes the planned spectroscopy with the 2-m telescope and ShaFES at the Shamakhy Astrophysical Observatory. The test is **line doubling** at the extremes of the orbit, not the RV semi-amplitude. A blended centroid reproduces the photocentre amplitude under both hypotheses (`src/rv_degeneracy.py`). Two spectra per target are enough: for 13 of the 16 targets, a near-twin impostor shows doubled lines with probability ≥ 0.85 at R = 56 000. Code is in `followup/`, tests in `tests/test_shamakhy_forward.py`. The plan will be hashed and registered before the first spectrum is taken.
+
 ## Repository layout
 
 ```
