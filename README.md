@@ -24,7 +24,7 @@ sha256sum -c FREEZE_MANIFEST_v0.5.sha256      # must print OK for all 56 files
 
 Frozen files are never edited. Every later change is a dated amendment or a logged deviation (`DEVIATIONS_v0.6.md`).
 
-The blind test set (76 literature-labelled objects: 39 impostors, 26 substellar) is **not in this repository**. Only its hashes are public (`sealed/labels_v1.sha256`, `sealed/labels_v2.sha256`). Gaia data of those objects were never inspected: they are dropped by id first (`realdata/excluded_sealed_ids.csv`).
+The blind test set (76 literature-labelled objects: 39 impostors, 26 substellar) is **not in this repository**. Only its hashes are public (`sealed/labels_v1.sha256`, `sealed/labels_v2.sha256`). The original v2 file was lost; it was rebuilt before DR4 as `labels_v2r` under the fixed rule of v0.6 A38 (same 76 objects, sources and counts), and the DR4 runner checks `sealed/labels_v2r.sha256` (SHA-256 a8ccb9b6…). Gaia data of those objects were never inspected: they are dropped by id first (`realdata/excluded_sealed_ids.csv`).
 
 ## Method in one paragraph
 
