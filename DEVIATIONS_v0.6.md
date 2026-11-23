@@ -176,3 +176,6 @@ After the hashes above were stored, we rewrote the eight Markdown files in this 
 
 ## 34. 23 Nov 2026: LICENSE author line (after the OSF v0.6 registration, n6jzx)
 The copyright line in `LICENSE` now names only Omar Abdullayev; the earlier line also listed Mikayıl. The git history has no commits by him. No code, data, plan or test changed. Two files therefore no longer match their hashes in the registered `FREEZE_MANIFEST_v0.6.sha256`: `LICENSE` and this file (`DEVIATIONS_v0.6.md`, which records post-registration changes by design). Every other file still matches.
+
+## 35. 24 Nov 2026: correction to a sentence in the H22 plan (no change to any test)
+`H22_LIKELIHOOD_ONLY_PLAN.md` (registered in n6jzx) says the prior "ranks impostors worse than chance (AUC 0.40)". The point estimate is right, but with only 16 SB2 positives its stratified-bootstrap 95% CI is [0.27, 0.52] (4000 resamples, seed 3), which includes 0.5. The supported statement is weaker: on these labels the prior is uninformative, and its spread on the logit scale (IQR 2.55–4.10) is larger than the spread of the likelihood (log_lr IQR −0.14–1.07), so it reorders candidates more than the evidence does and dilutes the AUC (log_lr 0.72, P_impostor 0.64). H22's test, threshold and code are unchanged.
