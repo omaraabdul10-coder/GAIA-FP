@@ -1,0 +1,40 @@
+{
+ "n_dr3": 2102,
+ "h_per_target": 2.0,
+ "hours_all": 4204.0,
+ "nights_all_8h": 525.5,
+ "log_lr": {
+  "0.25": {
+   "hours": 1050.0,
+   "known_impostors_skipped": 15,
+   "of": 16
+  },
+  "0.5": {
+   "hours": 2102.0,
+   "known_impostors_skipped": 13,
+   "of": 16
+  },
+  "0.75": {
+   "hours": 3152.0,
+   "known_impostors_skipped": 10,
+   "of": 16
+  }
+ },
+ "P_impostor": {
+  "0.25": {
+   "hours": 1050.0,
+   "known_impostors_skipped": 13,
+   "of": 16
+  },
+  "0.5": {
+   "hours": 2102.0,
+   "known_impostors_skipped": 13,
+   "of": 16
+  },
+  "0.75": {
+   "hours": 3152.0,
+   "known_impostors_skipped": 7,
+   "of": 16
+  }
+ }
+}

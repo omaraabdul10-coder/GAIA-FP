@@ -1,0 +1,16 @@
+{
+ "n_sbx_systems": 679,
+ "n_gaia_solutions": 42,
+ "n_in_600_1400": 24,
+ "classes_in_window": {
+  "baseline_alias": 14,
+  "harmonic": 4,
+  "agrees": 3,
+  "other": 3
+ },
+ "unmatched_lt1500": 28,
+ "unmatched_in_window": 17,
+ "expected_frac_loguniform": 0.11585837914619672,
+ "binom_p_greater": 7.34905725805633e-10,
+ "alias_median_ratio": 3.0073204297173515
+}

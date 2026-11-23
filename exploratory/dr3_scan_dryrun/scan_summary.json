@@ -1,0 +1,27 @@
+{
+ "n_input": 2102,
+ "n_sealed_removed": 0,
+ "n_candidates_mfit_lt_80": 2102,
+ "impostor_fraction_with_prior": {
+  "mean": 0.9401664606746319,
+  "ci95": [
+   0.9342997810455725,
+   0.9456757457935163
+  ]
+ },
+ "impostor_fraction_likelihood_only": {
+  "mean": 0.5942407859519591,
+  "ci95": [
+   0.5847797003247245,
+   0.6037428989135342
+  ]
+ },
+ "n_P_gt_0p5_with_prior": 2044,
+ "n_P_gt_0p5_likelihood_only": 1358,
+ "n_baseline_trap": 108,
+ "n_evolved_flagged": 10,
+ "n_shamakhy_ok": null,
+ "baseline_days": 1038.0,
+ "seed": 24,
+ "n_boot": 2000
+}

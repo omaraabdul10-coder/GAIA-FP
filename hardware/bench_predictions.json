@@ -1,0 +1,76 @@
+{
+ "d_mm": 20.0,
+ "B": 0.3,
+ "rows": [
+  {
+   "beta": 0,
+   "expected_radius_mm": 6.0,
+   "dark_assumed_B": 0.3,
+   "mass_underestimate": 1.0,
+   "photocentre_follows": "primary"
+  },
+  {
+   "beta": 0.05,
+   "expected_radius_mm": 5.0,
+   "dark_assumed_B": 0.25,
+   "mass_underestimate": 1.2,
+   "photocentre_follows": "primary"
+  },
+  {
+   "beta": 0.1,
+   "expected_radius_mm": 4.0,
+   "dark_assumed_B": 0.2,
+   "mass_underestimate": 1.5,
+   "photocentre_follows": "primary"
+  },
+  {
+   "beta": 0.15,
+   "expected_radius_mm": 3.0,
+   "dark_assumed_B": 0.15,
+   "mass_underestimate": 2.0,
+   "photocentre_follows": "primary"
+  },
+  {
+   "beta": 0.2,
+   "expected_radius_mm": 2.0,
+   "dark_assumed_B": 0.1,
+   "mass_underestimate": 3.0,
+   "photocentre_follows": "primary"
+  },
+  {
+   "beta": 0.25,
+   "expected_radius_mm": 1.0,
+   "dark_assumed_B": 0.05,
+   "mass_underestimate": 6.0,
+   "photocentre_follows": "primary"
+  },
+  {
+   "beta": 0.3,
+   "expected_radius_mm": 0.0,
+   "dark_assumed_B": 0.0,
+   "mass_underestimate": null,
+   "photocentre_follows": "none"
+  },
+  {
+   "beta": 0.35,
+   "expected_radius_mm": 1.0,
+   "dark_assumed_B": 0.05,
+   "mass_underestimate": 6.0,
+   "photocentre_follows": "secondary"
+  },
+  {
+   "beta": 0.4,
+   "expected_radius_mm": 2.0,
+   "dark_assumed_B": 0.1,
+   "mass_underestimate": 3.0,
+   "photocentre_follows": "secondary"
+  },
+  {
+   "beta": 0.5,
+   "expected_radius_mm": 4.0,
+   "dark_assumed_B": 0.2,
+   "mass_underestimate": 1.5,
+   "photocentre_follows": "secondary"
+  }
+ ]
+}
