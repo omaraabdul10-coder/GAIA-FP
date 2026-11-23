@@ -1,0 +1,46 @@
+{
+ "status": "DR3 development values, not a test",
+ "bins": [
+  {
+   "bin_MJ": "1-13",
+   "n": 0,
+   "n_luminous": 0,
+   "frac_luminous": null,
+   "cp95_lo": NaN,
+   "cp95_hi": NaN,
+   "n_dark_consistent": 0,
+   "median_true_over_dark_mass": null
+  },
+  {
+   "bin_MJ": "13-30",
+   "n": 1,
+   "n_luminous": 1,
+   "frac_luminous": 1.0,
+   "cp95_lo": 0.025,
+   "cp95_hi": 1.0,
+   "n_dark_consistent": 0,
+   "median_true_over_dark_mass": 9.436276648717598
+  },
+  {
+   "bin_MJ": "30-50",
+   "n": 4,
+   "n_luminous": 4,
+   "frac_luminous": 1.0,
+   "cp95_lo": 0.3976353643835253,
+   "cp95_hi": 1.0,
+   "n_dark_consistent": 0,
+   "median_true_over_dark_mass": 8.895941100259192
+  },
+  {
+   "bin_MJ": "50-80",
+   "n": 30,
+   "n_luminous": 28,
+   "frac_luminous": 0.9333333333333333,
+   "cp95_lo": 0.7792645984770381,
+   "cp95_hi": 0.9918218655393437,
+   "n_dark_consistent": 2,
+   "median_true_over_dark_mass": 4.203545942415255
+  }
+ ],
+ "note": "Combined orbits favour massive companions; fractions describe that subsample only."
+}

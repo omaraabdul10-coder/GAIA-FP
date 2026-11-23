@@ -1,0 +1,24 @@
+{
+ "f_m_Msun": 0.006709363086382652,
+ "inc30": {
+  "m2_Msun": 0.4411747710287896,
+  "a0_mas": 29.70780865398341,
+  "nonquad_resid_mas_median": 0.9668818374957688,
+  "frac_phases_resid_ge_0.3mas": 1.0,
+  "frac_ge_0.55": 0.68
+ },
+ "inc60": {
+  "m2_Msun": 0.2247589209619734,
+  "a0_mas": 17.151811323409245,
+  "nonquad_resid_mas_median": 0.504112978832574,
+  "frac_phases_resid_ge_0.3mas": 0.695,
+  "frac_ge_0.55": 0.46
+ },
+ "inc84": {
+  "m2_Msun": 0.19156597684335738,
+  "a0_mas": 14.935723784632884,
+  "nonquad_resid_mas_median": 0.3670257840973066,
+  "frac_phases_resid_ge_0.3mas": 0.62,
+  "frac_ge_0.55": 0.24
+ }
+}
