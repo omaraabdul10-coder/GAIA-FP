@@ -16,3 +16,7 @@ __pycache__/
 .pytest_cache/
 .ipynb_checkpoints/
 .DS_Store
+
+# private notes (kept off the public repo)
+docs/archive/COMPETITION_PACK.md
+docs/archive/TIMELINE.md

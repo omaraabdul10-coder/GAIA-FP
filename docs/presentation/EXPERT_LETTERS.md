@@ -28,7 +28,7 @@ Our question: does (iii) agree with your experience, or is there a known treatme
 Thank you for any comment, however brief.
 
 Sincerely,
-[Omar Abdullayev], [Mikayıl …]
+[Omar Abdullayev]
 [school], Ganja, Azerbaijan
 [link to the OSF registration / GitHub]
 
@@ -47,5 +47,5 @@ DR4-dən sonra parlaq namizədlərin (V ≲ 9–10) bir neçəsini radial sürə
 Rəsədxananın 2 m-lik teleskopunda bunun mümkün olub-olmadığını və hansı şərtlərlə olacağını soruşmaq istərdik.
 
 Hörmətlə,
-[Ömər Abdullayev], [Mikayıl …]
+[Ömər Abdullayev]
 [məktəb, əlaqə]

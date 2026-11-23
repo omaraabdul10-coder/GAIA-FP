@@ -4,7 +4,7 @@
 
 Gaia finds unseen companions (candidate planets, brown dwarfs, neutron stars and black holes) from the orbital wobble of their host stars. Many are **impostors**: a second star whose light shrinks the measured photocentre orbit, so a stellar binary looks substellar and its mass is underestimated. GAIA-FP assigns every candidate an impostor probability from **Gaia data alone**, and is tested once, blind, on Gaia DR4 (2 Dec 2026).
 
-Authors: Omar Abdullayev, Mikayıl (Ganja, Azerbaijan). Regeneron ISEF 2027 project.
+Author: Omar Abdullayev (Ganja, Azerbaijan). Regeneron ISEF 2027 project.
 
 ## Pre-registration
 
