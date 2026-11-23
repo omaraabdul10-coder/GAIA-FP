@@ -173,3 +173,6 @@ Dry run: COMPLETED, 14 steps. The fake-archive test covers the masses and the fa
 
 ## 33. 8 Nov 2026: wording edited for readability in the OSF files
 After the hashes above were stored, we rewrote the eight Markdown files in this package (`OSF_REGISTRATION_v0.6.md`, `CURRENT_RULES.md`, `PREREG_AMENDMENT_v0.6.md`, `DEVIATIONS_v0.6.md`, `HYPOTHESIS_LEDGER.md`, `DR4_READINESS.md`, `BJK_COMPARISON_PLAN.md`, `GAIA_RV_LABEL_PLAN.md`) so they read more easily. No rule, number, threshold, sample, hash or file name changed. `original/` keeps the files exactly as hashed. The stored hashes of the two exploratory plans (`BJK_COMPARISON_PLAN.sha256`, `GAIA_RV_LABEL_PLAN.sha256`) match those original copies, which are the versions that existed before the runs. `FREEZE_MANIFEST_v0.6.sha256` has been updated for the edited files.
+
+## 34. 23 Nov 2026: LICENSE author line (after the OSF v0.6 registration, n6jzx)
+The copyright line in `LICENSE` now names only Omar Abdullayev; the earlier line also listed Mikayıl. The git history has no commits by him. No code, data, plan or test changed. Two files therefore no longer match their hashes in the registered `FREEZE_MANIFEST_v0.6.sha256`: `LICENSE` and this file (`DEVIATIONS_v0.6.md`, which records post-registration changes by design). Every other file still matches.
